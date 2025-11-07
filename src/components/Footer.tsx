@@ -5,11 +5,11 @@ import { getContent } from "@/resources/content";
 import { IconButton, Row, Text } from "@once-ui-system/core";
 import styles from "./Footer.module.scss";
 
-export const Footer = () => {
+export function Footer() {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
   const content = getContent(language);
-  const footerText = language === "fr" 
+  const footerText = language === "fr"
     ? " / Conseil stratégique en carrière pour les professionnels de la technologie"
     : " / Strategic career consulting for technology professionals";
 
@@ -55,4 +55,4 @@ export const Footer = () => {
       <Row height="80" hide s={{ hide: false }} />
     </Row>
   );
-};
+}

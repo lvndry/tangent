@@ -21,7 +21,7 @@ interface ProjectCardProps {
   link: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export function ProjectCard({
   href,
   images = [],
   title,
@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
-}) => {
+}: ProjectCardProps) {
   return (
     <Column fillWidth gap="m">
       <Carousel
@@ -87,4 +87,4 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </Flex>
     </Column>
   );
-};
+}

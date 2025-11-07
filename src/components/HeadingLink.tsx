@@ -1,7 +1,7 @@
 "use client";
 
+import { Flex, Heading, IconButton, useToast } from "@once-ui-system/core";
 import React, { JSX } from "react";
-import { Heading, Flex, IconButton, useToast } from "@once-ui-system/core";
 
 import styles from "@/components/HeadingLink.module.scss";
 
@@ -12,10 +12,10 @@ interface HeadingLinkProps {
   style?: React.CSSProperties;
 }
 
-export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, style }) => {
+export function HeadingLink({ id, level, children, style }: HeadingLinkProps) {
   const { addToast } = useToast();
 
-  const copyURL = (id: string): void => {
+  function copyURL(id: string): void {
     const url = `${window.location.origin}${window.location.pathname}#${id}`;
     navigator.clipboard.writeText(url).then(
       () => {
@@ -31,7 +31,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
         });
       },
     );
-  };
+  }
 
   const variantMap = {
     1: "display-strong-xs",
@@ -66,4 +66,4 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
       />
     </Flex>
   );
-};
+}

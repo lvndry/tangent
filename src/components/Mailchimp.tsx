@@ -1,8 +1,7 @@
 "use client";
 
 import { mailchimp, newsletter } from "@/resources";
-import { Button, Heading, Input, Text, Background, Column, Row } from "@once-ui-system/core";
-import { opacity, SpacingToken } from "@once-ui-system/core";
+import { Background, Button, Column, Heading, Input, opacity, Row, SpacingToken, Text } from "@once-ui-system/core";
 import { useState } from "react";
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
@@ -13,21 +12,21 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
   }) as T;
 }
 
-export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex }) => {
+export function Mailchimp({ ...flex }: React.ComponentProps<typeof Column>) {
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
 
-  const validateEmail = (email: string): boolean => {
+  function validateEmail(email: string): boolean {
     if (email === "") {
       return true;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-  };
+  }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const value = e.target.value;
     setEmail(value);
 
@@ -36,16 +35,16 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
     } else {
       setError("");
     }
-  };
+  }
 
   const debouncedHandleChange = debounce(handleChange, 2000);
 
-  const handleBlur = () => {
+  function handleBlur() {
     setTouched(true);
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
     }
-  };
+  }
 
   if (newsletter.display === false) return null;
 
@@ -181,4 +180,4 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
       </form>
     </Column>
   );
-};
+}

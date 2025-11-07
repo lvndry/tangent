@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { routes, protectedRoutes } from "@/resources";
-import { Flex, Spinner, Button, Heading, Column, PasswordInput } from "@once-ui-system/core";
 import NotFound from "@/app/not-found";
+import { protectedRoutes, routes } from "@/resources";
+import { Button, Column, Flex, Heading, PasswordInput, Spinner } from "@once-ui-system/core";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface RouteGuardProps {
   children: React.ReactNode;
 }
 
-const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
+function RouteGuard({ children }: RouteGuardProps) {
   const pathname = usePathname();
   const [isRouteEnabled, setIsRouteEnabled] = useState(false);
   const [isPasswordRequired, setIsPasswordRequired] = useState(false);
@@ -20,13 +20,13 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const performChecks = async () => {
+    async function performChecks() {
       setLoading(true);
       setIsRouteEnabled(false);
       setIsPasswordRequired(false);
       setIsAuthenticated(false);
 
-      const checkRouteEnabled = () => {
+      function checkRouteEnabled() {
         if (!pathname) return false;
 
         if (pathname in routes) {
@@ -41,7 +41,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
         }
 
         return false;
-      };
+      }
 
       const routeEnabled = checkRouteEnabled();
       setIsRouteEnabled(routeEnabled);
@@ -61,7 +61,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
     performChecks();
   }, [pathname]);
 
-  const handlePasswordSubmit = async () => {
+  async function handlePasswordSubmit() {
     const response = await fetch("/api/authenticate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -74,7 +74,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
     } else {
       setError("Incorrect password");
     }
-  };
+  }
 
   if (loading) {
     return (
@@ -109,6 +109,6 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
   }
 
   return <>{children}</>;
-};
+}
 
 export { RouteGuard };

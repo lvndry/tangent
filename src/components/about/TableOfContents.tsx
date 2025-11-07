@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Column, Flex, Text } from "@once-ui-system/core";
 import styles from "./about.module.scss";
 
@@ -18,8 +17,8 @@ interface TableOfContentsProps {
   };
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
-  const scrollTo = (id: string, offset: number) => {
+function TableOfContents({ structure, about }: TableOfContentsProps) {
+  function scrollTo(id: string, offset: number) {
     const element = document.getElementById(id);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
@@ -30,7 +29,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
         behavior: "smooth",
       });
     }
-  };
+  }
 
   if (!about.tableOfContent.display) return null;
 
@@ -84,6 +83,6 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
         ))}
     </Column>
   );
-};
+}
 
 export default TableOfContents;

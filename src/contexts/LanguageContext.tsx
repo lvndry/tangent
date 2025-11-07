@@ -38,11 +38,11 @@ function subscribeToLanguage(callback: () => void) {
 
   languageCallbacks.add(callback);
 
-  const handleStorageChange = (event: StorageEvent) => {
+  function handleStorageChange(event: StorageEvent) {
     if (event.key === "language") {
       callback();
     }
-  };
+  }
 
   window.addEventListener("storage", handleStorageChange);
   return () => {
@@ -60,13 +60,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     () => "en" as Language // Server-side fallback - always "en" to match initial client render
   ) as Language;
 
-  const setLanguage = (lang: Language) => {
+  function setLanguage(lang: Language) {
     if (typeof window !== "undefined") {
       localStorage.setItem("language", lang);
       // Manually trigger all subscription callbacks since StorageEvent doesn't fire for same-window changes
       languageCallbacks.forEach((callback) => callback());
     }
-  };
+  }
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
