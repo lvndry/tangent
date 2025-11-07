@@ -1,4 +1,4 @@
-import { About, Blog, Contact, Gallery, Home, Newsletter, Person, Services, Social, Team, Work } from "@/types";
+import { About, Blog, Contact, Home, Newsletter, Person, Services, Social, Team, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 type Language = "en" | "fr";
@@ -360,7 +360,7 @@ export function getContent(language: Language = "en") {
 
   const home: Home = {
     path: "/",
-    image: "/images/og/home.jpg",
+    image: "/images/tangent.png",
     label: t.home.label,
     title: t.home.title,
     description: t.home.description,
@@ -437,22 +437,14 @@ export function getContent(language: Language = "en") {
     label: "Work",
     title: `Projects – ${personData.name}`,
     description: `Design and dev projects by ${personData.name}`,
-  };
-
-  const gallery: Gallery = {
-    path: "/gallery",
-    label: "Gallery",
-    title: `Photo gallery – ${personData.name}`,
-    description: `A photo collection by ${personData.name}`,
-    images: [],
-  };
+  }
 
   const services: Services = {
     path: "/services",
     label: t.services.label,
     title: t.services.title,
     description: t.services.description,
-    image: "/images/og/home.jpg",
+    image: "/images/tangent.png",
     services: t.services.services,
   };
 
@@ -461,7 +453,7 @@ export function getContent(language: Language = "en") {
     label: t.team.label,
     title: t.team.title,
     description: t.team.description,
-    image: "/images/og/home.jpg",
+    image: "/images/tangent.png",
     members: t.team.members.map((member) => ({
       ...member,
       avatar: "/images/avatar.jpg",
@@ -474,7 +466,7 @@ export function getContent(language: Language = "en") {
     label: t.contact.label,
     title: t.contact.title,
     description: t.contact.description,
-    image: "/images/og/home.jpg",
+    image: "/images/tangent.png",
   };
 
   return {
@@ -485,7 +477,6 @@ export function getContent(language: Language = "en") {
     about,
     blog,
     work,
-    gallery,
     services,
     team,
     contact,
@@ -501,7 +492,6 @@ export const home = getContent("en").home;
 export const about = getContent("en").about;
 export const blog = getContent("en").blog;
 export const work = getContent("en").work;
-export const gallery = getContent("en").gallery;
 export const services = getContent("en").services;
 export const team = getContent("en").team;
 export const contact = getContent("en").contact;

@@ -1,15 +1,15 @@
 import {
-  DataStyleConfig,
-  DisplayConfig,
-  EffectsConfig,
-  FontsConfig,
-  MailchimpConfig,
-  ProtectedRoutesConfig,
-  RoutesConfig,
-  SameAsConfig,
-  SchemaConfig,
-  SocialSharingConfig,
-  StyleConfig,
+    DataStyleConfig,
+    DisplayConfig,
+    EffectsConfig,
+    FontsConfig,
+    MailchimpConfig,
+    ProtectedRoutesConfig,
+    RoutesConfig,
+    SameAsConfig,
+    SchemaConfig,
+    SocialSharingConfig,
+    StyleConfig,
 } from "@/types";
 import { home } from "./index";
 
@@ -21,7 +21,6 @@ const routes: RoutesConfig = {
   "/about": false,
   "/work": false,
   "/blog": false,
-  "/gallery": false,
   "/services": true,
   "/team": true,
   "/contact": true,
@@ -40,8 +39,7 @@ const protectedRoutes: ProtectedRoutesConfig = {
 };
 
 // Import and set font for each variant
-import { Geist } from "next/font/google";
-import { Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 
 const heading = Geist({
   variable: "--font-heading",
@@ -220,16 +218,6 @@ const socialSharing: SocialSharingConfig = {
 };
 
 export {
-  display,
-  mailchimp,
-  routes,
-  protectedRoutes,
-  baseURL,
-  fonts,
-  style,
-  schema,
-  sameAs,
-  socialSharing,
-  effects,
-  dataStyle,
+    baseURL, dataStyle, display, effects, fonts, mailchimp, protectedRoutes, routes, sameAs, schema, socialSharing, style
 };
+
