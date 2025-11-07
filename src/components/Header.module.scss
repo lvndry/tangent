@@ -12,6 +12,16 @@
     .position {
         top: auto;
         bottom: var(--static-space-24);
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    .position.scrolled {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .mask {

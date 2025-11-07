@@ -48,6 +48,20 @@ export function Header() {
   const pathname = usePathname() ?? "";
   const { language } = useLanguage();
   const content = getContent(language);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 0);
+    };
+
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -64,7 +78,7 @@ export function Header() {
       />
       <Row
         fitHeight
-        className={styles.position}
+        className={`${styles.position} ${isScrolled ? styles.scrolled : ""}`}
         position="sticky"
         as="header"
         zIndex={9}
