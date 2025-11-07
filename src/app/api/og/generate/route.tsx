@@ -1,5 +1,5 @@
-import { ImageResponse } from "next/og";
 import { baseURL, person } from "@/resources";
+import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
 
@@ -64,6 +64,7 @@ export async function GET(request: Request) {
         >
           <img
             src={baseURL + person.avatar}
+            alt={person.name}
             style={{
               width: "12rem",
               height: "12rem",

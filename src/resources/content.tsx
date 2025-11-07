@@ -105,7 +105,7 @@ const translations = {
           bio: (
             <>
               Built by a software engineer who understands both the technical and strategic dimensions of
-              career growth. Having personally attracted recruiters and opportunities without ever "posting"
+              career growth. Having personally attracted recruiters and opportunities without ever &quot;posting&quot;
               publicly, we know what actually drives visibility, credibility, and long-term success in the
               tech job market. Our proven track record includes demonstrated success in generating consistent
               recruiter interest and opportunities.
@@ -193,13 +193,13 @@ const translations = {
           title: "Planification Stratégique de Carrière",
           description: (
             <>
-              Développement d'un plan de carrière personnalisé aligné sur les demandes du marché. Nous vous aidons à identifier
+              Développement d&apos;un plan de carrière personnalisé aligné sur les demandes du marché. Nous vous aidons à identifier
               les entreprises cibles et à les prioriser en fonction de vos objectifs individuels, créant une stratégie de
               positionnement à long terme pour la croissance de carrière.
             </>
           ),
           includes: [
-            <>Développement d'un plan de carrière personnalisé</>,
+            <>Développement d&apos;un plan de carrière personnalisé</>,
             <>Identification et priorisation des entreprises cibles</>,
             <>Stratégie de positionnement à long terme pour la croissance de carrière</>,
             <>Alignement avec les demandes actuelles du marché</>,
@@ -214,21 +214,21 @@ const translations = {
           title: "Conseil en Développement des Compétences",
           description: (
             <>
-              Analyse des écarts de compétences actuels et émergents avec des parcours d'apprentissage priorisés adaptés à vos
+              Analyse des écarts de compétences actuels et émergents avec des parcours d&apos;apprentissage priorisés adaptés à vos
               objectifs de carrière. Nous fournissons des conseils sur les certifications, projets et opportunités de développement
-              d'expérience qui comptent le plus.
+              d&apos;expérience qui comptent le plus.
             </>
           ),
           includes: [
             <>Analyse des écarts de compétences actuels et émergents</>,
-            <>Parcours d'apprentissage priorisés adaptés aux objectifs de carrière</>,
+            <>Parcours d&apos;apprentissage priorisés adaptés aux objectifs de carrière</>,
             <>Conseils sur les certifications et les qualifications</>,
-            <>Recommandations de projets pour le développement d'expérience</>,
+            <>Recommandations de projets pour le développement d&apos;expérience</>,
           ],
           benefits: [
-            <>Focus sur les compétences qui favorisent l'avancement de carrière</>,
-            <>Utilisation efficace du temps d'apprentissage</>,
-            <>Rester en avance sur les tendances de l'industrie</>,
+            <>Focus sur les compétences qui favorisent l&apos;avancement de carrière</>,
+            <>Utilisation efficace du temps d&apos;apprentissage</>,
+            <>Rester en avance sur les tendances de l&apos;industrie</>,
           ],
         },
         {
@@ -236,15 +236,15 @@ const translations = {
           description: (
             <>
               Optimisation du profil LinkedIn et stratégie de marque personnelle conçue pour attirer des opportunités de recruteurs
-              de qualité. Nous améliorons votre visibilité au sein des réseaux d'entreprises cibles et vous enseignons des tactiques
-              d'engagement avec les recruteurs qui fonctionnent.
+              de qualité. Nous améliorons votre visibilité au sein des réseaux d&apos;entreprises cibles et vous enseignons des tactiques
+              d&apos;engagement avec les recruteurs qui fonctionnent.
             </>
           ),
           includes: [
             <>Optimisation du profil LinkedIn</>,
             <>Développement de stratégie de marque personnelle</>,
-            <>Tactiques d'engagement avec les recruteurs</>,
-            <>Amélioration de la visibilité au sein des réseaux d'entreprises cibles</>,
+            <>Tactiques d&apos;engagement avec les recruteurs</>,
+            <>Amélioration de la visibilité au sein des réseaux d&apos;entreprises cibles</>,
           ],
           benefits: [
             <>Attirer des opportunités de recruteurs de qualité</>,
@@ -265,9 +265,9 @@ const translations = {
           bio: (
             <>
               Créé par un ingénieur logiciel qui comprend à la fois les dimensions techniques et stratégiques de
-              la croissance de carrière. Ayant personnellement attiré des recruteurs et des opportunités sans jamais "publier"
+              la croissance de carrière. Ayant personnellement attiré des recruteurs et des opportunités sans jamais &quot;publier&quot;
               publiquement, nous savons ce qui motive réellement la visibilité, la crédibilité et le succès à long terme sur le
-              marché de l'emploi tech. Notre bilan éprouvé comprend un succès démontré dans la génération d'intérêt et d'opportunités
+              marché de l&apos;emploi tech. Notre bilan éprouvé comprend un succès démontré dans la génération d&apos;intérêt et d&apos;opportunités
               de recruteurs constants.
             </>
           ),
