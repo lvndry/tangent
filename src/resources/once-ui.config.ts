@@ -1,20 +1,20 @@
 import {
-    DataStyleConfig,
-    DisplayConfig,
-    EffectsConfig,
-    FontsConfig,
-    MailchimpConfig,
-    ProtectedRoutesConfig,
-    RoutesConfig,
-    SameAsConfig,
-    SchemaConfig,
-    SocialSharingConfig,
-    StyleConfig,
+  DataStyleConfig,
+  DisplayConfig,
+  EffectsConfig,
+  FontsConfig,
+  MailchimpConfig,
+  ProtectedRoutesConfig,
+  RoutesConfig,
+  SameAsConfig,
+  SchemaConfig,
+  SocialSharingConfig,
+  StyleConfig,
 } from "@/types";
 import { home } from "./index";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+// Important: should match the domain address
+const baseURL: string = "https://tangent-bice.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -218,6 +218,6 @@ const socialSharing: SocialSharingConfig = {
 };
 
 export {
-    baseURL, dataStyle, display, effects, fonts, mailchimp, protectedRoutes, routes, sameAs, schema, socialSharing, style
+  baseURL, dataStyle, display, effects, fonts, mailchimp, protectedRoutes, routes, sameAs, schema, socialSharing, style
 };
 

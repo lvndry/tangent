@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
+import { Fade, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { display, routes } from "@/resources";
@@ -13,10 +13,10 @@ import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
   timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
+  locale?: string;
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+function TimeDisplay({ timeZone, locale = "en-GB" }: TimeDisplayProps) {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
@@ -40,11 +40,11 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
   }, [timeZone, locale]);
 
   return <>{currentTime}</>;
-};
+}
 
 export default TimeDisplay;
 
-export const Header = () => {
+export function Header() {
   const pathname = usePathname() ?? "";
   const { language } = useLanguage();
   const content = getContent(language);
@@ -76,9 +76,6 @@ export const Header = () => {
           position: "fixed",
         }}
       >
-        <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{content.person.location}</Row>}
-        </Row>
         <Row fillWidth horizontal="center">
           <Row
             background="page"
@@ -160,20 +157,7 @@ export const Header = () => {
             </Row>
           </Row>
         </Row>
-        <Flex fillWidth horizontal="end" vertical="center">
-          <Flex
-            paddingRight="12"
-            horizontal="end"
-            vertical="center"
-            textVariant="body-default-s"
-            gap="20"
-          >
-            <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={content.person.location} />}
-            </Flex>
-          </Flex>
-        </Flex>
       </Row>
     </>
   );
-};
+}

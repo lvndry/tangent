@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useContext, useSyncExternalStore } from "react";
 
 type Language = "en" | "fr";
 
@@ -11,41 +11,60 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+// Store subscription callbacks to trigger updates when language changes in same window
+let languageCallbacks: Set<() => void> = new Set();
+
+function getLanguageFromStorage(): Language {
+  if (typeof window === "undefined") {
+    return "en";
+  }
+
+  const savedLanguage = localStorage.getItem("language") as Language | null;
+  if (savedLanguage && (savedLanguage === "en" || savedLanguage === "fr")) {
+    return savedLanguage;
+  }
+
+  // Detect browser language
+  const browserLang = navigator.language || (navigator as any).userLanguage;
+  const detectedLang = browserLang.startsWith("fr") ? "fr" : "en";
+  localStorage.setItem("language", detectedLang);
+  return detectedLang;
+}
+
+function subscribeToLanguage(callback: () => void) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
+
+  languageCallbacks.add(callback);
+
+  const handleStorageChange = (event: StorageEvent) => {
+    if (event.key === "language") {
+      callback();
+    }
+  };
+
+  window.addEventListener("storage", handleStorageChange);
+  return () => {
+    languageCallbacks.delete(callback);
+    window.removeEventListener("storage", handleStorageChange);
+  };
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window === "undefined") {
-      return "en";
-    }
-
-    // Check localStorage first
-    const savedLanguage = localStorage.getItem("language") as Language | null;
-    if (savedLanguage && (savedLanguage === "en" || savedLanguage === "fr")) {
-      return savedLanguage;
-    }
-
-    // Detect browser language
-    const browserLang = navigator.language || (navigator as any).userLanguage;
-    const detectedLang = browserLang.startsWith("fr") ? "fr" : "en";
-    localStorage.setItem("language", detectedLang);
-    return detectedLang;
-  });
-
-  useEffect(() => {
-    // Sync localStorage changes from other tabs/windows
-    const handleStorageChange = (event: StorageEvent) => {
-      if (event.key === "language" && event.newValue && (event.newValue === "en" || event.newValue === "fr")) {
-        setLanguageState(event.newValue as Language);
-      }
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
-  }, []);
+  // Use useSyncExternalStore to properly sync with localStorage
+  // This ensures server and client both start with "en" to prevent hydration mismatch
+  const language = useSyncExternalStore(
+    subscribeToLanguage,
+    getLanguageFromStorage,
+    () => "en" as Language // Server-side fallback - always "en" to match initial client render
+  ) as Language;
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
     if (typeof window !== "undefined") {
       localStorage.setItem("language", lang);
+      // Manually trigger all subscription callbacks since StorageEvent doesn't fire for same-window changes
+      languageCallbacks.forEach((callback) => callback());
     }
   };
 

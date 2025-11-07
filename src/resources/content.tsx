@@ -96,27 +96,29 @@ const translations = {
     },
     team: {
       label: "Team",
-      title: "Our Team – Tangent Consulting",
+      title: "Our Team - Tangent Consulting",
       description: "Meet the experienced professionals helping tech professionals navigate their careers.",
       members: [
         {
-          name: "Tangent Consulting Advisor",
-          role: "Founder & Career Strategy Consultant",
+          name: "Landry Monga",
+          role: "Software Engineer",
           bio: (
             <>
-              Built by a software engineer who understands both the technical and strategic dimensions of
-              career growth. Having personally attracted recruiters and opportunities without ever &quot;posting&quot;
-              publicly, we know what actually drives visibility, credibility, and long-term success in the
-              tech job market. Our proven track record includes demonstrated success in generating consistent
-              recruiter interest and opportunities.
+              Software engineer based in Paris who has never had to apply for a job. Through the power of
+              strategic networking and intentional career choices, I&apos;ve built a career working at unicorns,
+              Y Combinator-backed startups, and companies backed by Sequoia Capital. Beyond my own success,
+              I&apos;ve helped professionals from outside tech land roles at companies like Microsoft and Google.
+              With an extended network and deep understanding of what makes careers thrive, I&apos;m super excited
+              to help my clients reach the next level in their tech careers.
             </>
           ),
+          email: "monga.4landry@gmail.com",
         },
       ],
     },
     contact: {
       label: "Contact",
-      title: "Contact Us – Tangent Consulting",
+      title: "Contact Us - Tangent Consulting",
       description: "Get in touch to discuss how we can help accelerate your tech career.",
       form: {
         name: "Name",
@@ -256,21 +258,24 @@ const translations = {
     },
     team: {
       label: "Équipe",
-      title: "Notre Équipe – Tangent Consulting",
+      title: "Notre Équipe - Tangent Consulting",
       description: "Rencontrez les professionnels expérimentés qui aident les professionnels de la tech à naviguer dans leur carrière.",
       members: [
         {
-          name: "Conseiller Tangent Consulting",
-          role: "Fondateur et Consultant en Stratégie de Carrière",
+          name: "Landry Monga",
+          role: "Ingénieur Logiciel @Dust | Ex-Ledger",
           bio: (
             <>
-              Créé par un ingénieur logiciel qui comprend à la fois les dimensions techniques et stratégiques de
-              la croissance de carrière. Ayant personnellement attiré des recruteurs et des opportunités sans jamais &quot;publier&quot;
-              publiquement, nous savons ce qui motive réellement la visibilité, la crédibilité et le succès à long terme sur le
-              marché de l&apos;emploi tech. Notre bilan éprouvé comprend un succès démontré dans la génération d&apos;intérêt et d&apos;opportunités
-              de recruteurs constants.
+              Ingénieur logiciel basé à Paris qui n&apos;a jamais eu besoin de postuler pour un emploi. Grâce à
+              la puissance du réseautage stratégique et de choix de carrière intentionnels, j&apos;ai construit une
+              carrière en travaillant dans des licornes, des startups soutenues par Y Combinator, et des entreprises
+              financées par Sequoia Capital. Au-delà de mon propre succès, j&apos;ai aidé des professionnels venant
+              de l&apos;extérieur de la tech à décrocher des postes dans des entreprises comme Microsoft et Google.
+              Avec un réseau étendu et une compréhension approfondie de ce qui fait prospérer les carrières, je suis
+              très enthousiaste à l&apos;idée d&apos;aider mes clients à atteindre le niveau supérieur dans leur carrière tech.
             </>
           ),
+          email: "monga.4landry@gmail.com",
         },
       ],
     },
@@ -360,7 +365,7 @@ export function getContent(language: Language = "en") {
 
   const home: Home = {
     path: "/",
-    image: "/images/tangent.png",
+    image: "/images/og/tangent.png",
     label: t.home.label,
     title: t.home.title,
     description: t.home.description,
@@ -444,7 +449,7 @@ export function getContent(language: Language = "en") {
     label: t.services.label,
     title: t.services.title,
     description: t.services.description,
-    image: "/images/tangent.png",
+    image: "/images/og/tangent.png",
     services: t.services.services,
   };
 
@@ -453,11 +458,11 @@ export function getContent(language: Language = "en") {
     label: t.team.label,
     title: t.team.title,
     description: t.team.description,
-    image: "/images/tangent.png",
+    image: "/images/og/tangent.png",
     members: t.team.members.map((member) => ({
       ...member,
       avatar: "/images/avatar.jpg",
-      email: personData.email,
+      email: member.email || personData.email,
     })),
   };
 
@@ -466,7 +471,7 @@ export function getContent(language: Language = "en") {
     label: t.contact.label,
     title: t.contact.title,
     description: t.contact.description,
-    image: "/images/tangent.png",
+    image: "/images/og/tangent.png",
   };
 
   return {
