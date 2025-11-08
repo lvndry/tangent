@@ -14,7 +14,7 @@ const translations = {
     },
     home: {
       label: "Home",
-      title: "Tangent Consulting – Strategic Career Guidance for Technology Professionals",
+      title: "Tangent Consulting - Strategic Career Guidance for Technology Professionals",
       description: "Specialized career consulting service designed exclusively for technology professionals seeking to navigate and accelerate their careers in today's rapidly evolving tech landscape.",
       headline: <>Empowering tech professionals to take control of their careers</>,
       subline: (
@@ -26,7 +26,7 @@ const translations = {
     },
     services: {
       label: "Services",
-      title: "Our Services – Tangent Consulting",
+      title: "Our Services - Tangent Consulting",
       description: "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, market positioning, and interview preparation.",
       services: [
         {
@@ -104,6 +104,7 @@ const translations = {
           ),
           includes: [
             <>Screening interview preparation and strategy</>,
+            <>Resume improvements and optimization</>,
             <>Technical interview coaching and practice</>,
             <>Non-technical interview guidance</>,
             <>Salary negotiation tactics and frameworks</>,
@@ -199,7 +200,7 @@ const translations = {
     },
     home: {
       label: "Accueil",
-      title: "Tangent Consulting – Orientation Stratégique pour les Professionnels de la Technologie",
+      title: "Tangent Consulting - Orientation Stratégique pour les Professionnels de la Technologie",
       description: "Service de conseil en carrière spécialisé conçu exclusivement pour les professionnels de la technologie cherchant à naviguer et accélérer leur carrière dans le paysage technologique en évolution rapide d'aujourd'hui.",
       headline: <>Permettre aux professionnels de la tech de prendre le contrôle de leur carrière</>,
       subline: (
@@ -289,6 +290,7 @@ const translations = {
           ),
           includes: [
             <>Préparation et stratégie pour les entretiens de sélection</>,
+            <>Amélioration et optimisation du CV</>,
             <>Coaching et pratique pour les entretiens techniques</>,
             <>Guidance pour les entretiens non techniques</>,
             <>Tactiques et cadres de négociation salariale</>,
@@ -435,7 +437,7 @@ export function getContent(language: Language = "en") {
   const about: About = {
     path: "/about",
     label: "About",
-    title: `About – ${personData.name}`,
+    title: `About - ${personData.name}`,
     description: `Meet ${personData.name}, ${personData.role} from ${personData.location}`,
     tableOfContent: {
       display: true,
@@ -486,7 +488,7 @@ export function getContent(language: Language = "en") {
   const work: Work = {
     path: "/work",
     label: "Work",
-    title: `Projects – ${personData.name}`,
+    title: `Projects - ${personData.name}`,
     description: `Design and dev projects by ${personData.name}`,
   }
 
