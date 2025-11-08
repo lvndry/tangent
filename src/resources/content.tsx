@@ -27,7 +27,7 @@ const translations = {
     services: {
       label: "Services",
       title: "Our Services – Tangent Consulting",
-      description: "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, and market positioning.",
+      description: "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, market positioning, and interview preparation.",
       services: [
         {
           title: "Strategic Career Planning",
@@ -92,6 +92,28 @@ const translations = {
             <>Build professional credibility</>,
           ],
         },
+        {
+          title: "Interview Preparation",
+          description: (
+            <>
+              Comprehensive interview coaching covering every stage of the hiring process. From initial
+              screening calls to technical assessments, behavioral interviews, and salary negotiations, we
+              prepare you to confidently navigate the entire interview journey and secure the best possible
+              offer.
+            </>
+          ),
+          includes: [
+            <>Screening interview preparation and strategy</>,
+            <>Technical interview coaching and practice</>,
+            <>Non-technical interview guidance</>,
+            <>Salary negotiation tactics and frameworks</>,
+          ],
+          benefits: [
+            <>Confidence at every interview stage</>,
+            <>Maximize your offer potential</>,
+            <>Navigate complex interview processes</>,
+          ],
+        },
       ],
     },
     team: {
@@ -141,6 +163,7 @@ const translations = {
           strategic: "Strategic Career Planning",
           skills: "Skills Development Advisory",
           positioning: "Market Positioning",
+          interview: "Interview Preparation",
           other: "Other",
         },
       },
@@ -188,8 +211,8 @@ const translations = {
     },
     services: {
       label: "Services",
-      title: "Nos Services – Tangent Consulting",
-      description: "Services complets de conseil en carrière pour les professionnels de la technologie, incluant la planification stratégique de carrière, le conseil en développement des compétences et le positionnement sur le marché.",
+      title: "Nos Services - Tangent Consulting",
+      description: "Services complets de conseil en carrière pour les professionnels de la technologie, incluant la planification stratégique de carrière, le conseil en développement des compétences, le positionnement sur le marché et la préparation aux entretiens.",
       services: [
         {
           title: "Planification Stratégique de Carrière",
@@ -254,6 +277,28 @@ const translations = {
             <>Construire une crédibilité professionnelle</>,
           ],
         },
+        {
+          title: "Préparation aux Entretiens",
+          description: (
+            <>
+              Coaching d&apos;entretien complet couvrant chaque étape du processus de recrutement. Des appels
+              de sélection initiaux aux évaluations techniques, entretiens comportementaux et négociations
+              salariales, nous vous préparons à naviguer en toute confiance dans l&apos;ensemble du parcours
+              d&apos;entretien et à sécuriser la meilleure offre possible.
+            </>
+          ),
+          includes: [
+            <>Préparation et stratégie pour les entretiens de sélection</>,
+            <>Coaching et pratique pour les entretiens techniques</>,
+            <>Guidance pour les entretiens non techniques</>,
+            <>Tactiques et cadres de négociation salariale</>,
+          ],
+          benefits: [
+            <>Confiance à chaque étape de l&apos;entretien</>,
+            <>Maximiser votre potentiel d&apos;offre</>,
+            <>Naviguer dans des processus d&apos;entretien complexes</>,
+          ],
+        },
       ],
     },
     team: {
@@ -281,7 +326,7 @@ const translations = {
     },
     contact: {
       label: "Contact",
-      title: "Contactez-nous – Tangent Consulting",
+      title: "Contactez-nous - Tangent Consulting",
       description: "Contactez-nous pour discuter de la façon dont nous pouvons aider à accélérer votre carrière tech.",
       form: {
         name: "Nom",
@@ -304,6 +349,7 @@ const translations = {
           strategic: "Planification Stratégique de Carrière",
           skills: "Conseil en Développement des Compétences",
           positioning: "Positionnement sur le Marché",
+          interview: "Préparation aux Entretiens",
           other: "Autre",
         },
       },

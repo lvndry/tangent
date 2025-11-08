@@ -112,6 +112,7 @@ export function ContactForm() {
               <option value="strategic-career-planning">{t.serviceOptions.strategic}</option>
               <option value="skills-development">{t.serviceOptions.skills}</option>
               <option value="market-positioning">{t.serviceOptions.positioning}</option>
+              <option value="interview-preparation">{t.serviceOptions.interview}</option>
               <option value="other">{t.serviceOptions.other}</option>
             </select>
           </Column>
