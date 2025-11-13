@@ -127,7 +127,7 @@ const translations = {
           role: "Software Engineer",
           bio: (
             <>
-              Software engineer based in Paris who has never had to apply for a job. Through the power of
+              Software engineer based in Paris with + 6 years of experience. Through the power of
               strategic networking and intentional career choices, I&apos;ve built a career working at unicorns,
               Y Combinator-backed startups, and companies backed by Sequoia Capital. Beyond my own success,
               I&apos;ve helped professionals from outside tech land roles at companies like Microsoft and Google.
@@ -136,6 +136,20 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          logos: [
+            {
+              src: "https://img.logo.dev/ycombinator.com",
+              alt: "Y Combinator",
+            },
+            {
+              src: "https://img.logo.dev/sequoiacap.com",
+              alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/ledger.com",
+              alt: "Ledger",
+            },
+          ],
         },
       ],
     },
@@ -313,7 +327,7 @@ const translations = {
           role: "Ingénieur Logiciel @Dust | Ex-Ledger",
           bio: (
             <>
-              Ingénieur logiciel basé à Paris qui n&apos;a jamais eu besoin de postuler pour un emploi. Grâce à
+              Ingénieur logiciel basé à Paris avec + 6 ans d&apos;expérience. Grâce à
               la puissance du réseautage stratégique et de choix de carrière intentionnels, j&apos;ai construit une
               carrière en travaillant dans des licornes, des startups soutenues par Y Combinator, et des entreprises
               financées par Sequoia Capital. Au-delà de mon propre succès, j&apos;ai aidé des professionnels venant
@@ -323,6 +337,20 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          logos: [
+            {
+              src: "https://img.logo.dev/ycombinator.com",
+              alt: "Y Combinator",
+            },
+            {
+              src: "https://img.logo.dev/sequoiacap.com",
+              alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/ledger.com",
+              alt: "Ledger",
+            },
+          ],
         },
       ],
     },
@@ -501,6 +529,8 @@ export function getContent(language: Language = "en") {
     services: t.services.services,
   };
 
+  const logoDevToken = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN || "";
+
   const team: Team = {
     path: "/team",
     label: t.team.label,
@@ -511,6 +541,10 @@ export function getContent(language: Language = "en") {
       ...member,
       avatar: "/images/avatar.jpg",
       email: member.email || personData.email,
+      logos: member.logos?.map((logo) => ({
+        ...logo,
+        src: logoDevToken ? `${logo.src}?token=${logoDevToken}` : logo.src,
+      })),
     })),
   };
 

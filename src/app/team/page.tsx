@@ -11,6 +11,7 @@ import {
   Schema,
   Text
 } from "@once-ui-system/core";
+import Image from "next/image";
 
 export default function TeamPage() {
   const { language } = useLanguage();
@@ -71,6 +72,24 @@ export default function TeamPage() {
                   <Text variant="body-default-l" onBackground="neutral-weak">
                     {member.bio}
                   </Text>
+                  {member.logos && member.logos.length > 0 && (
+                    <Row gap="m" paddingTop="m" wrap>
+                      {member.logos.map((logo, index) => (
+                        <Image
+                          key={index}
+                          src={logo.src}
+                          alt={logo.alt}
+                          width={72}
+                          height={72}
+                          style={{
+                            width: "auto",
+                            objectFit: "contain",
+                            opacity: 0.8,
+                          }}
+                        />
+                      ))}
+                    </Row>
+                  )}
                 </Column>
               </Row>
             ))

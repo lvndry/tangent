@@ -16,6 +16,11 @@ const nextConfig = {
         hostname: "www.google.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "img.logo.dev",
+        pathname: "**",
+      },
     ],
   },
   sassOptions: {
