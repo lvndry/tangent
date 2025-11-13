@@ -136,6 +136,8 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          linkedin: "https://www.linkedin.com/in/landry-monga",
+          github: "https://github.com/lvndry",
           logos: [
             {
               src: "https://img.logo.dev/ycombinator.com",
@@ -337,6 +339,8 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          linkedin: "https://www.linkedin.com/in/landry-monga",
+          github: undefined,
           logos: [
             {
               src: "https://img.logo.dev/ycombinator.com",
@@ -511,6 +515,7 @@ export function getContent(language: Language = "en") {
     label: "Blog",
     title: "Writing about design and tech...",
     description: `Read what ${personData.name} has been up to recently`,
+    image: "/images/og/tangent.png",
   };
 
   const work: Work = {
@@ -518,6 +523,7 @@ export function getContent(language: Language = "en") {
     label: "Work",
     title: `Projects - ${personData.name}`,
     description: `Design and dev projects by ${personData.name}`,
+    image: "/images/og/tangent.png",
   }
 
   const services: Services = {

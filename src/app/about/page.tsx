@@ -1,3 +1,7 @@
+import TableOfContents from "@/components/about/TableOfContents";
+import styles from "@/components/about/about.module.scss";
+import { baseURL, person, social } from "@/resources";
+import { getContent } from "@/resources/content";
 import {
   Avatar,
   Button,
@@ -6,28 +10,55 @@ import {
   Icon,
   IconButton,
   Media,
+  Meta,
+  Row,
+  Schema,
   Tag,
   Text,
-  Meta,
-  Schema,
-  Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
-import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: about.title,
-    description: about.description,
+  const contentFr = getContent("fr");
+  const aboutFr = contentFr.about;
+  const url = `${baseURL}${aboutFr.path}`;
+  const imageUrl = `${baseURL}/api/og/generate?title=${encodeURIComponent(aboutFr.title)}`;
+
+  const baseMetadata = Meta.generate({
+    title: aboutFr.title,
+    description: aboutFr.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
-    path: about.path,
+    image: `/api/og/generate?title=${encodeURIComponent(aboutFr.title)}`,
+    path: aboutFr.path,
   });
+
+  return {
+    ...baseMetadata,
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: url,
+        "fr-FR": url,
+        en: url,
+        "en-US": url,
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: aboutFr.title,
+      description: aboutFr.description,
+      images: [imageUrl],
+    },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      locale: "fr_FR",
+      alternateLocale: "en_US",
+    },
+  };
 }
 
 export default function About() {
+  const about = getContent("en").about; // Use English for display (client-side will switch)
   const structure = [
     {
       title: about.intro.title,
@@ -50,18 +81,19 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
+  const aboutFr = getContent("fr").about;
   return (
     <Column maxWidth="m">
       <Schema
         as="webPage"
         baseURL={baseURL}
-        title={about.title}
-        description={about.description}
-        path={about.path}
-        image={`/api/og/generate?title=${encodeURIComponent(about.title)}`}
+        title={aboutFr.title}
+        description={aboutFr.description}
+        path={aboutFr.path}
+        image={`/api/og/generate?title=${encodeURIComponent(aboutFr.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}${about.path}`,
+          url: `${baseURL}${aboutFr.path}`,
           image: `${baseURL}${person.avatar}`,
         }}
       />

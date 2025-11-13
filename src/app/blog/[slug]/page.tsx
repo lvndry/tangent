@@ -1,26 +1,25 @@
-import { notFound } from "next/navigation";
 import { CustomMDX, ScrollToHash } from "@/components";
+import { Posts } from "@/components/blog/Posts";
+import { ShareSection } from "@/components/blog/ShareSection";
+import { about, baseURL, blog, person } from "@/resources";
+import { formatDate } from "@/utils/formatDate";
+import { getPosts } from "@/utils/utils";
 import {
-  Meta,
-  Schema,
+  Avatar,
   Column,
   Heading,
   HeadingNav,
   Icon,
-  Row,
-  Text,
-  SmartLink,
-  Avatar,
-  Media,
   Line,
+  Media,
+  Meta,
+  Row,
+  Schema,
+  SmartLink,
+  Text,
 } from "@once-ui-system/core";
-import { baseURL, about, blog, person } from "@/resources";
-import { formatDate } from "@/utils/formatDate";
-import { getPosts } from "@/utils/utils";
 import { Metadata } from "next";
-import React from "react";
-import { Posts } from "@/components/blog/Posts";
-import { ShareSection } from "@/components/blog/ShareSection";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
@@ -44,13 +43,47 @@ export async function generateMetadata({
 
   if (!post) return {};
 
-  return Meta.generate({
+  const url = `${baseURL}${blog.path}/${post.slug}`;
+  const imageUrl = post.metadata.image
+    ? `${baseURL}${post.metadata.image}`
+    : `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`;
+
+  const baseMetadata = Meta.generate({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${blog.path}/${post.slug}`,
   });
+
+  return {
+    ...baseMetadata,
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: url,
+        "fr-FR": url,
+        en: url,
+        "en-US": url,
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metadata.title,
+      description: post.metadata.summary,
+      images: [imageUrl],
+    },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      type: "article",
+      publishedTime: post.metadata.publishedAt,
+      authors: [person.name],
+      url: url,
+      locale: "fr_FR",
+      alternateLocale: "en_US",
+    },
+    keywords: post.metadata.tag ? [post.metadata.tag] : undefined,
+  };
 }
 
 export default async function Blog({ params }: { params: Promise<{ slug: string | string[] }> }) {
@@ -126,10 +159,10 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
           <Column as="article" maxWidth="s">
             <CustomMDX source={post.content} />
           </Column>
-          
-          <ShareSection 
-            title={post.metadata.title} 
-            url={`${baseURL}${blog.path}/${post.slug}`} 
+
+          <ShareSection
+            title={post.metadata.title}
+            url={`${baseURL}${blog.path}/${post.slug}`}
           />
 
           <Column fillWidth gap="40" horizontal="center" marginTop="40">

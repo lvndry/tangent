@@ -51,14 +51,32 @@ export default function TeamPage() {
                   gap="m"
                   s={{ minWidth: "auto", width: "100%" }}
                 >
-                  {member.email && (
-                    <IconButton
-                      href={`mailto:${member.email}`}
-                      icon="email"
-                      variant="secondary"
-                      tooltip={`${language === "fr" ? "Envoyer un email à" : "Email"} ${member.name}`}
-                    />
-                  )}
+                  <Row gap="8" wrap horizontal="center">
+                    {member.email && (
+                      <IconButton
+                        href={`mailto:${member.email}`}
+                        icon="email"
+                        variant="secondary"
+                        tooltip={"Email"}
+                      />
+                    )}
+                    {member.linkedin && (
+                      <IconButton
+                        href={member.linkedin}
+                        icon="linkedin"
+                        variant="secondary"
+                        tooltip={"LinkedIn"}
+                      />
+                    )}
+                    {member.github && (
+                      <IconButton
+                        href={member.github}
+                        icon="github"
+                        variant="secondary"
+                        tooltip={"GitHub"}
+                      />
+                    )}
+                  </Row>
                 </Column>
                 <Column flex={1} gap="m" s={{ width: "100%" }}>
                   <Column gap="4">

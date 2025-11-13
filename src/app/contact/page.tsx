@@ -14,7 +14,7 @@ import { ContactForm } from "./ContactForm";
 export default function ContactPage() {
   const { language } = useLanguage();
   const content = getContent(language);
-  
+
   return (
     <Column maxWidth="m" gap="xl" paddingY="12">
       <Schema
@@ -24,6 +24,13 @@ export default function ContactPage() {
         title={content.contact.title}
         description={content.contact.description}
         image={content.contact.image ? `${baseURL}${content.contact.image}` : undefined}
+      />
+      <Schema
+        as="webPage"
+        baseURL={baseURL}
+        path={content.contact.path}
+        title={content.contact.title}
+        description={content.contact.description}
       />
       <Column fillWidth gap="l">
         <Column gap="m">
