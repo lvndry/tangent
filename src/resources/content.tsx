@@ -115,6 +115,29 @@ const translations = {
             <>Navigate complex interview processes</>,
           ],
         },
+        {
+          title: "Organizational Impact & Growth",
+          description: (
+            <>
+              Maximize your impact and accelerate your growth within your current organization. We help you
+              navigate trial periods with confidence, identify opportunities to shine, and develop long-term
+              strategies to level up your career internally. Our mentoring approach ensures you stand out and
+              make meaningful contributions that get recognized.
+            </>
+          ),
+          includes: [
+            <>Trial period support and guarantee strategies</>,
+            <>Mentoring to help you stand out and get noticed</>,
+            <>Long-term strategy for internal career advancement</>,
+            <>Identifying and seizing opportunities to shine</>,
+            <>Building visibility and credibility within your organization</>,
+          ],
+          benefits: [
+            <>Navigate trial periods with confidence</>,
+            <>Accelerate internal career growth</>,
+            <>Make meaningful impact that gets recognized</>,
+          ],
+        },
       ],
     },
     team: {
@@ -124,7 +147,7 @@ const translations = {
       members: [
         {
           name: "Landry Monga",
-          role: "Software Engineer",
+          role: "Senior Software Engineer",
           bio: (
             <>
               Software engineer based in Paris with + 6 years of experience. Through the power of
@@ -181,6 +204,7 @@ const translations = {
           skills: "Skills Development Advisory",
           positioning: "Market Positioning",
           interview: "Interview Preparation",
+          impact: "Organizational Impact & Growth",
           other: "Other",
         },
       },
@@ -317,6 +341,30 @@ const translations = {
             <>Naviguer dans des processus d&apos;entretien complexes</>,
           ],
         },
+        {
+          title: "Impact Organisationnel & Croissance",
+          description: (
+            <>
+              Maximisez votre impact et accélérez votre croissance au sein de votre organisation actuelle. Nous
+              vous aidons à naviguer les périodes d&apos;essai en toute confiance, à identifier les opportunités
+              de briller, et à développer des stratégies à long terme pour faire progresser votre carrière en
+              interne. Notre approche de mentorat vous assure de vous démarquer et de faire des contributions
+              significatives qui sont reconnues.
+            </>
+          ),
+          includes: [
+            <>Support et stratégies de garantie pendant la période d&apos;essai</>,
+            <>Mentorat pour vous aider à vous démarquer et à être remarqué</>,
+            <>Stratégie à long terme pour l&apos;avancement de carrière interne</>,
+            <>Identifier et saisir les opportunités de briller</>,
+            <>Construire la visibilité et la crédibilité au sein de votre organisation</>,
+          ],
+          benefits: [
+            <>Naviguer les périodes d&apos;essai en toute confiance</>,
+            <>Accélérer la croissance de carrière interne</>,
+            <>Faire un impact significatif qui est reconnu</>,
+          ],
+        },
       ],
     },
     team: {
@@ -326,7 +374,7 @@ const translations = {
       members: [
         {
           name: "Landry Monga",
-          role: "Ingénieur Logiciel @Dust | Ex-Ledger",
+          role: "Senior Software Engineer",
           bio: (
             <>
               Ingénieur logiciel basé à Paris avec + 6 ans d&apos;expérience. Grâce à
@@ -384,6 +432,7 @@ const translations = {
           skills: "Conseil en Développement des Compétences",
           positioning: "Positionnement sur le Marché",
           interview: "Préparation aux Entretiens",
+          impact: "Impact Organisationnel & Croissance",
           other: "Autre",
         },
       },
