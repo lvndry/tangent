@@ -1,25 +1,22 @@
-import { notFound } from "next/navigation";
+import { CustomMDX, ScrollToHash } from "@/components";
+import { Projects } from "@/components/work/Projects";
+import { about, baseURL, person, work } from "@/resources";
+import { formatDate } from "@/utils/formatDate";
 import { getPosts } from "@/utils/utils";
 import {
-  Meta,
-  Schema,
   AvatarGroup,
-  Button,
   Column,
-  Flex,
   Heading,
-  Media,
-  Text,
-  SmartLink,
-  Row,
-  Avatar,
   Line,
+  Media,
+  Meta,
+  Row,
+  Schema,
+  SmartLink,
+  Text
 } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
-import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
-import { Projects } from "@/components/work/Projects";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
@@ -43,13 +40,47 @@ export async function generateMetadata({
 
   if (!post) return {};
 
-  return Meta.generate({
+  const url = `${baseURL}${work.path}/${post.slug}`;
+  const imageUrl = post.metadata.image
+    ? `${baseURL}${post.metadata.image}`
+    : `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`;
+
+  const baseMetadata = Meta.generate({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${work.path}/${post.slug}`,
   });
+
+  return {
+    ...baseMetadata,
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: url,
+        "fr-FR": url,
+        en: url,
+        "en-US": url,
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metadata.title,
+      description: post.metadata.summary,
+      images: [imageUrl],
+    },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      type: "article",
+      publishedTime: post.metadata.publishedAt,
+      authors: [person.name],
+      url: url,
+      locale: "fr_FR",
+      alternateLocale: "en_US",
+    },
+    keywords: post.metadata.tag ? [post.metadata.tag] : undefined,
+  };
 }
 
 export default async function Project({

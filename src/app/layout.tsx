@@ -2,7 +2,8 @@ import classNames from "classnames";
 
 import { Footer, Header, Providers, RouteGuard } from "@/components";
 import { LangSetter } from "@/components/LangSetter";
-import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
+import { baseURL, dataStyle, effects, fonts, sameAs, schema, SEO_KEYWORDS, style } from "@/resources";
+import { getContent } from "@/resources/content";
 import {
   Background,
   Column,
@@ -10,6 +11,7 @@ import {
   Meta,
   opacity,
   RevealFx,
+  Schema,
   SpacingToken,
 } from "@once-ui-system/core";
 
@@ -18,13 +20,44 @@ import "@once-ui-system/core/css/styles.css";
 import "@once-ui-system/core/css/tokens.css";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
+  const contentFr = getContent("fr");
+  const url = `${baseURL}${contentFr.home.path}`;
+  const imageUrl = contentFr.home.image
+    ? `${baseURL}${contentFr.home.image}`
+    : `${baseURL}/api/og/generate?title=${encodeURIComponent(contentFr.home.title)}`;
+
+  const baseMetadata = Meta.generate({
+    title: contentFr.home.title,
+    description: contentFr.home.description,
     baseURL: baseURL,
-    path: home.path,
-    image: home.image,
+    path: contentFr.home.path,
+    image: contentFr.home.image,
   });
+
+  return {
+    ...baseMetadata,
+    alternates: {
+      canonical: url,
+      languages: {
+        fr: url,
+        "fr-FR": url,
+        en: url,
+        "en-US": url,
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: contentFr.home.title,
+      description: contentFr.home.description,
+      images: [imageUrl],
+    },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      locale: "fr_FR",
+      alternateLocale: "en_US",
+    },
+    keywords: SEO_KEYWORDS,
+  };
 }
 
 export default async function RootLayout({
@@ -54,7 +87,7 @@ export default async function RootLayout({
                 try {
                   const root = document.documentElement;
                   const defaultTheme = 'system';
-                  
+
                   // Set defaults from config
                   const config = ${JSON.stringify({
                     brand: style.brand,
@@ -68,12 +101,12 @@ export default async function RootLayout({
                     scaling: style.scaling,
                     "viz-style": dataStyle.variant,
                   })};
-                  
+
                   // Apply default values
                   Object.entries(config).forEach(([key, value]) => {
                     root.setAttribute('data-' + key, value);
                   });
-                  
+
                   // Resolve theme
                   const resolveTheme = (themeValue) => {
                     if (!themeValue || themeValue === 'system') {
@@ -81,12 +114,12 @@ export default async function RootLayout({
                     }
                     return themeValue;
                   };
-                  
+
                   // Apply saved theme
                   const savedTheme = localStorage.getItem('data-theme');
                   const resolvedTheme = resolveTheme(savedTheme);
                   root.setAttribute('data-theme', resolvedTheme);
-                  
+
                   // Apply any saved style overrides
                   const styleKeys = Object.keys(config);
                   styleKeys.forEach(key => {
@@ -104,6 +137,16 @@ export default async function RootLayout({
           }}
         />
       </head>
+      <Schema
+        as="organization"
+        baseURL={baseURL}
+        path="/"
+        title={schema.name}
+        description={schema.description}
+        sameAs={[
+          sameAs.linkedin,
+        ].filter(Boolean)}
+      />
       <Providers>
         <LangSetter />
         <Column
