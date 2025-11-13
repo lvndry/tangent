@@ -253,6 +253,10 @@ export interface TeamMember {
   bio: React.ReactNode;
   /** Email address */
   email?: string;
+  /** LinkedIn profile URL */
+  linkedin?: string;
+  /** GitHub profile URL */
+  github?: string;
   /** Company/investor logos to display */
   logos?: Array<{
     /** Logo image source (path or URL) */

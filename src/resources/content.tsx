@@ -136,6 +136,8 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          linkedin: "https://www.linkedin.com/in/landry-monga",
+          github: "https://github.com/lvndry",
           logos: [
             {
               src: "https://img.logo.dev/ycombinator.com",
@@ -337,6 +339,8 @@ const translations = {
             </>
           ),
           email: "monga.4landry@gmail.com",
+          linkedin: "https://www.linkedin.com/in/landry-monga",
+          github: undefined,
           logos: [
             {
               src: "https://img.logo.dev/ycombinator.com",
