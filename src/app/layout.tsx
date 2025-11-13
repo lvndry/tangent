@@ -79,11 +79,12 @@ export default async function RootLayout({
         fonts.code.variable,
       )}
     >
-      <Script
-        id="theme-init"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             (function() {
               try {
                 const root = document.documentElement;
@@ -135,8 +136,9 @@ export default async function RootLayout({
               }
             })();
           `,
-        }}
-      />
+          }}
+        />
+      </head>
       <Schema
         as="organization"
         baseURL={baseURL}

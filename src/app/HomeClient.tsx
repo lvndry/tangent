@@ -4,16 +4,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
 import {
-    Button,
-    Card,
-    Column,
-    Heading,
-    Line,
-    RevealFx,
-    Row,
-    Schema,
-    Tag,
-    Text,
+  Button,
+  Card,
+  Column,
+  Heading,
+  Line,
+  RevealFx,
+  Row,
+  Schema,
+  Tag,
+  Text,
 } from "@once-ui-system/core";
 
 export function HomeClient() {
@@ -82,9 +82,9 @@ export function HomeClient() {
               {t.servicesSubtitle}
             </Text>
           </Column>
-          <Row fillWidth gap="l" wrap s={{ direction: "column" }}>
+          <Row fillWidth gap="l" wrap>
             {content.services.services.map((service, index) => (
-              <Card key={index} flex={1} padding="l" gap="m">
+              <Card key={index} flex={1} s={{ direction: "column" }} padding="l" gap="m">
                 <Heading as="h3" variant="heading-strong-m">
                   {service.title}
                 </Heading>
