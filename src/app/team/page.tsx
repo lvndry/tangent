@@ -12,7 +12,6 @@ import {
   Text
 } from "@once-ui-system/core";
 import Image from "next/image";
-import React from "react";
 
 export default function TeamPage() {
   const { language } = useLanguage();
@@ -38,17 +37,7 @@ export default function TeamPage() {
 
         <Column fillWidth gap="xl" paddingTop="l">
           {content.team.members && content.team.members.length > 0 ? (
-            content.team.members.map((member) => {
-              // Extract text content from React nodes for schema
-              let memberBio = '';
-              if (typeof member.bio === 'string') {
-                memberBio = member.bio;
-              } else if (React.isValidElement(member.bio)) {
-                const element = member.bio as React.ReactElement<{ children?: React.ReactNode }>;
-                memberBio = element.props?.children ? String(element.props.children) : '';
-              }
-
-              return (
+            content.team.members.map((member) => (
               <Row
                 key={member.email || member.name}
                 fillWidth
@@ -57,14 +46,6 @@ export default function TeamPage() {
                 wrap
                 s={{ direction: "column", align: "center" }}
               >
-                <Schema
-                  as="webPage"
-                  baseURL={baseURL}
-                  path={content.team.path}
-                  title={member.name}
-                  description={memberBio}
-                  image={member.avatar ? `${baseURL}${member.avatar}` : undefined}
-                />
                 <Column
                   horizontal="center"
                   gap="m"
@@ -111,8 +92,7 @@ export default function TeamPage() {
                   )}
                 </Column>
               </Row>
-              );
-            })
+            ))
           ) : (
             <Text variant="body-default-l" onBackground="neutral-weak">
               {language === "fr" ? "Aucun membre d'équipe disponible." : "No team members available."}

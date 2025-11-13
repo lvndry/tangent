@@ -11,7 +11,6 @@ import {
   Tag,
   Text,
 } from "@once-ui-system/core";
-import React from "react";
 
 export default function ServicesPage() {
   const { language } = useLanguage();
@@ -36,25 +35,8 @@ export default function ServicesPage() {
         </Column>
 
         <Column fillWidth gap="xl" paddingTop="l">
-          {content.services.services.map((service, index) => {
-            // Extract text content from React nodes for schema
-            let serviceDescription = '';
-            if (typeof service.description === 'string') {
-              serviceDescription = service.description;
-            } else if (React.isValidElement(service.description)) {
-              const element = service.description as React.ReactElement<{ children?: React.ReactNode }>;
-              serviceDescription = element.props?.children ? String(element.props.children) : '';
-            }
-
-            return (
+          {content.services.services.map((service, index) => (
             <Column key={index} fillWidth gap="m" paddingY="l">
-              <Schema
-                as="webPage"
-                baseURL={baseURL}
-                path={content.services.path}
-                title={service.title}
-                description={serviceDescription}
-              />
               <Heading as="h2" variant="display-strong-m">
                 {service.title}
               </Heading>
@@ -97,8 +79,7 @@ export default function ServicesPage() {
                 </Column>
               )}
             </Column>
-            );
-          })}
+          ))}
         </Column>
       </Column>
     </Column>
