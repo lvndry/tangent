@@ -237,6 +237,11 @@ export interface Services extends BasePageConfig {
     /** Benefits of this service */
     benefits?: React.ReactNode[];
   }>;
+  /** Button configuration */
+  button?: {
+    /** Book a call button text */
+    bookACall: string;
+  };
 }
 
 /**

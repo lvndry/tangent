@@ -139,6 +139,9 @@ const translations = {
           ],
         },
       ],
+      button: {
+        bookACall: "Book a Call",
+      },
     },
     team: {
       label: "Team",
@@ -366,6 +369,9 @@ const translations = {
           ],
         },
       ],
+      button: {
+        bookACall: "Réserver un Appel",
+      },
     },
     team: {
       label: "Équipe",
@@ -405,6 +411,9 @@ const translations = {
           ],
         },
       ],
+      button: {
+        bookACall: "Réserver un Appel",
+      },
     },
     contact: {
       label: "Contact",
@@ -566,6 +575,7 @@ export function getContent(language: Language = "en") {
     description: t.services.description,
     image: "/images/og/tangent.png",
     services: t.services.services,
+    button: t.services.button,
   };
 
   const logoDevToken = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN || "";

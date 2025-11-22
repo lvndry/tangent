@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
 import {
+  Button,
   Column,
   Heading,
   Row,
@@ -32,6 +33,18 @@ export default function ServicesPage() {
           <Text variant="heading-default-l" onBackground="neutral-weak">
             {content.services.description}
           </Text>
+          <Row paddingTop="m">
+            <Button
+              data-border="rounded"
+              href={content.contact.path}
+              variant="primary"
+              size="m"
+              weight="default"
+              arrowIcon
+            >
+              {content.services.button?.bookACall || "Book a Call"}
+            </Button>
+          </Row>
         </Column>
 
         <Column fillWidth gap="xl" paddingTop="l">
