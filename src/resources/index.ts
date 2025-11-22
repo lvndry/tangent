@@ -1,7 +1,7 @@
 // import a pre-defined template for config and content options
 export {
   about,
-  blog, contact, home, newsletter, person, services, social, team, work
+  contact, home, newsletter, person, services, social, team
 } from "./content";
 
 export {
@@ -9,4 +9,3 @@ export {
 } from "./once-ui.config";
 
 export { SEO_KEYWORDS } from "./seo";
-

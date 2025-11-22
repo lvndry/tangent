@@ -1,6 +1,6 @@
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { baseURL, person, social } from "@/resources";
+import { baseURL, person, schema, social } from "@/resources";
 import { getContent } from "@/resources/content";
 import {
   Avatar,
@@ -51,8 +51,19 @@ export async function generateMetadata() {
     },
     openGraph: {
       ...baseMetadata.openGraph,
+      url: url,
+      type: "website",
+      siteName: schema.name,
       locale: "fr_FR",
       alternateLocale: "en_US",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: aboutFr.title,
+        },
+      ],
     },
   };
 }

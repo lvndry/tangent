@@ -54,8 +54,19 @@ export async function generateMetadata() {
     },
     openGraph: {
       ...baseMetadata.openGraph,
+      url: url,
+      type: "website",
+      siteName: schema.name,
       locale: "fr_FR",
       alternateLocale: "en_US",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: contentFr.home.title,
+        },
+      ],
     },
     keywords: SEO_KEYWORDS,
   };

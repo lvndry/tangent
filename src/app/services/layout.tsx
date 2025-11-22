@@ -1,4 +1,4 @@
-import { baseURL, SEO_KEYWORDS } from "@/resources";
+import { baseURL, schema, SEO_KEYWORDS } from "@/resources";
 import { getContent } from "@/resources/content";
 import { Meta } from "@once-ui-system/core";
 
@@ -36,10 +36,21 @@ export async function generateMetadata() {
     },
     openGraph: {
       ...baseMetadata.openGraph,
+      url: url,
+      type: "website",
+      siteName: schema.name,
       title: contentFr.services.title,
       description: contentFr.services.description,
       locale: "fr_FR",
       alternateLocale: "en_US",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: contentFr.services.title,
+        },
+      ],
     },
     keywords: SEO_KEYWORDS,
   };

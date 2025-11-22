@@ -1,4 +1,4 @@
-import { About, Blog, Contact, Home, Newsletter, Person, Services, Social, Team, Work } from "@/types";
+import { About, Contact, Home, Newsletter, Person, Services, Social, Team } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 type Language = "en" | "fr";
@@ -559,22 +559,6 @@ export function getContent(language: Language = "en") {
     },
   };
 
-  const blog: Blog = {
-    path: "/blog",
-    label: "Blog",
-    title: "Writing about design and tech...",
-    description: `Read what ${personData.name} has been up to recently`,
-    image: "/images/og/tangent.png",
-  };
-
-  const work: Work = {
-    path: "/work",
-    label: "Work",
-    title: `Projects - ${personData.name}`,
-    description: `Design and dev projects by ${personData.name}`,
-    image: "/images/og/tangent.png",
-  }
-
   const services: Services = {
     path: "/services",
     label: t.services.label,
@@ -617,8 +601,6 @@ export function getContent(language: Language = "en") {
     newsletter,
     home,
     about,
-    blog,
-    work,
     services,
     team,
     contact,
@@ -632,8 +614,6 @@ export const social = getContent("en").social;
 export const newsletter = getContent("en").newsletter;
 export const home = getContent("en").home;
 export const about = getContent("en").about;
-export const blog = getContent("en").blog;
-export const work = getContent("en").work;
 export const services = getContent("en").services;
 export const team = getContent("en").team;
 export const contact = getContent("en").contact;

@@ -1,4 +1,4 @@
-import { baseURL } from "@/resources";
+import { baseURL, schema } from "@/resources";
 import { getContent } from "@/resources/content";
 import { Meta } from "@once-ui-system/core";
 
@@ -36,10 +36,21 @@ export async function generateMetadata() {
     },
     openGraph: {
       ...baseMetadata.openGraph,
+      url: url,
+      type: "website",
+      siteName: schema.name,
       title: contentFr.team.title,
       description: contentFr.team.description,
       locale: "fr_FR",
       alternateLocale: "en_US",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: contentFr.team.title,
+        },
+      ],
     },
   };
 }
