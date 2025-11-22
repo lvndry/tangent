@@ -1,5 +1,4 @@
-import { baseURL, routes as routesConfig } from "@/resources";
-import { getPosts } from "@/utils/utils";
+import { baseURL } from "@/resources";
 
 type SitemapEntry = {
   url: string;
@@ -9,25 +8,15 @@ type SitemapEntry = {
 };
 
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
-    url: `${baseURL}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const existingRoutes = [
+    "/",
+    "/about",
+    "/services",
+    "/team",
+    "/contact",
+  ];
 
-  const works = getPosts(["src", "app", "work", "projects"]).map((post) => ({
-    url: `${baseURL}/work/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  const activeRoutes = Object.keys(routesConfig).filter(
-    (route) => routesConfig[route as keyof typeof routesConfig],
-  );
-
-  const routes: SitemapEntry[] = activeRoutes.map((route) => {
+  const routes: SitemapEntry[] = existingRoutes.map((route) => {
     const url = `${baseURL}${route !== "/" ? route : ""}`;
     // Homepage gets highest priority
     if (route === "/") {
@@ -56,5 +45,5 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
     };
   });
 
-  return [...routes, ...blogs, ...works];
+  return routes;
 }
