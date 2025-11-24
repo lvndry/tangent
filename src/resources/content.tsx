@@ -221,7 +221,7 @@ const translations = {
       approachText: "We blend strategic foresight, personal branding, and market intelligence to guide clients in making smart, data-informed decisions about their next career moves. Our approach focuses on actionable strategies rather than generic career advice, leveraging proven success in generating consistent recruiter interest and opportunities. We offer a personalized, individual approach with 1:1 sessions and dedicated sessions tailored to each client's specific needs.",
       buttons: {
         viewServices: "View Our Services",
-        getInTouch: "Get In Touch",
+        getInTouch: "Book a Call",
         learnMore: "Learn More",
         viewAllServices: "View All Services",
       },
@@ -455,7 +455,7 @@ const translations = {
       approachText: "Nous combinons la prévoyance stratégique, la marque personnelle et l'intelligence du marché pour guider les clients dans la prise de décisions intelligentes et basées sur les données concernant leurs prochaines étapes de carrière. Notre approche se concentre sur des stratégies actionnables plutôt que sur des conseils génériques, en tirant parti d'un succès éprouvé dans la génération d'intérêt et d'opportunités de recruteurs constants. Nous offrons une approche personnalisée et individuelle avec des sessions en 1:1 et des sessions dédiées adaptées aux besoins spécifiques de chaque client.",
       buttons: {
         viewServices: "Voir Nos Services",
-        getInTouch: "Nous Contacter",
+        getInTouch: "Réserver un Appel",
         learnMore: "En Savoir Plus",
         viewAllServices: "Voir Tous les Services",
       },

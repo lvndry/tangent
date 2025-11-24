@@ -4,8 +4,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
 import {
+  Button,
   Column,
   Heading,
+  Row,
   Schema,
   Text,
 } from "@once-ui-system/core";
@@ -38,6 +40,18 @@ export default function ContactPage() {
           <Text variant="heading-default-l" onBackground="neutral-weak">
             {content.contact.description}
           </Text>
+          <Row paddingTop="m">
+            <Button
+              data-border="rounded"
+              href="https://calendar.app.google/vsTDwGyn5oBUVkrf8"
+              variant="primary"
+              size="l"
+              weight="strong"
+              arrowIcon
+            >
+              {content.services.button?.bookACall || "Book a Call"}
+            </Button>
+          </Row>
         </Column>
 
         <ContactForm />

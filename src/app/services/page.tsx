@@ -36,10 +36,10 @@ export default function ServicesPage() {
           <Row paddingTop="m">
             <Button
               data-border="rounded"
-              href={content.contact.path}
+              href="https://calendar.app.google/vsTDwGyn5oBUVkrf8"
               variant="primary"
-              size="m"
-              weight="default"
+              size="l"
+              weight="strong"
               arrowIcon
             >
               {content.services.button?.bookACall || "Book a Call"}

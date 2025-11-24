@@ -58,10 +58,10 @@ export function HomeClient() {
               </Button>
               <Button
                 data-border="rounded"
-                href={content.contact.path}
+                href="https://calendar.app.google/vsTDwGyn5oBUVkrf8"
                 variant="secondary"
                 size="m"
-                weight="default"
+                weight="strong"
                 arrowIcon
               >
                 {t.buttons.getInTouch}
