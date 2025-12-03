@@ -1,4 +1,4 @@
-import { About, Contact, Home, Newsletter, Person, Services, Social, Team } from "@/types";
+import type { About, Contact, Home, Newsletter, Person, Services, Social, Team } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 type Language = "en" | "fr";
@@ -15,11 +15,13 @@ const translations = {
     home: {
       label: "Home",
       title: "Tangent Consulting - Strategic Career Guidance for Technology Professionals",
-      description: "Specialized career consulting service designed exclusively for technology professionals seeking to navigate and accelerate their careers in today's rapidly evolving tech landscape.",
+      description:
+        "Specialized career consulting service designed exclusively for technology professionals seeking to navigate and accelerate their careers in today's rapidly evolving tech landscape.",
       headline: <>Empowering tech professionals to take control of their careers</>,
       subline: (
         <>
-          We help tech professionals define long-term career strategies, identify high-leverage skills,
+          We help tech professionals define long-term career strategies, identify high-leverage
+          skills,
           <br /> and position themselves to attract top-tier opportunities.
         </>
       ),
@@ -27,115 +29,138 @@ const translations = {
     services: {
       label: "Services",
       title: "Our Services - Tangent Consulting",
-      description: "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, market positioning, and interview preparation.",
+      description:
+        "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, market positioning, and interview preparation.",
       services: [
         {
           title: "Strategic Career Planning",
           description: (
             <>
-              Personalized career roadmap development aligned with market demands. We help you identify
-              target companies and prioritize them based on your individual goals, creating a long-term
-              positioning strategy for career growth.
+              Personalized career roadmap development aligned with market demands. We help you
+              identify target companies and prioritize them based on your individual goals, creating
+              a long-term positioning strategy for career growth.
             </>
           ),
           includes: [
-            <>Personalized career roadmap development</>,
-            <>Target company identification and prioritization</>,
-            <>Long-term positioning strategy for career growth</>,
-            <>Alignment with current market demands</>,
+            "Personalized career roadmap development",
+            "Target company identification and prioritization",
+            "Long-term positioning strategy for career growth",
+            "Alignment with current market demands",
           ],
           benefits: [
-            <>Clear direction for your career trajectory</>,
-            <>Data-driven decision making</>,
-            <>Strategic focus on high-value opportunities</>,
+            "Clear direction for your career trajectory",
+            "Data-driven decision making",
+            "Strategic focus on high-value opportunities",
           ],
         },
         {
           title: "Skills Development Advisory",
           description: (
             <>
-              Current and emerging skill gap analysis with prioritized learning paths tailored to your
-              career objectives. We provide guidance on certifications, projects, and experience-building
-              opportunities that matter most.
+              Current and emerging skill gap analysis with prioritized learning paths tailored to
+              your career objectives. We provide guidance on certifications, projects, and
+              experience-building opportunities that matter most.
             </>
           ),
           includes: [
-            <>Current and emerging skill gap analysis</>,
-            <>Prioritized learning paths tailored to career objectives</>,
-            <>Guidance on certifications and credentials</>,
-            <>Project recommendations for experience-building</>,
+            "Current and emerging skill gap analysis",
+            "Prioritized learning paths tailored to career objectives",
+            "Guidance on certifications and credentials",
+            "Project recommendations for experience-building",
           ],
           benefits: [
-            <>Focus on skills that drive career advancement</>,
-            <>Efficient use of learning time</>,
-            <>Stay ahead of industry trends</>,
+            "Focus on skills that drive career advancement",
+            "Efficient use of learning time",
+            "Stay ahead of industry trends",
           ],
         },
         {
           title: "Market Positioning",
           description: (
             <>
-              LinkedIn profile optimization and personal branding strategy designed to attract quality
-              recruiter opportunities. We enhance your visibility within target company networks and teach
-              you recruiter engagement tactics that work.
+              LinkedIn profile optimization and personal branding strategy designed to attract
+              quality recruiter opportunities. We enhance your visibility within target company
+              networks and teach you recruiter engagement tactics that work.
             </>
           ),
           includes: [
-            <>LinkedIn profile optimization</>,
-            <>Personal branding strategy development</>,
-            <>Recruiter engagement tactics</>,
-            <>Visibility enhancement within target company networks</>,
+            "LinkedIn profile optimization",
+            "Personal branding strategy development",
+            "Recruiter engagement tactics",
+            "Visibility enhancement within target company networks",
           ],
           benefits: [
-            <>Attract quality recruiter opportunities</>,
-            <>Stand out in saturated talent pools</>,
-            <>Build professional credibility</>,
+            "Attract quality recruiter opportunities",
+            "Stand out in saturated talent pools",
+            "Build professional credibility",
           ],
         },
         {
           title: "Interview Preparation",
           description: (
             <>
-              Comprehensive interview coaching covering every stage of the hiring process. From initial
-              screening calls to technical assessments, behavioral interviews, and salary negotiations, we
-              prepare you to confidently navigate the entire interview journey and secure the best possible
-              offer.
+              Comprehensive interview coaching covering every stage of the hiring process. From
+              initial screening calls to technical assessments, behavioral interviews, and salary
+              negotiations, we prepare you to confidently navigate the entire interview journey and
+              secure the best possible offer.
             </>
           ),
           includes: [
-            <>Screening interview preparation and strategy</>,
-            <>Resume improvements and optimization</>,
-            <>Technical interview coaching and practice</>,
-            <>Non-technical interview guidance</>,
-            <>Salary negotiation tactics and frameworks</>,
+            "Screening interview preparation and strategy",
+            "Resume improvements and optimization",
+            "Technical interview coaching and practice",
+            "Non-technical interview guidance",
+            "Salary negotiation tactics and frameworks",
           ],
           benefits: [
-            <>Confidence at every interview stage</>,
-            <>Maximize your offer potential</>,
-            <>Navigate complex interview processes</>,
+            "Confidence at every interview stage",
+            "Maximize your offer potential",
+            "Navigate complex interview processes",
           ],
         },
         {
           title: "Organizational Impact & Growth",
           description: (
             <>
-              Maximize your impact and accelerate your growth within your current organization. We help you
-              navigate trial periods with confidence, identify opportunities to shine, and develop long-term
-              strategies to level up your career internally. Our mentoring approach ensures you stand out and
-              make meaningful contributions that get recognized.
+              Maximize your impact and accelerate your growth within your current organization. We
+              help you navigate trial periods with confidence, identify opportunities to shine, and
+              develop long-term strategies to level up your career internally. Our mentoring
+              approach ensures you stand out and make meaningful contributions that get recognized.
             </>
           ),
           includes: [
-            <>Trial period support and guarantee strategies</>,
-            <>Mentoring to help you stand out and get noticed</>,
-            <>Long-term strategy for internal career advancement</>,
-            <>Identifying and seizing opportunities to shine</>,
-            <>Building visibility and credibility within your organization</>,
+            "Trial period support and guarantee strategies",
+            "Mentoring to help you stand out and get noticed",
+            "Long-term strategy for internal career advancement",
+            "Identifying and seizing opportunities to shine",
+            "Building visibility and credibility within your organization",
           ],
           benefits: [
-            <>Navigate trial periods with confidence</>,
-            <>Accelerate internal career growth</>,
-            <>Make meaningful impact that gets recognized</>,
+            "Navigate trial periods with confidence",
+            "Accelerate internal career growth",
+            "Make meaningful impact that gets recognized",
+          ],
+        },
+        {
+          title: "AI Proficiency for Career Growth",
+          description: (
+            <>
+              Become proficient in AI from understanding what LLMs are to leveraging AI in your
+              company and career. Designed for both technical and non-technical professionals, we
+              help you understand how AI works, identify practical use cases for your work, and
+              leverage AI to accelerate your career and create new opportunities.
+            </>
+          ),
+          includes: [
+            "Understanding AI fundamentals and how LLMs work",
+            "Identifying AI use cases for your company and role",
+            "Practical strategies to leverage AI at work",
+            "Career acceleration through AI proficiency",
+          ],
+          benefits: [
+            "Stay ahead in the AI-driven workplace",
+            "Create new opportunities through AI expertise",
+            "Apply AI effectively in your daily work",
           ],
         },
       ],
@@ -146,19 +171,21 @@ const translations = {
     team: {
       label: "Team",
       title: "Our Team - Tangent Consulting",
-      description: "Meet the experienced professionals helping tech professionals navigate their careers.",
+      description:
+        "Meet the experienced professionals helping tech professionals navigate their careers.",
       members: [
         {
           name: "Landry Monga",
           role: "Senior Software Engineer",
           bio: (
             <>
-              Software engineer based in Paris with + 6 years of experience. Through the power of
-              strategic networking and intentional career choices, I&apos;ve built a career working at unicorns,
-              Y Combinator-backed startups, and companies backed by Sequoia Capital. Beyond my own success,
-              I&apos;ve helped professionals from outside tech land roles at companies like Microsoft and Google.
-              With an extended network and deep understanding of what makes careers thrive, I&apos;m super excited
-              to help my clients reach the next level in their tech careers.
+              Software engineer based in Paris with +6 years of experience. Through the power of
+              strategic networking and intentional career choices, I&apos;ve built a career working
+              at unicorns, Y Combinator-backed startups, Sequoia backed statups and with the best engineers in the world.
+              Beyond my own success, I&apos;ve helped professionals from outside tech land roles at
+              companies like Microsoft and Google. With an extended network and deep understanding
+              of what makes careers thrive, I&apos;m super excited to help my clients reach the next
+              level in their tech careers.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -208,6 +235,7 @@ const translations = {
           positioning: "Market Positioning",
           interview: "Interview Preparation",
           impact: "Organizational Impact & Growth",
+          ai: "AI Proficiency for Career Growth",
           other: "Other",
         },
       },
@@ -216,9 +244,11 @@ const translations = {
       servicesTitle: "Our Services",
       servicesSubtitle: "Comprehensive career consulting designed specifically for the tech world",
       targetAudienceTitle: "Who We Help",
-      targetAudienceSubtitle: "Technology professionals at various career stages who want to take control of their career trajectory",
+      targetAudienceSubtitle:
+        "Technology professionals at various career stages who want to take control of their career trajectory",
       approachTitle: "Our Approach",
-      approachText: "We blend strategic foresight, personal branding, and market intelligence to guide clients in making smart, data-informed decisions about their next career moves. Our approach focuses on actionable strategies rather than generic career advice, leveraging proven success in generating consistent recruiter interest and opportunities. We offer a personalized, individual approach with 1:1 sessions and dedicated sessions tailored to each client's specific needs.",
+      approachText:
+        "We blend strategic foresight, personal branding, and market intelligence to guide clients in making smart, data-informed decisions about their next career moves. Our approach focuses on actionable strategies rather than generic career advice, leveraging proven success in generating consistent recruiter interest and opportunities. We offer a personalized, individual approach with 1:1 sessions and dedicated sessions tailored to each client's specific needs.",
       buttons: {
         viewServices: "View Our Services",
         getInTouch: "Book a Call",
@@ -243,12 +273,17 @@ const translations = {
     },
     home: {
       label: "Accueil",
-      title: "Tangent Consulting - Orientation Stratégique pour les Professionnels de la Technologie",
-      description: "Service de conseil en carrière spécialisé conçu exclusivement pour les professionnels de la technologie cherchant à naviguer et accélérer leur carrière dans le paysage technologique en évolution rapide d'aujourd'hui.",
-      headline: <>Permettre aux professionnels de la tech de prendre le contrôle de leur carrière</>,
+      title:
+        "Tangent Consulting - Orientation Stratégique pour les Professionnels de la Technologie",
+      description:
+        "Service de conseil en carrière spécialisé conçu exclusivement pour les professionnels de la technologie cherchant à naviguer et accélérer leur carrière dans le paysage technologique en évolution rapide d'aujourd'hui.",
+      headline: (
+        <>Permettre aux professionnels de la tech de prendre le contrôle de leur carrière</>
+      ),
       subline: (
         <>
-          Nous aidons les professionnels de la tech à définir des stratégies de carrière à long terme, à identifier les compétences à fort impact,
+          Nous aidons les professionnels de la tech à définir des stratégies de carrière à long
+          terme, à identifier les compétences à fort impact,
           <br /> et à se positionner pour attirer des opportunités de premier plan.
         </>
       ),
@@ -256,116 +291,145 @@ const translations = {
     services: {
       label: "Services",
       title: "Nos Services - Tangent Consulting",
-      description: "Services complets de conseil en carrière pour les professionnels de la technologie, incluant la planification stratégique de carrière, le conseil en développement des compétences, le positionnement sur le marché et la préparation aux entretiens.",
+      description:
+        "Services complets de conseil en carrière pour les professionnels de la technologie, incluant la planification stratégique de carrière, le conseil en développement des compétences, le positionnement sur le marché et la préparation aux entretiens.",
       services: [
         {
           title: "Planification Stratégique de Carrière",
           description: (
             <>
-              Développement d&apos;un plan de carrière personnalisé aligné sur les demandes du marché. Nous vous aidons à identifier
-              les entreprises cibles et à les prioriser en fonction de vos objectifs individuels, créant une stratégie de
-              positionnement à long terme pour la croissance de carrière.
+              Développement d&apos;un plan de carrière personnalisé aligné sur les demandes du
+              marché. Nous vous aidons à identifier les entreprises cibles et à les prioriser en
+              fonction de vos objectifs individuels, créant une stratégie de positionnement à long
+              terme pour la croissance de carrière.
             </>
           ),
           includes: [
-            <>Développement d&apos;un plan de carrière personnalisé</>,
-            <>Identification et priorisation des entreprises cibles</>,
-            <>Stratégie de positionnement à long terme pour la croissance de carrière</>,
-            <>Alignement avec les demandes actuelles du marché</>,
+            "Développement d'un plan de carrière personnalisé",
+            "Identification et priorisation des entreprises cibles",
+            "Stratégie de positionnement à long terme pour la croissance de carrière",
+            "Alignement avec les demandes actuelles du marché",
           ],
           benefits: [
-            <>Direction claire pour votre trajectoire de carrière</>,
-            <>Prise de décision basée sur les données</>,
-            <>Focus stratégique sur les opportunités à forte valeur</>,
+            "Direction claire pour votre trajectoire de carrière",
+            "Prise de décision basée sur les données",
+            "Focus stratégique sur les opportunités à forte valeur",
           ],
         },
         {
           title: "Conseil en Développement des Compétences",
           description: (
             <>
-              Analyse des écarts de compétences actuels et émergents avec des parcours d&apos;apprentissage priorisés adaptés à vos
-              objectifs de carrière. Nous fournissons des conseils sur les certifications, projets et opportunités de développement
+              Analyse des écarts de compétences actuels et émergents avec des parcours
+              d&apos;apprentissage priorisés adaptés à vos objectifs de carrière. Nous fournissons
+              des conseils sur les certifications, projets et opportunités de développement
               d&apos;expérience qui comptent le plus.
             </>
           ),
           includes: [
-            <>Analyse des écarts de compétences actuels et émergents</>,
-            <>Parcours d&apos;apprentissage priorisés adaptés aux objectifs de carrière</>,
-            <>Conseils sur les certifications et les qualifications</>,
-            <>Recommandations de projets pour le développement d&apos;expérience</>,
+            "Analyse des écarts de compétences actuels et émergents",
+            "Parcours d'apprentissage priorisés adaptés aux objectifs de carrière",
+            "Conseils sur les certifications et les qualifications",
+            "Recommandations de projets pour le développement d'expérience",
           ],
           benefits: [
-            <>Focus sur les compétences qui favorisent l&apos;avancement de carrière</>,
-            <>Utilisation efficace du temps d&apos;apprentissage</>,
-            <>Rester en avance sur les tendances de l&apos;industrie</>,
+            "Focus sur les compétences qui favorisent l'avancement de carrière",
+            "Utilisation efficace du temps d'apprentissage",
+            "Rester en avance sur les tendances de l'industrie",
           ],
         },
         {
           title: "Positionnement sur le Marché",
           description: (
             <>
-              Optimisation du profil LinkedIn et stratégie de marque personnelle conçue pour attirer des opportunités de recruteurs
-              de qualité. Nous améliorons votre visibilité au sein des réseaux d&apos;entreprises cibles et vous enseignons des tactiques
+              Optimisation du profil LinkedIn et stratégie de marque personnelle conçue pour attirer
+              des opportunités de recruteurs de qualité. Nous améliorons votre visibilité au sein
+              des réseaux d&apos;entreprises cibles et vous enseignons des tactiques
               d&apos;engagement avec les recruteurs qui fonctionnent.
             </>
           ),
           includes: [
-            <>Optimisation du profil LinkedIn</>,
-            <>Développement de stratégie de marque personnelle</>,
-            <>Tactiques d&apos;engagement avec les recruteurs</>,
-            <>Amélioration de la visibilité au sein des réseaux d&apos;entreprises cibles</>,
+            "Optimisation du profil LinkedIn",
+            "Développement de stratégie de marque personnelle",
+            "Tactiques d'engagement avec les recruteurs",
+            "Amélioration de la visibilité au sein des réseaux d'entreprises cibles",
           ],
           benefits: [
-            <>Attirer des opportunités de recruteurs de qualité</>,
-            <>Se démarquer dans des bassins de talents saturés</>,
-            <>Construire une crédibilité professionnelle</>,
+            "Attirer des opportunités de recruteurs de qualité",
+            "Se démarquer dans des bassins de talents saturés",
+            "Construire une crédibilité professionnelle",
           ],
         },
         {
           title: "Préparation aux Entretiens",
           description: (
             <>
-              Coaching d&apos;entretien complet couvrant chaque étape du processus de recrutement. Des appels
-              de sélection initiaux aux évaluations techniques, entretiens comportementaux et négociations
-              salariales, nous vous préparons à naviguer en toute confiance dans l&apos;ensemble du parcours
-              d&apos;entretien et à sécuriser la meilleure offre possible.
+              Coaching d&apos;entretien complet couvrant chaque étape du processus de recrutement.
+              Des appels de sélection initiaux aux évaluations techniques, entretiens
+              comportementaux et négociations salariales, nous vous préparons à naviguer en toute
+              confiance dans l&apos;ensemble du parcours d&apos;entretien et à sécuriser la
+              meilleure offre possible.
             </>
           ),
           includes: [
-            <>Préparation et stratégie pour les entretiens de sélection</>,
-            <>Amélioration et optimisation du CV</>,
-            <>Coaching et pratique pour les entretiens techniques</>,
-            <>Guidance pour les entretiens non techniques</>,
-            <>Tactiques et cadres de négociation salariale</>,
+            "Préparation et stratégie pour les entretiens de sélection",
+            "Amélioration et optimisation du CV",
+            "Coaching et pratique pour les entretiens techniques",
+            "Guidance pour les entretiens non techniques",
+            "Tactiques et cadres de négociation salariale",
           ],
           benefits: [
-            <>Confiance à chaque étape de l&apos;entretien</>,
-            <>Maximiser votre potentiel d&apos;offre</>,
-            <>Naviguer dans des processus d&apos;entretien complexes</>,
+            "Confiance à chaque étape de l'entretien",
+            "Maximiser votre potentiel d'offre",
+            "Naviguer dans des processus d'entretien complexes",
           ],
         },
         {
           title: "Impact Organisationnel & Croissance",
           description: (
             <>
-              Maximisez votre impact et accélérez votre croissance au sein de votre organisation actuelle. Nous
-              vous aidons à naviguer les périodes d&apos;essai en toute confiance, à identifier les opportunités
-              de briller, et à développer des stratégies à long terme pour faire progresser votre carrière en
-              interne. Notre approche de mentorat vous assure de vous démarquer et de faire des contributions
-              significatives qui sont reconnues.
+              Maximisez votre impact et accélérez votre croissance au sein de votre organisation
+              actuelle. Nous vous aidons à naviguer les périodes d&apos;essai en toute confiance, à
+              identifier les opportunités de briller, et à développer des stratégies à long terme
+              pour faire progresser votre carrière en interne. Notre approche de mentorat vous
+              assure de vous démarquer et de faire des contributions significatives qui sont
+              reconnues.
             </>
           ),
           includes: [
-            <>Support et stratégies de garantie pendant la période d&apos;essai</>,
-            <>Mentorat pour vous aider à vous démarquer et à être remarqué</>,
-            <>Stratégie à long terme pour l&apos;avancement de carrière interne</>,
-            <>Identifier et saisir les opportunités de briller</>,
-            <>Construire la visibilité et la crédibilité au sein de votre organisation</>,
+            "Support et stratégies de garantie pendant la période d'essai",
+            "Mentorat pour vous aider à vous démarquer et à être remarqué",
+            "Stratégie à long terme pour l'avancement de carrière interne",
+            "Identifier et saisir les opportunités de briller",
+            "Construire la visibilité et la crédibilité au sein de votre organisation",
           ],
           benefits: [
-            <>Naviguer les périodes d&apos;essai en toute confiance</>,
-            <>Accélérer la croissance de carrière interne</>,
-            <>Faire un impact significatif qui est reconnu</>,
+            "Naviguer les périodes d'essai en toute confiance",
+            "Accélérer la croissance de carrière interne",
+            "Faire un impact significatif qui est reconnu",
+          ],
+        },
+        {
+          title: "Maîtrise de l&apos;IA pour la Croissance de Carrière",
+          description: (
+            <>
+              Devenez compétent en IA, de la compréhension des LLM à l&apos;utilisation de l&apos;IA
+              dans votre entreprise et votre carrière. Conçu pour les professionnels techniques et
+              non techniques, nous vous aidons à comprendre comment l&apos;IA fonctionne, à
+              identifier des cas d&apos;usage pratiques pour votre travail, et à exploiter l&apos;IA
+              pour accélérer votre carrière et créer de nouvelles opportunités.
+            </>
+          ),
+          includes: [
+            "Comprendre les fondamentaux de l'IA et le fonctionnement des LLM",
+            "Identifier les cas d'usage de l'IA pour votre entreprise et votre rôle",
+            "Stratégies pratiques pour exploiter l'IA au travail",
+            "Accélération de carrière grâce à la maîtrise de l'IA",
+          ],
+          benefits: [
+            "Rester en avance dans le lieu de travail axé sur l'IA",
+            "Créer de nouvelles opportunités grâce à l'expertise en IA",
+            "Appliquer l'IA efficacement dans votre travail quotidien",
           ],
         },
       ],
@@ -376,20 +440,21 @@ const translations = {
     team: {
       label: "Équipe",
       title: "Notre Équipe - Tangent Consulting",
-      description: "Rencontrez les professionnels expérimentés qui aident les professionnels de la tech à naviguer dans leur carrière.",
+      description:
+        "Rencontrez les professionnels expérimentés qui aident les professionnels de la tech à naviguer dans leur carrière.",
       members: [
         {
           name: "Landry Monga",
           role: "Senior Software Engineer",
           bio: (
             <>
-              Ingénieur logiciel basé à Paris avec + 6 ans d&apos;expérience. Grâce à
-              la puissance du réseautage stratégique et de choix de carrière intentionnels, j&apos;ai construit une
-              carrière en travaillant dans des licornes, des startups soutenues par Y Combinator, et des entreprises
-              financées par Sequoia Capital. Au-delà de mon propre succès, j&apos;ai aidé des professionnels venant
-              de l&apos;extérieur de la tech à décrocher des postes dans des entreprises comme Microsoft et Google.
-              Avec un réseau étendu et une compréhension approfondie de ce qui fait prospérer les carrières, je suis
-              très enthousiaste à l&apos;idée d&apos;aider mes clients à atteindre le niveau supérieur dans leur carrière tech.
+              Ingénieur logiciel basé à Paris avec plus de 6 ans d&apos;expérience. Grâce à un
+              réseautage stratégique et des choix de carrière réfléchis, j&apos;ai construit une
+              carrière en travaillant dans des licornes, des startups soutenues par Y Combinator, Sequoia Capital et pu travailler parmis les meilleurs équipes au monde.
+              Au-delà de mon propre succès, j&apos;ai aidé des professionnels non issus de la tech à décrocher des postes dans
+              des entreprises comme Microsoft et Google. Fort d&apos;un réseau étendu et d&apos;une
+              compréhension approfondie de ce qui fait prospérer les carrières, j&apos;ai hâte
+              d&apos;aider mes clients à atteindre le niveau supérieur dans leur carrière tech.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -418,7 +483,8 @@ const translations = {
     contact: {
       label: "Contact",
       title: "Contactez-nous - Tangent Consulting",
-      description: "Contactez-nous pour discuter de la façon dont nous pouvons aider à accélérer votre carrière tech.",
+      description:
+        "Contactez-nous pour discuter de la façon dont nous pouvons aider à accélérer votre carrière tech.",
       form: {
         name: "Nom",
         email: "Email",
@@ -428,12 +494,14 @@ const translations = {
         submit: "Envoyer le Message",
         sending: "Envoi en cours...",
         success: "Merci ! Nous vous répondrons bientôt.",
-        error: "Une erreur s'est produite. Veuillez réessayer ou nous envoyer un email directement.",
+        error:
+          "Une erreur s'est produite. Veuillez réessayer ou nous envoyer un email directement.",
         placeholder: {
           name: "Votre nom",
           email: "votre.email@exemple.com",
           phone: "+33 6 12 34 56 78",
-          message: "Parlez-nous de vos objectifs de carrière et de la façon dont nous pouvons vous aider...",
+          message:
+            "Parlez-nous de vos objectifs de carrière et de la façon dont nous pouvons vous aider...",
         },
         serviceOptions: {
           select: "Sélectionner un service",
@@ -442,6 +510,7 @@ const translations = {
           positioning: "Positionnement sur le Marché",
           interview: "Préparation aux Entretiens",
           impact: "Impact Organisationnel & Croissance",
+          ai: "Maîtrise de l'IA pour la Croissance de Carrière",
           other: "Autre",
         },
       },
@@ -450,9 +519,11 @@ const translations = {
       servicesTitle: "Nos Services",
       servicesSubtitle: "Conseil en carrière complet conçu spécifiquement pour le monde de la tech",
       targetAudienceTitle: "Qui Nous Aidons",
-      targetAudienceSubtitle: "Professionnels de la technologie à différents stades de carrière qui souhaitent prendre le contrôle de leur trajectoire professionnelle",
+      targetAudienceSubtitle:
+        "Professionnels de la technologie à différents stades de carrière qui souhaitent prendre le contrôle de leur trajectoire professionnelle",
       approachTitle: "Notre Approche",
-      approachText: "Nous combinons la prévoyance stratégique, la marque personnelle et l'intelligence du marché pour guider les clients dans la prise de décisions intelligentes et basées sur les données concernant leurs prochaines étapes de carrière. Notre approche se concentre sur des stratégies actionnables plutôt que sur des conseils génériques, en tirant parti d'un succès éprouvé dans la génération d'intérêt et d'opportunités de recruteurs constants. Nous offrons une approche personnalisée et individuelle avec des sessions en 1:1 et des sessions dédiées adaptées aux besoins spécifiques de chaque client.",
+      approachText:
+        "Nous combinons la prévoyance stratégique, la marque personnelle et l'intelligence du marché pour guider les clients dans la prise de décisions intelligentes et basées sur les données concernant leurs prochaines étapes de carrière. Notre approche se concentre sur des stratégies actionnables plutôt que sur des conseils génériques, en tirant parti d'un succès éprouvé dans la génération d'intérêt et d'opportunités de recruteurs constants. Nous offrons une approche personnalisée et individuelle avec des sessions en 1:1 et des sessions dédiées adaptées aux besoins spécifiques de chaque client.",
       buttons: {
         viewServices: "Voir Nos Services",
         getInTouch: "Réserver un Appel",
@@ -543,13 +614,7 @@ export function getContent(language: Language = "en") {
     intro: {
       display: true,
       title: "Introduction",
-      description: (
-        <>
-          Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-          into simple, elegant design solutions. Her work spans digital interfaces, interactive
-          experiences, and the convergence of design and technology.
-        </>
-      ),
+      description: "",
     },
     work: {
       display: false,
@@ -618,7 +683,6 @@ export function getContent(language: Language = "en") {
   };
 }
 
-// Default export for backward compatibility
 export const person = getContent("en").person;
 export const social = getContent("en").social;
 export const newsletter = getContent("en").newsletter;
