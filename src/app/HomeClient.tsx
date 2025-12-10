@@ -29,22 +29,45 @@ export function HomeClient() {
         path={content.home.path}
         title={content.home.title}
         description={content.home.description}
-        image={`/api/og/generate?title=${encodeURIComponent(content.home.title)}`}
+        image={`/api/og/generate?title=${encodeURIComponent(
+          content.home.title
+        )}`}
       />
       {/* Hero Section */}
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+          <RevealFx
+            translateY="4"
+            fillWidth
+            horizontal="center"
+            paddingBottom="16"
+          >
             <Heading wrap="balance" variant="display-strong-l">
               {content.home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+          <RevealFx
+            translateY="8"
+            delay={0.2}
+            fillWidth
+            horizontal="center"
+            paddingBottom="32"
+          >
+            <Text
+              wrap="balance"
+              onBackground="neutral-weak"
+              variant="heading-default-xl"
+            >
               {content.home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" gap="m" s={{ direction: "column" }}>
+          <RevealFx
+            paddingTop="12"
+            delay={0.4}
+            horizontal="center"
+            gap="m"
+            s={{ direction: "column" }}
+          >
             <Row gap="m" s={{ direction: "column", fillWidth: true }}>
               <Button
                 data-border="rounded"
@@ -83,8 +106,14 @@ export function HomeClient() {
             </Text>
           </Column>
           <Row fillWidth gap="l" wrap>
-            {content.services.services.map((service, index) => (
-              <Card key={index} flex={1} s={{ direction: "column" }} padding="l" gap="m">
+            {content.services.services.map((service) => (
+              <Card
+                key={service.title}
+                flex={1}
+                s={{ direction: "column" }}
+                padding="l"
+                gap="m"
+              >
                 <Heading as="h3" variant="heading-strong-m">
                   {service.title}
                 </Heading>
@@ -119,7 +148,7 @@ export function HomeClient() {
       <RevealFx translateY="16" delay={0.8}>
         <Column fillWidth gap="l" paddingY="l">
           <Row fillWidth paddingRight="64">
-            <Line maxWidth={48} />
+            <Line />
           </Row>
           <Column fillWidth gap="m">
             <Heading as="h2" variant="display-strong-m">
@@ -130,8 +159,8 @@ export function HomeClient() {
             </Text>
           </Column>
           <Column fillWidth gap="m" paddingLeft="l">
-            {t.targetAudience.map((audience, index) => (
-              <Row key={index} gap="m" vertical="center">
+            {t.targetAudience.map((audience) => (
+              <Row key={audience} gap="m" vertical="center">
                 <Tag size="l">✓</Tag>
                 <Text variant="body-default-l" onBackground="neutral-weak">
                   {audience}
@@ -140,7 +169,7 @@ export function HomeClient() {
             ))}
           </Column>
           <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
+            <Line />
           </Row>
         </Column>
       </RevealFx>
@@ -161,4 +190,3 @@ export function HomeClient() {
     </Column>
   );
 }
-
