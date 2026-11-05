@@ -127,18 +127,15 @@ const translations = {
       members: [
         {
           name: "Landry Monga",
-          role: "Senior Software Engineer",
+          role: "Founding Engineer",
           bio: (
             <>
-              Software engineer based in Paris with +6 years of experience.
-              Through the power of strategic networking and intentional career
-              choices, I&apos;ve built a career working at unicorns, Y
-              Combinator-backed startups, Sequoia backed statups and with the
-              best engineers in the world. Beyond my own success, I&apos;ve
-              helped professionals from outside tech land roles at companies
-              like Microsoft and Google. With an extended network and deep
-              understanding of what makes careers thrive, I&apos;m super excited
-              to help my clients reach the next level in their tech careers.
+              Founding engineer at a defense startup, where I lead AI, research
+              and deployment. Software engineer based in Paris with 6+ years of
+              experience, having worked at unicorns and at Y Combinator and
+              Sequoia-backed startups. I now bring that hands-on experience of
+              building and deploying AI in demanding environments to startups
+              and engineering teams.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -366,27 +363,23 @@ const translations = {
       },
     },
     team: {
-      label: "Équipe",
-      title: "Notre Équipe - Tangent Consulting",
+      label: "Qui suis-je",
+      title: "Qui suis-je - Tangent Consulting",
       description:
         "Rencontrez l'ingénieur derrière Tangent Consulting.",
       members: [
         {
           name: "Landry Monga",
-          role: "Senior Software Engineer",
+          role: "Founding Engineer",
           bio: (
             <>
-              Ingénieur logiciel basé à Paris avec plus de 6 ans
-              d&apos;expérience. Grâce à un réseautage stratégique et des choix
-              de carrière réfléchis, j&apos;ai construit une carrière en
-              travaillant dans des licornes, des startups soutenues par Y
-              Combinator, Sequoia Capital et pu travailler parmis les meilleurs
-              équipes au monde. Au-delà de mon propre succès, j&apos;ai aidé des
-              professionnels non issus de la tech à décrocher des postes dans
-              des entreprises comme Microsoft et Google. Fort d&apos;un réseau
-              étendu et d&apos;une compréhension approfondie de ce qui fait
-              prospérer les carrières, j&apos;ai hâte d&apos;aider mes clients à
-              atteindre le niveau supérieur dans leur carrière tech.
+              Founding Engineer dans une startup de défense, où je pilote
+              l&apos;IA, la recherche et le déploiement. Ingénieur logiciel basé
+              à Paris avec plus de 6 ans d&apos;expérience, passé par des
+              licornes et des startups soutenues par Y Combinator et Sequoia
+              Capital. J&apos;apporte aujourd&apos;hui cette expérience concrète
+              de la construction et du déploiement d&apos;IA en environnements
+              exigeants aux startups et aux équipes d&apos;ingénierie.
             </>
           ),
           email: "monga.4landry@gmail.com",
