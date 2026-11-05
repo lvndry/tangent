@@ -9,6 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { display, routes } from "@/resources";
 import { getContent } from "@/resources/content";
 import styles from "./Header.module.scss";
+import { LanguageToggle } from "./LanguageToggle";
 import { ThemeToggle } from "./ThemeToggle";
 
 type TimeDisplayProps = {
@@ -162,12 +163,9 @@ export function Header() {
                   </Row>
                 </>
               )}
-              {display.themeSwitcher && (
-                <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
-                </>
-              )}
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <LanguageToggle />
+              {display.themeSwitcher && <ThemeToggle />}
             </Row>
           </Row>
         </Row>
