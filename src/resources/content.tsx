@@ -141,6 +141,10 @@ const translations = {
               alt: "Sequoia Capital",
             },
             {
+              src: "https://img.logo.dev/project-a.vc",
+              alt: "Project A",
+            },
+            {
               src: "https://img.logo.dev/ledger.com",
               alt: "Ledger",
             },
@@ -370,6 +374,10 @@ const translations = {
             {
               src: "https://img.logo.dev/sequoiacap.com",
               alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/project-a.vc",
+              alt: "Project A",
             },
             {
               src: "https://img.logo.dev/ledger.com",
