@@ -112,7 +112,8 @@ export function ContactForm() {
               <option value="ai-strategy-engineering">{t.serviceOptions.strategy}</option>
               <option value="private-ai-infrastructure">{t.serviceOptions.infrastructure}</option>
               <option value="engineering-leadership-hiring">{t.serviceOptions.leadership}</option>
-              <option value="training-governance">{t.serviceOptions.training}</option>
+              <option value="team-training">{t.serviceOptions.training}</option>
+              <option value="ai-governance">{t.serviceOptions.governance}</option>
               <option value="other">{t.serviceOptions.other}</option>
             </select>
           </Column>

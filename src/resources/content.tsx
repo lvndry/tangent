@@ -39,7 +39,7 @@ const translations = {
       label: "Services",
       title: "Services - Tangent Consulting",
       description:
-        "AI strategy and engineering, private AI and infrastructure, engineering leadership and hiring, and team training for startups and engineering teams.",
+        "AI strategy and engineering, private AI and infrastructure, engineering leadership and hiring, team training and AI governance for startups and engineering teams.",
       services: [
         {
           title: "AI Strategy & Engineering",
@@ -87,15 +87,28 @@ const translations = {
           ],
         },
         {
-          title: "Training & Governance",
+          title: "Team Training",
           description: (
             <>
-              Give your teams the knowledge and tools to adopt AI responsibly.
+              Give your teams the practical knowledge and tools to build and run
+              AI systems.
             </>
           ),
           includes: [
             "Practical AI engineering workshops",
             "LLM infrastructure and deployment training",
+            "Sessions tailored to your team's current skill levels",
+          ],
+        },
+        {
+          title: "AI Governance",
+          description: (
+            <>
+              Adopt AI responsibly with clear practices for data, evaluation and
+              internal use.
+            </>
+          ),
+          includes: [
             "Data and AI governance fundamentals",
             "AI evaluation and reliability practices",
             "Internal AI adoption guidelines",
@@ -178,7 +191,8 @@ const translations = {
           strategy: "AI Strategy & Engineering",
           infrastructure: "Private AI & Infrastructure",
           leadership: "Engineering Leadership & Hiring",
-          training: "Training & Governance",
+          training: "Team Training",
+          governance: "AI Governance",
           other: "Other",
         },
       },
@@ -268,7 +282,7 @@ const translations = {
       label: "Services",
       title: "Services - Tangent Consulting",
       description:
-        "Stratégie et ingénierie IA, IA privée et infrastructure, leadership technique et recrutement, formation des équipes pour les startups et les équipes d'ingénierie.",
+        "Stratégie et ingénierie IA, IA privée et infrastructure, leadership technique et recrutement, formation des équipes et gouvernance de l'IA pour les startups et les équipes d'ingénierie.",
       services: [
         {
           title: "Stratégie & ingénierie IA",
@@ -319,16 +333,28 @@ const translations = {
           ],
         },
         {
-          title: "Formation & gouvernance",
+          title: "Formation des équipes",
           description: (
             <>
-              Donnez à vos équipes les connaissances et les outils pour adopter
-              l&apos;IA de façon responsable.
+              Donnez à vos équipes les connaissances et les outils pratiques
+              pour construire et exploiter des systèmes d&apos;IA.
             </>
           ),
           includes: [
             "Ateliers pratiques d'ingénierie IA",
             "Formation à l'infrastructure et au déploiement des LLM",
+            "Sessions adaptées au niveau actuel de vos équipes",
+          ],
+        },
+        {
+          title: "Gouvernance de l'IA",
+          description: (
+            <>
+              Adoptez l&apos;IA de façon responsable grâce à des pratiques
+              claires sur les données, l&apos;évaluation et l&apos;usage interne.
+            </>
+          ),
+          includes: [
             "Fondamentaux de la gouvernance des données et de l'IA",
             "Bonnes pratiques d'évaluation et de fiabilité de l'IA",
             "Guides internes d'adoption de l'IA",
@@ -417,7 +443,8 @@ const translations = {
           strategy: "Stratégie & ingénierie IA",
           infrastructure: "IA privée & infrastructure",
           leadership: "Leadership technique & recrutement",
-          training: "Formation & gouvernance",
+          training: "Formation des équipes",
+          governance: "Gouvernance de l'IA",
           other: "Autre",
         },
       },
