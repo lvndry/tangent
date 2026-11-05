@@ -18,181 +18,99 @@ const translations = {
       firstName: "Tangent",
       lastName: "Consulting",
       name: "Tangent Consulting",
-      role: "Career Strategy Advisor",
+      role: "Independent AI & Engineering Advisor",
       languages: ["English"],
     },
     home: {
       label: "Home",
-      title:
-        "Tangent Consulting - Strategic Career Guidance for Technology Professionals",
+      title: "Tangent Consulting - Independent AI & Engineering Advisory",
       description:
-        "Specialized career consulting service designed exclusively for technology professionals seeking to navigate and accelerate their careers in today's rapidly evolving tech landscape.",
-      headline: (
-        <>Empowering tech professionals to take control of their careers</>
-      ),
+        "Independent AI & engineering advisory for startups and engineering teams: AI strategy, private AI and infrastructure, fractional CTO and hiring support, and team training.",
+      headline: <>Build AI that works in the real world.</>,
       subline: (
         <>
-          We help tech professionals define long-term career strategies,
-          identify high-leverage skills,
-          <br /> and position themselves to attract top-tier opportunities.
+          I help startups and engineering teams design, deploy and optimize AI
+          systems, and make better decisions about technology, infrastructure
+          and hiring.
         </>
       ),
     },
     services: {
       label: "Services",
-      title: "Our Services - Tangent Consulting",
+      title: "Services - Tangent Consulting",
       description:
-        "Comprehensive career consulting services for technology professionals including strategic career planning, skills development advisory, market positioning, and interview preparation.",
+        "AI strategy and engineering, private AI and infrastructure, engineering leadership and hiring, and team training for startups and engineering teams.",
       services: [
         {
-          title: "Strategic Career Planning",
+          title: "AI Strategy & Engineering",
           description: (
-            <>
-              Personalized career roadmap development aligned with market
-              demands. We help you identify target companies and prioritize them
-              based on your individual goals, creating a long-term positioning
-              strategy for career growth.
-            </>
+            <>Make the right technical decisions when building AI-powered products.</>
           ),
           includes: [
-            "Personalized career roadmap development",
-            "Target company identification and prioritization",
-            "Long-term positioning strategy for career growth",
-            "Alignment with current market demands",
-          ],
-          benefits: [
-            "Clear direction for your career trajectory",
-            "Data-driven decision making",
-            "Strategic focus on high-value opportunities",
+            "AI use-case assessment and technical roadmaps",
+            "Model selection and architecture design",
+            "RAG systems and knowledge integration",
+            "Evaluation, reliability and production readiness",
+            "AI integration into existing applications",
           ],
         },
         {
-          title: "Skills Development Advisory",
+          title: "Private AI & Infrastructure",
           description: (
             <>
-              Current and emerging skill gap analysis with prioritized learning
-              paths tailored to your career objectives. We provide guidance on
-              certifications, projects, and experience-building opportunities
-              that matter most.
+              Deploy AI systems efficiently while maintaining control over your
+              infrastructure and data.
             </>
           ),
           includes: [
-            "Current and emerging skill gap analysis",
-            "Prioritized learning paths tailored to career objectives",
-            "Guidance on certifications and credentials",
-            "Project recommendations for experience-building",
-          ],
-          benefits: [
-            "Focus on skills that drive career advancement",
-            "Efficient use of learning time",
-            "Stay ahead of industry trends",
+            "On-premise and private AI deployment",
+            "Self-hosted language and speech models",
+            "GPU sizing and inference optimization",
+            "Model serving and performance benchmarking",
+            "Infrastructure cost analysis",
           ],
         },
         {
-          title: "Market Positioning",
+          title: "Engineering Leadership & Hiring",
           description: (
             <>
-              LinkedIn profile and CV optimization designed to attract quality
-              recruiter opportunities. We enhance your visibility within target
-              company networks and teach you recruiter engagement tactics that
-              work.
+              Independent technical expertise when you need it, without
+              necessarily hiring a full-time technical leader.
             </>
           ),
           includes: [
-            "LinkedIn profile optimization",
-            "CV optimization",
-            "Recruiter engagement tactics",
-            "Visibility enhancement within target company networks",
-          ],
-          benefits: [
-            "Attract quality recruiter opportunities",
-            "Stand out in saturated talent pools",
-            "Build professional credibility",
+            "Fractional CTO and engineering advisory",
+            "Architecture and codebase assessments",
+            "Technical interviews and candidate evaluation",
+            "Engineering process and productivity reviews",
+            "Technology and vendor selection",
           ],
         },
         {
-          title: "Interview Preparation",
+          title: "Training & Governance",
           description: (
             <>
-              Comprehensive interview coaching covering every stage of the
-              hiring process. From initial screening calls to technical
-              assessments, behavioral interviews, and salary negotiations, we
-              prepare you to confidently navigate the entire interview journey
-              and secure the best possible offer.
+              Give your teams the knowledge and tools to adopt AI responsibly.
             </>
           ),
           includes: [
-            "Screening interview preparation and strategy",
-            "Resume improvements and optimization",
-            "Technical interview coaching and practice",
-            "Non-technical interview guidance",
-            "Salary negotiation tactics and frameworks",
-          ],
-          benefits: [
-            "Confidence at every interview stage",
-            "Maximize your offer potential",
-            "Navigate complex interview processes",
-          ],
-        },
-        {
-          title: "Organizational Impact & Growth",
-          description: (
-            <>
-              Maximize your impact and accelerate your growth within your
-              current organization. We help you navigate trial periods with
-              confidence, identify opportunities to shine, and develop long-term
-              strategies to level up your career internally. Our mentoring
-              approach ensures you stand out and make meaningful contributions
-              that get recognized.
-            </>
-          ),
-          includes: [
-            "Trial period support and guarantee strategies",
-            "Mentoring to help you stand out and get noticed",
-            "Long-term strategy for internal career advancement",
-            "Identifying and seizing opportunities to shine",
-            "Building visibility and credibility within your organization",
-          ],
-          benefits: [
-            "Navigate trial periods with confidence",
-            "Accelerate internal career growth",
-            "Make meaningful impact that gets recognized",
-          ],
-        },
-        {
-          title: "AI Proficiency for Career Growth",
-          description: (
-            <>
-              Become proficient in AI from understanding what LLMs are to
-              leveraging AI in your company and career. Designed for both
-              technical and non-technical professionals, we help you understand
-              how AI works, identify practical use cases for your work, and
-              leverage AI to accelerate your career and create new
-              opportunities.
-            </>
-          ),
-          includes: [
-            "Understanding AI fundamentals and how LLMs work",
-            "Identifying AI use cases for your company and role",
-            "Practical strategies to leverage AI at work",
-            "Career acceleration through AI proficiency",
-          ],
-          benefits: [
-            "Stay ahead in the AI-driven workplace",
-            "Create new opportunities through AI expertise",
-            "Apply AI effectively in your daily work",
+            "Practical AI engineering workshops",
+            "LLM infrastructure and deployment training",
+            "Data and AI governance fundamentals",
+            "AI evaluation and reliability practices",
+            "Internal AI adoption guidelines",
           ],
         },
       ],
       button: {
-        bookACall: "Book a Call",
+        bookACall: "Book an intro call",
       },
     },
     team: {
       label: "Team",
       title: "Our Team - Tangent Consulting",
       description:
-        "Meet the experienced professionals helping tech professionals navigate their careers.",
+        "Meet the engineer behind Tangent Consulting.",
       members: [
         {
           name: "Landry Monga",
@@ -232,14 +150,14 @@ const translations = {
     },
     contact: {
       label: "Contact",
-      title: "Contact Us - Tangent Consulting",
+      title: "Contact - Tangent Consulting",
       description:
-        "Get in touch to discuss how we can help accelerate your tech career.",
+        "Get in touch to discuss your AI or engineering challenge.",
       form: {
         name: "Name",
         email: "Email",
         phone: "Phone (Optional)",
-        service: "What's the most important for you right now? (Optional)",
+        service: "What do you need help with? (Optional)",
         message: "Message",
         submit: "Send Message",
         sending: "Sending...",
@@ -247,44 +165,77 @@ const translations = {
         error: "Something went wrong. Please try again or email us directly.",
         placeholder: {
           name: "Your name",
-          email: "your.email@example.com",
+          email: "your.email@company.com",
           phone: "+33 6 12 34 56 78",
-          message: "Tell us about your career goals and how we can help...",
+          message: "Tell us about your project or technical challenge...",
         },
         serviceOptions: {
           select: "Select a service",
-          strategic: "Strategic Career Planning",
-          skills: "Skills Development Advisory",
-          positioning: "Market Positioning",
-          interview: "Interview Preparation",
-          impact: "Organizational Impact & Growth",
-          ai: "AI Proficiency for Career Growth",
+          strategy: "AI Strategy & Engineering",
+          infrastructure: "Private AI & Infrastructure",
+          leadership: "Engineering Leadership & Hiring",
+          training: "Training & Governance",
           other: "Other",
         },
       },
     },
     homepage: {
-      servicesTitle: "Our Services",
-      servicesSubtitle:
-        "Comprehensive career consulting designed specifically for the tech world",
-      targetAudienceTitle: "Who We Help",
-      targetAudienceSubtitle:
-        "Technology professionals at various career stages who want to take control of their career trajectory",
-      approachTitle: "Our Approach",
-      approachText:
-        "We blend strategic foresight, and market intelligence and a rich network of recruiters to guide clients in making smart, data-informed decisions about their next career moves. Our approach focuses on actionable strategies rather than generic career advice, leveraging proven success in generating consistent recruiter interest and opportunities. We offer a personalized, individual approach with 1:1 sessions and dedicated sessions tailored to each client's specific needs.",
-      buttons: {
-        viewServices: "View Our Services",
-        getInTouch: "Book a Call",
-        learnMore: "Learn More",
-        viewAllServices: "View All Services",
-      },
-      targetAudience: [
-        "Mid-level software engineers aiming for senior or leadership roles",
-        "Early-career developers seeking clarity on skill development",
-        "Tech professionals transitioning into AI, data, or product strategy roles",
-        "Ambitious individuals seeking to stand out in a crowded job market",
+      eyebrow: "Independent AI & Engineering Advisory",
+      introTitle: "Engineering challenges deserve practical answers.",
+      introText: [
+        "Building AI products involves more than choosing a model.",
+        "Which architecture should you use? When does self-hosting make sense? How do you control inference costs? How do you evaluate reliability? And how do you build the right engineering team to support it?",
+        "I help founders and technical teams answer these questions and turn decisions into actionable plans.",
       ],
+      servicesTitle: "What I can help you with",
+      engagementTitle: "How we can work together",
+      engagements: [
+        {
+          title: "Technical Assessments",
+          text: "Independent reviews of your systems and technical decisions, delivered with clear recommendations and a prioritized roadmap.",
+        },
+        {
+          title: "Focused Engineering Projects",
+          text: "Time-boxed engagements to investigate, benchmark or implement a specific technical solution.",
+        },
+        {
+          title: "Ongoing Advisory",
+          text: "Regular support for architecture decisions, infrastructure strategy, hiring and engineering leadership.",
+        },
+        {
+          title: "Team Training",
+          text: "Practical workshops tailored to your organization's engineering challenges and current skill levels.",
+        },
+      ],
+      audienceTitle: "Who I work with",
+      audiences: [
+        {
+          title: "Early-stage startups",
+          text: "Building their first AI-powered products, preparing to scale, or making foundational engineering decisions.",
+        },
+        {
+          title: "Growing engineering teams",
+          text: "Looking to improve reliability, infrastructure efficiency and technical execution.",
+        },
+        {
+          title: "Companies adopting private AI",
+          text: "Exploring secure deployment options and practical approaches to using AI with sensitive business data.",
+        },
+      ],
+      approachTitle: "A practical, independent approach.",
+      approachText: [
+        "I believe good engineering is about making thoughtful trade-offs, not blindly adopting the latest technology.",
+        "My approach combines technical analysis, practical experimentation and straightforward communication.",
+        "The goal is to help your team understand its options, make confident decisions and build sustainable systems.",
+      ],
+      ctaTitle: "Let's discuss your technical challenge.",
+      ctaText:
+        "Whether you're planning an AI deployment, reconsidering your architecture or looking for an independent technical perspective, I'd be happy to explore how I can help.",
+      buttons: {
+        viewServices: "Explore services",
+        getInTouch: "Book an intro call",
+        contact: "Or reach out to discuss your project",
+      },
     },
   },
   fr: {
@@ -292,191 +243,103 @@ const translations = {
       firstName: "Tangent",
       lastName: "Consulting",
       name: "Tangent Consulting",
-      role: "Conseiller en Stratégie de Carrière",
+      role: "Conseiller indépendant en IA et ingénierie",
       languages: ["Français"],
     },
     home: {
       label: "Accueil",
-      title:
-        "Tangent Consulting - Orientation Stratégique pour les Professionnels de la Technologie",
+      title: "Tangent Consulting - Conseil indépendant en IA et ingénierie",
       description:
-        "Service de conseil en carrière spécialisé conçu exclusivement pour les professionnels de la technologie cherchant à naviguer et accélérer leur carrière dans le paysage technologique en évolution rapide d'aujourd'hui.",
-      headline: (
-        <>
-          Permettre aux professionnels de la tech de prendre le contrôle de leur
-          carrière
-        </>
-      ),
+        "Conseil indépendant en IA et ingénierie pour les startups et les équipes techniques : stratégie IA, IA privée et infrastructure, CTO à temps partagé et recrutement, formation des équipes.",
+      headline: <>Construisez une IA qui fonctionne dans le monde réel.</>,
       subline: (
         <>
-          Nous aidons les professionnels de la tech à définir des stratégies de
-          carrière à long terme, à identifier les compétences à fort impact,
-          <br /> et à se positionner pour attirer des opportunités de premier
-          plan.
+          J&apos;aide les startups et les équipes d&apos;ingénierie à concevoir,
+          déployer et optimiser leurs systèmes d&apos;IA, et à mieux décider en
+          matière de technologie, d&apos;infrastructure et de recrutement.
         </>
       ),
     },
     services: {
       label: "Services",
-      title: "Nos Services - Tangent Consulting",
+      title: "Services - Tangent Consulting",
       description:
-        "Services complets de conseil en carrière pour les professionnels de la technologie, incluant la planification stratégique de carrière, le conseil en développement des compétences, le positionnement sur le marché et la préparation aux entretiens.",
+        "Stratégie et ingénierie IA, IA privée et infrastructure, leadership technique et recrutement, formation des équipes pour les startups et les équipes d'ingénierie.",
       services: [
         {
-          title: "Planification Stratégique de Carrière",
+          title: "Stratégie & ingénierie IA",
           description: (
             <>
-              Développement d&apos;un plan de carrière personnalisé aligné sur
-              les demandes du marché. Nous vous aidons à identifier les
-              entreprises cibles et à les prioriser en fonction de vos objectifs
-              individuels, créant une stratégie de positionnement à long terme
-              pour la croissance de carrière.
+              Prenez les bonnes décisions techniques pour construire vos
+              produits basés sur l&apos;IA.
             </>
           ),
           includes: [
-            "Développement d'un plan de carrière personnalisé",
-            "Identification et priorisation des entreprises cibles",
-            "Stratégie de positionnement à long terme pour la croissance de carrière",
-            "Alignement avec les demandes actuelles du marché",
-          ],
-          benefits: [
-            "Direction claire pour votre trajectoire de carrière",
-            "Prise de décision basée sur les données",
-            "Focus stratégique sur les opportunités à forte valeur",
+            "Évaluation des cas d'usage IA et feuilles de route techniques",
+            "Choix des modèles et conception d'architecture",
+            "Systèmes RAG et intégration des connaissances",
+            "Évaluation, fiabilité et préparation à la production",
+            "Intégration de l'IA dans les applications existantes",
           ],
         },
         {
-          title: "Conseil en Développement des Compétences",
+          title: "IA privée & infrastructure",
           description: (
             <>
-              Analyse des écarts de compétences actuels et émergents avec des
-              parcours d&apos;apprentissage priorisés adaptés à vos objectifs de
-              carrière. Nous fournissons des conseils sur les certifications,
-              projets et opportunités de développement d&apos;expérience qui
-              comptent le plus.
+              Déployez vos systèmes d&apos;IA efficacement tout en gardant le
+              contrôle de votre infrastructure et de vos données.
             </>
           ),
           includes: [
-            "Analyse des écarts de compétences actuels et émergents",
-            "Parcours d'apprentissage priorisés adaptés aux objectifs de carrière",
-            "Conseils sur les certifications et les qualifications",
-            "Recommandations de projets pour le développement d'expérience",
-          ],
-          benefits: [
-            "Focus sur les compétences qui favorisent l'avancement de carrière",
-            "Utilisation efficace du temps d'apprentissage",
-            "Rester en avance sur les tendances de l'industrie",
+            "Déploiement d'IA on-premise et privé",
+            "Modèles de langage et de parole auto-hébergés",
+            "Dimensionnement GPU et optimisation de l'inférence",
+            "Serving de modèles et benchmarks de performance",
+            "Analyse des coûts d'infrastructure",
           ],
         },
         {
-          title: "Positionnement sur le Marché",
+          title: "Leadership technique & recrutement",
           description: (
             <>
-              Optimisation du profil LinkedIn et du CV conçue pour attirer des
-              opportunités de recruteurs de qualité. Nous améliorons votre
-              visibilité au sein des réseaux d&apos;entreprises cibles et vous
-              enseignons des tactiques d&apos;engagement avec les recruteurs qui
-              fonctionnent.
+              Une expertise technique indépendante quand vous en avez besoin,
+              sans forcément recruter un responsable technique à plein temps.
             </>
           ),
           includes: [
-            "Optimisation du profil LinkedIn",
-            "Optimisation du CV",
-            "Tactiques d'engagement avec les recruteurs",
-            "Amélioration de la visibilité au sein des réseaux d'entreprises cibles",
-          ],
-          benefits: [
-            "Attirer des opportunités de recruteurs de qualité",
-            "Se démarquer dans des bassins de talents saturés",
-            "Construire une crédibilité professionnelle",
+            "CTO à temps partagé et conseil en ingénierie",
+            "Audits d'architecture et de code",
+            "Entretiens techniques et évaluation des candidats",
+            "Revue des processus et de la productivité d'ingénierie",
+            "Choix des technologies et des fournisseurs",
           ],
         },
         {
-          title: "Préparation aux Entretiens",
+          title: "Formation & gouvernance",
           description: (
             <>
-              Coaching d&apos;entretien complet couvrant chaque étape du
-              processus de recrutement. Des appels de sélection initiaux aux
-              évaluations techniques, entretiens comportementaux et négociations
-              salariales, nous vous préparons à naviguer en toute confiance dans
-              l&apos;ensemble du parcours d&apos;entretien et à sécuriser la
-              meilleure offre possible.
+              Donnez à vos équipes les connaissances et les outils pour adopter
+              l&apos;IA de façon responsable.
             </>
           ),
           includes: [
-            "Préparation et stratégie pour les entretiens de sélection",
-            "Amélioration et optimisation du CV",
-            "Coaching et pratique pour les entretiens techniques",
-            "Guidance pour les entretiens non techniques",
-            "Tactiques et cadres de négociation salariale",
-          ],
-          benefits: [
-            "Confiance à chaque étape de l'entretien",
-            "Maximiser votre potentiel d'offre",
-            "Naviguer dans des processus d'entretien complexes",
-          ],
-        },
-        {
-          title: "Impact Organisationnel & Croissance",
-          description: (
-            <>
-              Maximisez votre impact et accélérez votre croissance au sein de
-              votre organisation actuelle. Nous vous aidons à naviguer les
-              périodes d&apos;essai en toute confiance, à identifier les
-              opportunités de briller, et à développer des stratégies à long
-              terme pour faire progresser votre carrière en interne. Notre
-              approche de mentorat vous assure de vous démarquer et de faire des
-              contributions significatives qui sont reconnues.
-            </>
-          ),
-          includes: [
-            "Support et stratégies de garantie pendant la période d'essai",
-            "Mentorat pour vous aider à vous démarquer et à être remarqué",
-            "Stratégie à long terme pour l'avancement de carrière interne",
-            "Identifier et saisir les opportunités de briller",
-            "Construire la visibilité et la crédibilité au sein de votre organisation",
-          ],
-          benefits: [
-            "Naviguer les périodes d'essai en toute confiance",
-            "Accélérer la croissance de carrière interne",
-            "Faire un impact significatif qui est reconnu",
-          ],
-        },
-        {
-          title: "Maîtrise de l&apos;IA pour la Croissance de Carrière",
-          description: (
-            <>
-              Devenez compétent en IA, de la compréhension des LLM à
-              l&apos;utilisation de l&apos;IA dans votre entreprise et votre
-              carrière. Conçu pour les professionnels techniques et non
-              techniques, nous vous aidons à comprendre comment l&apos;IA
-              fonctionne, à identifier des cas d&apos;usage pratiques pour votre
-              travail, et à exploiter l&apos;IA pour accélérer votre carrière et
-              créer de nouvelles opportunités.
-            </>
-          ),
-          includes: [
-            "Comprendre les fondamentaux de l'IA et le fonctionnement des LLM",
-            "Identifier les cas d'usage de l'IA pour votre entreprise et votre rôle",
-            "Stratégies pratiques pour exploiter l'IA au travail",
-            "Accélération de carrière grâce à la maîtrise de l'IA",
-          ],
-          benefits: [
-            "Rester en avance dans le lieu de travail axé sur l'IA",
-            "Créer de nouvelles opportunités grâce à l'expertise en IA",
-            "Appliquer l'IA efficacement dans votre travail quotidien",
+            "Ateliers pratiques d'ingénierie IA",
+            "Formation à l'infrastructure et au déploiement des LLM",
+            "Fondamentaux de la gouvernance des données et de l'IA",
+            "Bonnes pratiques d'évaluation et de fiabilité de l'IA",
+            "Guides internes d'adoption de l'IA",
           ],
         },
       ],
       button: {
-        bookACall: "Réserver un Appel",
+        bookACall: "Réserver un appel découverte",
       },
     },
     team: {
       label: "Équipe",
       title: "Notre Équipe - Tangent Consulting",
       description:
-        "Rencontrez les professionnels expérimentés qui aident les professionnels de la tech à naviguer dans leur carrière.",
+        "Rencontrez l'ingénieur derrière Tangent Consulting.",
       members: [
         {
           name: "Landry Monga",
@@ -521,15 +384,14 @@ const translations = {
     },
     contact: {
       label: "Contact",
-      title: "Contactez-nous - Tangent Consulting",
+      title: "Contact - Tangent Consulting",
       description:
-        "Contactez-nous pour discuter de la façon dont nous pouvons aider à accélérer votre carrière tech.",
+        "Contactez-nous pour discuter de votre défi IA ou d'ingénierie.",
       form: {
         name: "Nom",
         email: "Email",
         phone: "Téléphone (Optionnel)",
-        service:
-          "Qu'est-ce qui est le plus important pour vous en ce moment ? (Optionnel)",
+        service: "De quoi avez-vous besoin ? (Optionnel)",
         message: "Message",
         submit: "Envoyer le Message",
         sending: "Envoi en cours...",
@@ -538,45 +400,77 @@ const translations = {
           "Une erreur s'est produite. Veuillez réessayer ou nous envoyer un email directement.",
         placeholder: {
           name: "Votre nom",
-          email: "votre.email@exemple.com",
+          email: "votre.email@entreprise.com",
           phone: "+33 6 12 34 56 78",
-          message:
-            "Parlez-nous de vos objectifs de carrière et de la façon dont nous pouvons vous aider...",
+          message: "Parlez-nous de votre projet ou de votre défi technique...",
         },
         serviceOptions: {
           select: "Sélectionner un service",
-          strategic: "Planification Stratégique de Carrière",
-          skills: "Conseil en Développement des Compétences",
-          positioning: "Positionnement sur le Marché",
-          interview: "Préparation aux Entretiens",
-          impact: "Impact Organisationnel & Croissance",
-          ai: "Maîtrise de l'IA pour la Croissance de Carrière",
+          strategy: "Stratégie & ingénierie IA",
+          infrastructure: "IA privée & infrastructure",
+          leadership: "Leadership technique & recrutement",
+          training: "Formation & gouvernance",
           other: "Autre",
         },
       },
     },
     homepage: {
-      servicesTitle: "Nos Services",
-      servicesSubtitle:
-        "Conseil en carrière complet conçu spécifiquement pour le monde de la tech",
-      targetAudienceTitle: "Qui Nous Aidons",
-      targetAudienceSubtitle:
-        "Professionnels de la technologie à différents stades de carrière qui souhaitent prendre le contrôle de leur trajectoire professionnelle",
-      approachTitle: "Notre Approche",
-      approachText:
-        "Nous combinons la prévoyance stratégique, la marque personnelle et l'intelligence du marché pour guider les clients dans la prise de décisions intelligentes et basées sur les données concernant leurs prochaines étapes de carrière. Notre approche se concentre sur des stratégies actionnables plutôt que sur des conseils génériques, en tirant parti d'un succès éprouvé dans la génération d'intérêt et d'opportunités de recruteurs constants. Nous offrons une approche personnalisée et individuelle avec des sessions en 1:1 et des sessions dédiées adaptées aux besoins spécifiques de chaque client.",
-      buttons: {
-        viewServices: "Voir Nos Services",
-        getInTouch: "Réserver un Appel",
-        learnMore: "En Savoir Plus",
-        viewAllServices: "Voir Tous les Services",
-      },
-      targetAudience: [
-        "Ingénieurs logiciels de niveau intermédiaire visant des rôles seniors ou de leadership",
-        "Développeurs en début de carrière cherchant de la clarté sur le développement des compétences",
-        "Professionnels de la tech en transition vers des rôles en IA, données ou stratégie produit",
-        "Personnes ambitieuses cherchant à se démarquer dans un marché du travail saturé",
+      eyebrow: "Conseil indépendant en IA et ingénierie",
+      introTitle: "Les défis d'ingénierie méritent des réponses pratiques.",
+      introText: [
+        "Construire des produits d'IA, ce n'est pas seulement choisir un modèle.",
+        "Quelle architecture adopter ? Quand l'auto-hébergement a-t-il du sens ? Comment maîtriser les coûts d'inférence ? Comment évaluer la fiabilité ? Et comment constituer la bonne équipe d'ingénierie pour soutenir tout cela ?",
+        "J'aide les fondateurs et les équipes techniques à répondre à ces questions et à transformer leurs décisions en plans d'action.",
       ],
+      servicesTitle: "Comment je peux vous aider",
+      engagementTitle: "Comment travailler ensemble",
+      engagements: [
+        {
+          title: "Audits techniques",
+          text: "Des revues indépendantes de vos systèmes et de vos décisions techniques, avec des recommandations claires et une feuille de route priorisée.",
+        },
+        {
+          title: "Projets d'ingénierie ciblés",
+          text: "Des missions limitées dans le temps pour investiguer, benchmarker ou implémenter une solution technique précise.",
+        },
+        {
+          title: "Accompagnement continu",
+          text: "Un soutien régulier pour les décisions d'architecture, la stratégie d'infrastructure, le recrutement et le leadership technique.",
+        },
+        {
+          title: "Formation des équipes",
+          text: "Des ateliers pratiques adaptés aux défis d'ingénierie de votre organisation et au niveau actuel de vos équipes.",
+        },
+      ],
+      audienceTitle: "Avec qui je travaille",
+      audiences: [
+        {
+          title: "Startups en phase initiale",
+          text: "Qui construisent leurs premiers produits d'IA, se préparent à passer à l'échelle ou prennent leurs premières décisions d'ingénierie structurantes.",
+        },
+        {
+          title: "Équipes d'ingénierie en croissance",
+          text: "Qui veulent améliorer la fiabilité, l'efficacité de l'infrastructure et l'exécution technique.",
+        },
+        {
+          title: "Entreprises adoptant l'IA privée",
+          text: "Qui explorent des options de déploiement sécurisées et des approches concrètes pour utiliser l'IA avec des données d'entreprise sensibles.",
+        },
+      ],
+      approachTitle: "Une approche pragmatique et indépendante.",
+      approachText: [
+        "Je crois qu'une bonne ingénierie consiste à faire des compromis réfléchis, pas à adopter aveuglément la dernière technologie.",
+        "Mon approche combine analyse technique, expérimentation pratique et communication directe.",
+        "L'objectif : aider votre équipe à comprendre ses options, à décider en confiance et à construire des systèmes durables.",
+      ],
+      ctaTitle: "Parlons de votre défi technique.",
+      ctaText:
+        "Que vous prépariez un déploiement d'IA, reconsidériez votre architecture ou cherchiez un regard technique indépendant, je serai ravi d'explorer comment je peux vous aider.",
+      buttons: {
+        viewServices: "Découvrir les services",
+        getInTouch: "Réserver un appel découverte",
+        contact: "Ou contactez-moi pour discuter de votre projet",
+      },
     },
   },
 };

@@ -10,8 +10,8 @@ export function Footer() {
   const { language } = useLanguage();
   const content = getContent(language);
   const footerText = language === "fr"
-    ? " / Conseil stratégique en carrière pour les professionnels de la technologie"
-    : " / Strategic career consulting for technology professionals";
+    ? " / Conseil indépendant en IA et ingénierie"
+    : " / Independent AI & engineering advisory";
 
   return (
     <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
