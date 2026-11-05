@@ -150,16 +150,6 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <Schema
-        as="organization"
-        baseURL={baseURL}
-        path="/"
-        title={schema.name}
-        description={schema.description}
-        sameAs={[
-          sameAs.linkedin,
-        ].filter(Boolean)}
-      />
       <Providers>
         <LangSetter />
         <Column
@@ -171,6 +161,16 @@ export default async function RootLayout({
           padding="0"
           horizontal="center"
         >
+          <Schema
+            as="organization"
+            baseURL={baseURL}
+            path="/"
+            title={schema.name}
+            description={schema.description}
+            sameAs={[
+              sameAs.linkedin,
+            ].filter(Boolean)}
+          />
           <RevealFx fill position="absolute">
             <Background
               mask={{

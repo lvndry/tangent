@@ -5,7 +5,6 @@ import {
   BorderStyle,
   DataThemeProvider,
   IconProvider,
-  LayoutProvider,
   NeutralColor,
   ScalingSize,
   Schemes,
@@ -17,6 +16,7 @@ import {
   TransitionStyle,
 } from "@once-ui-system/core";
 import type { ChartMode, ChartVariant } from "@/types/config.types";
+import { LayoutProvider } from "@once-ui-system/core/next";
 import { dataStyle, style } from "../resources";
 import { iconLibrary } from "../resources/icons";
 
