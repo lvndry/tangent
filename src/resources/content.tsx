@@ -39,7 +39,7 @@ const translations = {
       label: "Services",
       title: "Services - Tangent Consulting",
       description:
-        "AI strategy and engineering, private AI and infrastructure, engineering leadership and hiring, team training and AI governance for startups and engineering teams.",
+        "AI strategy and engineering, private AI and infrastructure, engineering leadership and hiring, team training and AI & data governance for startups and engineering teams.",
       services: [
         {
           title: "AI Strategy & Engineering",
@@ -101,7 +101,7 @@ const translations = {
           ],
         },
         {
-          title: "AI Governance",
+          title: "AI & Data Governance",
           description: (
             <>
               Adopt AI responsibly with clear practices for data, evaluation and
@@ -192,7 +192,7 @@ const translations = {
           infrastructure: "Private AI & Infrastructure",
           leadership: "Engineering Leadership & Hiring",
           training: "Team Training",
-          governance: "AI Governance",
+          governance: "AI & Data Governance",
           other: "Other",
         },
       },
@@ -282,7 +282,7 @@ const translations = {
       label: "Services",
       title: "Services - Tangent Consulting",
       description:
-        "Stratégie et ingénierie IA, IA privée et infrastructure, leadership technique et recrutement, formation des équipes et gouvernance de l'IA pour les startups et les équipes d'ingénierie.",
+        "Stratégie et ingénierie IA, IA privée et infrastructure, leadership technique et recrutement, formation des équipes et gouvernance de l'IA et des données pour les startups et les équipes d'ingénierie.",
       services: [
         {
           title: "Stratégie & ingénierie IA",
@@ -347,7 +347,7 @@ const translations = {
           ],
         },
         {
-          title: "Gouvernance de l'IA",
+          title: "Gouvernance de l'IA et des données",
           description: (
             <>
               Adoptez l&apos;IA de façon responsable grâce à des pratiques
@@ -444,7 +444,7 @@ const translations = {
           infrastructure: "IA privée & infrastructure",
           leadership: "Leadership technique & recrutement",
           training: "Formation des équipes",
-          governance: "Gouvernance de l'IA",
+          governance: "Gouvernance de l'IA et des données",
           other: "Autre",
         },
       },
