@@ -1,7 +1,6 @@
 import {
   BorderStyle,
-  ChartMode,
-  ChartVariant,
+  DataThemeProviderProps,
   NeutralColor,
   ScalingSize,
   Schemes,
@@ -12,6 +11,9 @@ import {
   TransitionStyle,
 } from "@once-ui-system/core";
 import { NextFontWithVariable } from "next/dist/compiled/@next/font";
+
+export type ChartVariant = NonNullable<DataThemeProviderProps["variant"]>;
+export type ChartMode = NonNullable<DataThemeProviderProps["mode"]>;
 
 /**
  * Display configuration for UI elements.

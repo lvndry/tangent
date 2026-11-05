@@ -3,8 +3,6 @@
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import {
   BorderStyle,
-  ChartMode,
-  ChartVariant,
   DataThemeProvider,
   IconProvider,
   LayoutProvider,
@@ -18,6 +16,7 @@ import {
   ToastProvider,
   TransitionStyle,
 } from "@once-ui-system/core";
+import type { ChartMode, ChartVariant } from "@/types/config.types";
 import { dataStyle, style } from "../resources";
 import { iconLibrary } from "../resources/icons";
 

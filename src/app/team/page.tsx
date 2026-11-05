@@ -49,7 +49,7 @@ export default function TeamPage() {
                 <Column
                   horizontal="center"
                   gap="m"
-                  s={{ minWidth: "auto", width: "100%" }}
+                  s={{ minWidth: 0, width: "100%" }}
                 >
                   <Row gap="8" wrap horizontal="center">
                     {member.email && (

@@ -30,7 +30,7 @@ import {
 
 import { FaDiscord, FaFacebook, FaGithub, FaLinkedin, FaPinterest, FaReddit, FaTelegram, FaThreads, FaWhatsapp, FaX, FaXTwitter, } from "react-icons/fa6";
 
-export const iconLibrary: Record<string, IconType> = {
+export const iconLibrary = {
   arrowUpRight: HiArrowUpRight,
   arrowRight: HiArrowRight,
   email: HiEnvelope,
@@ -61,7 +61,7 @@ export const iconLibrary: Record<string, IconType> = {
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
-};
+} satisfies Record<string, IconType>;
 
 export type IconLibrary = typeof iconLibrary;
 export type IconName = keyof IconLibrary;
