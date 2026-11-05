@@ -97,10 +97,11 @@ export default function TeamPage() {
                           key={index}
                           src={logo.src}
                           alt={logo.alt}
-                          width={72}
-                          height={72}
+                          width={40}
+                          height={40}
                           style={{
                             width: "auto",
+                            height: 40,
                             objectFit: "contain",
                             opacity: 0.8,
                           }}

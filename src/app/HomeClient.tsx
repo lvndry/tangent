@@ -7,12 +7,12 @@ import {
   Button,
   Card,
   Column,
+  Grid,
   Heading,
   Line,
   RevealFx,
   Row,
   Schema,
-  Tag,
   Text,
 } from "@once-ui-system/core";
 
@@ -42,9 +42,14 @@ export function HomeClient() {
             horizontal="center"
             paddingBottom="16"
           >
-            <Heading wrap="balance" variant="display-strong-l">
-              {content.home.headline}
-            </Heading>
+            <Column fillWidth horizontal="center" gap="16">
+              <Text variant="label-default-s" onBackground="brand-medium">
+                {t.eyebrow}
+              </Text>
+              <Heading wrap="balance" variant="display-strong-l">
+                {content.home.headline}
+              </Heading>
+            </Column>
           </RevealFx>
           <RevealFx
             translateY="8"
@@ -94,25 +99,39 @@ export function HomeClient() {
         </Column>
       </Column>
 
-      {/* Services Overview */}
+      {/* Intro */}
       <RevealFx translateY="16" delay={0.6}>
-        <Column fillWidth gap="l" paddingY="l">
-          <Column gap="m">
-            <Heading as="h2" variant="display-strong-m">
-              {t.servicesTitle}
-            </Heading>
-            <Text variant="heading-default-m" onBackground="neutral-weak">
-              {t.servicesSubtitle}
+        <Column fillWidth gap="m" paddingY="l">
+          <Heading as="h2" variant="display-strong-m">
+            {t.introTitle}
+          </Heading>
+          {t.introText.map((paragraph) => (
+            <Text
+              key={paragraph}
+              variant="body-default-l"
+              onBackground="neutral-weak"
+            >
+              {paragraph}
             </Text>
-          </Column>
-          <Row fillWidth gap="l" wrap>
+          ))}
+        </Column>
+      </RevealFx>
+
+      {/* Services Overview */}
+      <RevealFx translateY="16" delay={0.7}>
+        <Column fillWidth gap="l" paddingY="l">
+          <Heading as="h2" variant="display-strong-m">
+            {t.servicesTitle}
+          </Heading>
+          <Grid fillWidth columns="2" s={{ columns: 1 }} gap="l">
             {content.services.services.map((service) => (
               <Card
                 key={service.title}
-                flex={1}
-                s={{ direction: "column" }}
+                direction="column"
+                href={content.services.path}
                 padding="l"
                 gap="m"
+                fillWidth
               >
                 <Heading as="h3" variant="heading-strong-m">
                   {service.title}
@@ -120,71 +139,122 @@ export function HomeClient() {
                 <Text variant="body-default-m" onBackground="neutral-weak">
                   {service.description}
                 </Text>
-                <Button
-                  href={content.services.path}
-                  variant="tertiary"
-                  size="s"
-                  arrowIcon
-                >
-                  {t.buttons.learnMore}
-                </Button>
+                <Column as="ul" gap="8" paddingLeft="m">
+                  {service.includes?.map((item, index) => (
+                    <Text
+                      key={index}
+                      as="li"
+                      variant="body-default-s"
+                      onBackground="neutral-weak"
+                    >
+                      {item}
+                    </Text>
+                  ))}
+                </Column>
               </Card>
             ))}
-          </Row>
-          <Row fillWidth horizontal="center" paddingTop="m">
-            <Button
-              href={content.services.path}
-              variant="secondary"
-              size="m"
-              arrowIcon
-            >
-              {t.buttons.viewAllServices}
-            </Button>
-          </Row>
+          </Grid>
         </Column>
       </RevealFx>
 
-      {/* Target Audience */}
+      {/* Engagement models */}
       <RevealFx translateY="16" delay={0.8}>
         <Column fillWidth gap="l" paddingY="l">
           <Row fillWidth paddingRight="64">
             <Line />
           </Row>
-          <Column fillWidth gap="m">
-            <Heading as="h2" variant="display-strong-m">
-              {t.targetAudienceTitle}
-            </Heading>
-            <Text variant="heading-default-m" onBackground="neutral-weak">
-              {t.targetAudienceSubtitle}
-            </Text>
-          </Column>
-          <Column fillWidth gap="m" paddingLeft="l">
-            {t.targetAudience.map((audience) => (
-              <Row key={audience} gap="m" vertical="center">
-                <Tag size="l">✓</Tag>
-                <Text variant="body-default-l" onBackground="neutral-weak">
-                  {audience}
+          <Heading as="h2" variant="display-strong-m">
+            {t.engagementTitle}
+          </Heading>
+          <Grid fillWidth columns="2" s={{ columns: 1 }} gap="l">
+            {t.engagements.map((engagement) => (
+              <Column key={engagement.title} gap="8">
+                <Heading as="h3" variant="heading-strong-m">
+                  {engagement.title}
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  {engagement.text}
                 </Text>
-              </Row>
+              </Column>
             ))}
-          </Column>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line />
-          </Row>
+          </Grid>
         </Column>
       </RevealFx>
 
-      {/* Mission/Vision */}
-      <RevealFx translateY="16" delay={1.0}>
+      {/* Who I work with */}
+      <RevealFx translateY="16" delay={0.9}>
         <Column fillWidth gap="l" paddingY="l">
-          <Column gap="m">
-            <Heading as="h2" variant="display-strong-m">
-              {t.approachTitle}
-            </Heading>
-            <Text variant="body-default-l" onBackground="neutral-weak">
-              {t.approachText}
-            </Text>
+          <Row fillWidth paddingRight="64">
+            <Line />
+          </Row>
+          <Heading as="h2" variant="display-strong-m">
+            {t.audienceTitle}
+          </Heading>
+          <Column fillWidth gap="l">
+            {t.audiences.map((audience) => (
+              <Column key={audience.title} gap="8">
+                <Heading as="h3" variant="heading-strong-m">
+                  {audience.title}
+                </Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">
+                  {audience.text}
+                </Text>
+              </Column>
+            ))}
           </Column>
+        </Column>
+      </RevealFx>
+
+      {/* Approach */}
+      <RevealFx translateY="16" delay={1.0}>
+        <Column fillWidth gap="m" paddingY="l">
+          <Row fillWidth paddingLeft="64" horizontal="end">
+            <Line />
+          </Row>
+          <Heading as="h2" variant="display-strong-m">
+            {t.approachTitle}
+          </Heading>
+          {t.approachText.map((paragraph) => (
+            <Text
+              key={paragraph}
+              variant="body-default-l"
+              onBackground="neutral-weak"
+            >
+              {paragraph}
+            </Text>
+          ))}
+        </Column>
+      </RevealFx>
+
+      {/* Call to action */}
+      <RevealFx translateY="16" delay={1.1}>
+        <Column fillWidth gap="m" paddingY="l" horizontal="center" align="center">
+          <Heading as="h2" variant="display-strong-m" wrap="balance">
+            {t.ctaTitle}
+          </Heading>
+          <Text variant="body-default-l" onBackground="neutral-weak" wrap="balance">
+            {t.ctaText}
+          </Text>
+          <Row gap="m" paddingTop="m" s={{ direction: "column", fillWidth: true }}>
+            <Button
+              data-border="rounded"
+              href="https://calendar.app.google/vsTDwGyn5oBUVkrf8"
+              variant="primary"
+              size="m"
+              arrowIcon
+            >
+              {t.buttons.getInTouch}
+            </Button>
+            <Button
+              data-border="rounded"
+              href={content.contact.path}
+              variant="secondary"
+              size="m"
+              arrowIcon
+            >
+              {t.buttons.contact}
+            </Button>
+          </Row>
         </Column>
       </RevealFx>
     </Column>
