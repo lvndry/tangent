@@ -366,8 +366,8 @@ const translations = {
       },
     },
     team: {
-      label: "Équipe",
-      title: "Notre Équipe - Tangent Consulting",
+      label: "Qui suis-je",
+      title: "Qui suis-je - Tangent Consulting",
       description:
         "Rencontrez l'ingénieur derrière Tangent Consulting.",
       members: [
