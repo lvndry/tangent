@@ -7,7 +7,6 @@ import {
   HeadingLink,
   Text,
   InlineCode,
-  CodeBlock,
   TextProps,
   MediaProps,
   Accordion,
@@ -26,6 +25,7 @@ import {
   ListItem,
   Line,
 } from "@once-ui-system/core";
+import { CodeBlock } from "@once-ui-system/core/code";
 
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;

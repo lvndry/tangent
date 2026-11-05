@@ -2,6 +2,7 @@
 
 import { socialSharing } from "@/resources";
 import { Button, Row, Text, useToast } from "@once-ui-system/core";
+import type { IconName } from "@/resources/icons";
 
 interface ShareSectionProps {
   title: string;
@@ -10,7 +11,7 @@ interface ShareSectionProps {
 
 interface SocialPlatform {
   name: string;
-  icon: string;
+  icon: IconName;
   label: string;
   generateUrl: (title: string, url: string) => string;
 }
