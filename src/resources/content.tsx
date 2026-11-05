@@ -370,10 +370,10 @@ const translations = {
       members: [
         {
           name: "Landry Monga",
-          role: "Ingénieur fondateur",
+          role: "Founding Engineer",
           bio: (
             <>
-              Ingénieur fondateur dans une startup de défense, où je pilote
+              Founding Engineer dans une startup de défense, où je pilote
               l&apos;IA, la recherche et le déploiement. Ingénieur logiciel basé
               à Paris avec plus de 6 ans d&apos;expérience, passé par des
               licornes et des startups soutenues par Y Combinator et Sequoia
