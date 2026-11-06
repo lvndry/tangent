@@ -49,8 +49,7 @@ const socialPlatforms: Record<string, SocialPlatform> = {
     name: "whatsapp",
     icon: "whatsapp",
     label: "WhatsApp",
-    generateUrl: (title, url) =>
-      `https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`,
+    generateUrl: (title, url) => `https://wa.me/?text=${encodeURIComponent(`${title} ${url}`)}`,
   },
   reddit: {
     name: "reddit",
@@ -90,7 +89,7 @@ export function ShareSection({ title, url }: ShareSectionProps) {
         message: "Link copied to clipboard",
       });
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error("Failed to copy: ", err);
       addToast({
         variant: "danger",
         message: "Failed to copy link",
@@ -100,9 +99,9 @@ export function ShareSection({ title, url }: ShareSectionProps) {
 
   // Get enabled platforms
   const enabledPlatforms = Object.entries(socialSharing.platforms)
-    .filter(([_, enabled]) => enabled && _ !== 'copyLink')
+    .filter(([_, enabled]) => enabled && _ !== "copyLink")
     .map(([platformKey]) => ({ key: platformKey, ...socialPlatforms[platformKey] }))
-    .filter(platform => platform.name); // Filter out platforms that don't exist in our definitions
+    .filter((platform) => platform.name); // Filter out platforms that don't exist in our definitions
 
   return (
     <Row fillWidth center gap="16" marginTop="32" marginBottom="16">
@@ -111,16 +110,17 @@ export function ShareSection({ title, url }: ShareSectionProps) {
       </Text>
       <Row data-border="rounded" gap="16" horizontal="center" wrap>
         {enabledPlatforms.map((platform, index) => (
-          <Button key={index} variant="secondary" size="s" href={platform.generateUrl(title, url)} prefixIcon={platform.icon} />
+          <Button
+            key={index}
+            variant="secondary"
+            size="s"
+            href={platform.generateUrl(title, url)}
+            prefixIcon={platform.icon}
+          />
         ))}
 
         {socialSharing.platforms.copyLink && (
-          <Button
-            variant="secondary"
-            size="s"
-            onClick={handleCopy}
-            prefixIcon="openLink"
-          />
+          <Button variant="secondary" size="s" onClick={handleCopy} prefixIcon="openLink" />
         )}
       </Row>
     </Row>

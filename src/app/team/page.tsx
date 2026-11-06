@@ -3,14 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
-import {
-  Column,
-  Heading,
-  IconButton,
-  Row,
-  Schema,
-  Text
-} from "@once-ui-system/core";
+import { Column, Heading, IconButton, Row, Schema, Text } from "@once-ui-system/core";
 import Image from "next/image";
 
 export default function TeamPage() {
@@ -46,11 +39,7 @@ export default function TeamPage() {
                 wrap
                 s={{ direction: "column", align: "center" }}
               >
-                <Column
-                  horizontal="center"
-                  gap="m"
-                  s={{ minWidth: 0, width: "100%" }}
-                >
+                <Column horizontal="center" gap="m" s={{ minWidth: 0, width: "100%" }}>
                   <Row gap="8" wrap horizontal="center">
                     {member.email && (
                       <IconButton
@@ -114,7 +103,9 @@ export default function TeamPage() {
             ))
           ) : (
             <Text variant="body-default-l" onBackground="neutral-weak">
-              {language === "fr" ? "Aucun membre d'équipe disponible." : "No team members available."}
+              {language === "fr"
+                ? "Aucun membre d'équipe disponible."
+                : "No team members available."}
             </Text>
           )}
         </Column>

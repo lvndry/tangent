@@ -1,13 +1,4 @@
-import type {
-  About,
-  Contact,
-  Home,
-  Newsletter,
-  Person,
-  Services,
-  Social,
-  Team,
-} from "@/types";
+import type { About, Contact, Home, Newsletter, Person, Services, Social, Team } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 type Language = "en" | "fr";
@@ -29,9 +20,8 @@ const translations = {
       headline: <>Build AI that works in the real world.</>,
       subline: (
         <>
-          I help startups and engineering teams design, deploy and optimize AI
-          systems, and make better decisions about technology, infrastructure
-          and hiring.
+          I help startups and engineering teams design, deploy and optimize AI systems, and make
+          better decisions about technology, infrastructure and hiring.
         </>
       ),
     },
@@ -43,9 +33,7 @@ const translations = {
       services: [
         {
           title: "AI Strategy & Engineering",
-          description: (
-            <>Make the right technical decisions when building AI-powered products.</>
-          ),
+          description: <>Make the right technical decisions when building AI-powered products.</>,
           includes: [
             "AI use-case assessment and technical roadmaps",
             "Model selection and architecture design",
@@ -58,8 +46,8 @@ const translations = {
           title: "Private AI & Infrastructure",
           description: (
             <>
-              Deploy AI systems efficiently while maintaining control over your
-              infrastructure and data.
+              Deploy AI systems efficiently while maintaining control over your infrastructure and
+              data.
             </>
           ),
           includes: [
@@ -74,8 +62,8 @@ const translations = {
           title: "Engineering Leadership & Hiring",
           description: (
             <>
-              Independent technical expertise when you need it, without
-              necessarily hiring a full-time technical leader.
+              Independent technical expertise when you need it, without necessarily hiring a
+              full-time technical leader.
             </>
           ),
           includes: [
@@ -89,10 +77,7 @@ const translations = {
         {
           title: "Team Training",
           description: (
-            <>
-              Give your teams the practical knowledge and tools to build and run
-              AI systems.
-            </>
+            <>Give your teams the practical knowledge and tools to build and run AI systems.</>
           ),
           includes: [
             "Practical AI engineering workshops",
@@ -103,10 +88,7 @@ const translations = {
         {
           title: "AI & Data Governance",
           description: (
-            <>
-              Adopt AI responsibly with clear practices for data, evaluation and
-              internal use.
-            </>
+            <>Adopt AI responsibly with clear practices for data, evaluation and internal use.</>
           ),
           includes: [
             "Data and AI governance fundamentals",
@@ -122,20 +104,18 @@ const translations = {
     team: {
       label: "Team",
       title: "Our Team - Tangent Consulting",
-      description:
-        "Meet the engineer behind Tangent Consulting.",
+      description: "Meet the engineer behind Tangent Consulting.",
       members: [
         {
           name: "Landry Monga",
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead AI, research
-              and deployment. Software engineer based in Paris with 6+ years of
-              experience, having worked at unicorns and at Y Combinator and
-              Sequoia-backed startups. I now bring that hands-on experience of
-              building and deploying AI in demanding environments to startups
-              and engineering teams.
+              Founding engineer at a defense startup, where I lead AI, research and deployment.
+              Software engineer based in Paris with 6+ years of experience, having worked at
+              unicorns and at Y Combinator and Sequoia-backed startups. I now bring that hands-on
+              experience of building and deploying AI in demanding environments to startups and
+              engineering teams.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -165,8 +145,7 @@ const translations = {
     contact: {
       label: "Contact",
       title: "Contact - Tangent Consulting",
-      description:
-        "Get in touch to discuss your AI or engineering challenge.",
+      description: "Get in touch to discuss your AI or engineering challenge.",
       form: {
         name: "Name",
         email: "Email",
@@ -269,9 +248,9 @@ const translations = {
       headline: <>Construisez une IA qui fonctionne dans le monde réel.</>,
       subline: (
         <>
-          J&apos;aide les startups et les équipes d&apos;ingénierie à concevoir,
-          déployer et optimiser leurs systèmes d&apos;IA, et à mieux décider en
-          matière de technologie, d&apos;infrastructure et de recrutement.
+          J&apos;aide les startups et les équipes d&apos;ingénierie à concevoir, déployer et
+          optimiser leurs systèmes d&apos;IA, et à mieux décider en matière de technologie,
+          d&apos;infrastructure et de recrutement.
         </>
       ),
     },
@@ -285,8 +264,8 @@ const translations = {
           title: "Stratégie & ingénierie IA",
           description: (
             <>
-              Prenez les bonnes décisions techniques pour construire vos
-              produits basés sur l&apos;IA.
+              Prenez les bonnes décisions techniques pour construire vos produits basés sur
+              l&apos;IA.
             </>
           ),
           includes: [
@@ -301,8 +280,8 @@ const translations = {
           title: "IA privée & infrastructure",
           description: (
             <>
-              Déployez vos systèmes d&apos;IA efficacement tout en gardant le
-              contrôle de votre infrastructure et de vos données.
+              Déployez vos systèmes d&apos;IA efficacement tout en gardant le contrôle de votre
+              infrastructure et de vos données.
             </>
           ),
           includes: [
@@ -317,8 +296,8 @@ const translations = {
           title: "Leadership technique & recrutement",
           description: (
             <>
-              Une expertise technique indépendante quand vous en avez besoin,
-              sans forcément recruter un responsable technique à plein temps.
+              Une expertise technique indépendante quand vous en avez besoin, sans forcément
+              recruter un responsable technique à plein temps.
             </>
           ),
           includes: [
@@ -333,8 +312,8 @@ const translations = {
           title: "Formation des équipes",
           description: (
             <>
-              Donnez à vos équipes les connaissances et les outils pratiques
-              pour construire et exploiter des systèmes d&apos;IA.
+              Donnez à vos équipes les connaissances et les outils pratiques pour construire et
+              exploiter des systèmes d&apos;IA.
             </>
           ),
           includes: [
@@ -347,8 +326,8 @@ const translations = {
           title: "Gouvernance de l'IA et des données",
           description: (
             <>
-              Adoptez l&apos;IA de façon responsable grâce à des pratiques
-              claires sur les données, l&apos;évaluation et l&apos;usage interne.
+              Adoptez l&apos;IA de façon responsable grâce à des pratiques claires sur les données,
+              l&apos;évaluation et l&apos;usage interne.
             </>
           ),
           includes: [
@@ -365,21 +344,19 @@ const translations = {
     team: {
       label: "Qui suis-je",
       title: "Qui suis-je - Tangent Consulting",
-      description:
-        "Rencontrez l'ingénieur derrière Tangent Consulting.",
+      description: "Rencontrez l'ingénieur derrière Tangent Consulting.",
       members: [
         {
           name: "Landry Monga",
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, où je pilote
-              l&apos;IA, la recherche et le déploiement. Ingénieur logiciel basé
-              à Paris avec plus de 6 ans d&apos;expérience, passé par des
-              licornes et des startups soutenues par Y Combinator et Sequoia
-              Capital. J&apos;apporte aujourd&apos;hui cette expérience concrète
-              de la construction et du déploiement d&apos;IA en environnements
-              exigeants aux startups et aux équipes d&apos;ingénierie.
+              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, la recherche et
+              le déploiement. Ingénieur logiciel basé à Paris avec plus de 6 ans d&apos;expérience,
+              passé par des licornes et des startups soutenues par Y Combinator et Sequoia Capital.
+              J&apos;apporte aujourd&apos;hui cette expérience concrète de la construction et du
+              déploiement d&apos;IA en environnements exigeants aux startups et aux équipes
+              d&apos;ingénierie.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -412,8 +389,7 @@ const translations = {
     contact: {
       label: "Contact",
       title: "Contact - Tangent Consulting",
-      description:
-        "Contactez-nous pour discuter de votre défi IA ou d'ingénierie.",
+      description: "Contactez-nous pour discuter de votre défi IA ou d'ingénierie.",
       form: {
         name: "Nom",
         email: "Email",

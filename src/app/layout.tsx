@@ -3,7 +3,16 @@ import { cookies, headers } from "next/headers";
 import Script from "next/script";
 
 import { Footer, Header, Providers, RouteGuard } from "@/components";
-import { baseURL, dataStyle, effects, fonts, sameAs, schema, SEO_KEYWORDS, style } from "@/resources";
+import {
+  baseURL,
+  dataStyle,
+  effects,
+  fonts,
+  sameAs,
+  schema,
+  SEO_KEYWORDS,
+  style,
+} from "@/resources";
 import { getContent } from "@/resources/content";
 import { resolveLanguage } from "@/contexts/language";
 import {
@@ -172,9 +181,7 @@ export default async function RootLayout({
             path="/"
             title={schema.name}
             description={schema.description}
-            sameAs={[
-              sameAs.linkedin,
-            ].filter(Boolean)}
+            sameAs={[sameAs.linkedin].filter(Boolean)}
           />
           <Flex fill position="absolute" className="fade-in">
             <Background

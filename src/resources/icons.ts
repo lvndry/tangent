@@ -18,17 +18,24 @@ import {
   PiBookBookmarkDuotone,
   PiGridFourDuotone,
   PiHouseDuotone,
-  PiUserCircleDuotone
+  PiUserCircleDuotone,
 } from "react-icons/pi";
 
-import {
-  SiFigma,
-  SiJavascript,
-  SiNextdotjs,
-  SiSupabase,
-} from "react-icons/si";
+import { SiFigma, SiJavascript, SiNextdotjs, SiSupabase } from "react-icons/si";
 
-import { FaDiscord, FaFacebook, FaGithub, FaLinkedin, FaPinterest, FaReddit, FaTelegram, FaThreads, FaWhatsapp, FaX, FaXTwitter, } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPinterest,
+  FaReddit,
+  FaTelegram,
+  FaThreads,
+  FaWhatsapp,
+  FaX,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export const iconLibrary = {
   arrowUpRight: HiArrowUpRight,
