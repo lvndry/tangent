@@ -1,5 +1,6 @@
 "use client";
 
+import type { Language } from "@/contexts/language";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import {
   BorderStyle,
@@ -20,9 +21,15 @@ import { LayoutProvider } from "@once-ui-system/core/next";
 import { dataStyle, style } from "../resources";
 import { iconLibrary } from "../resources/icons";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({
+  children,
+  initialLanguage,
+}: {
+  children: React.ReactNode;
+  initialLanguage: Language;
+}) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage={initialLanguage}>
       <LayoutProvider>
         <ThemeProvider
           brand={style.brand as Schemes}

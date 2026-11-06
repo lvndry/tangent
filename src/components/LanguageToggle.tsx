@@ -12,7 +12,6 @@ export function LanguageToggle() {
       label={nextLanguage.toUpperCase()}
       onClick={() => setLanguage(nextLanguage)}
       aria-label={nextLanguage === "fr" ? "Passer en français" : "Switch to English"}
-      suppressHydrationWarning
     />
   );
 }

@@ -1,17 +1,17 @@
 import classNames from "classnames";
+import { cookies, headers } from "next/headers";
 import Script from "next/script";
 
 import { Footer, Header, Providers, RouteGuard } from "@/components";
-import { LangSetter } from "@/components/LangSetter";
 import { baseURL, dataStyle, effects, fonts, sameAs, schema, SEO_KEYWORDS, style } from "@/resources";
 import { getContent } from "@/resources/content";
+import { resolveLanguage } from "@/contexts/language";
 import {
   Background,
   Column,
   Flex,
   Meta,
   Opacity,
-  RevealFx,
   Schema,
   SpacingToken,
 } from "@once-ui-system/core";
@@ -77,11 +77,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [cookieStore, headerStore] = await Promise.all([cookies(), headers()]);
+  const language = resolveLanguage(
+    cookieStore.get("language")?.value,
+    headerStore.get("accept-language"),
+  );
+
   return (
     <Flex
       suppressHydrationWarning
       as="html"
-      lang="en"
+      lang={language}
       fillWidth
       className={classNames(
         fonts.heading.variable,
@@ -150,8 +156,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <Providers>
-        <LangSetter />
+      <Providers initialLanguage={language}>
         <Column
           as="body"
           background="page"
@@ -171,7 +176,7 @@ export default async function RootLayout({
               sameAs.linkedin,
             ].filter(Boolean)}
           />
-          <RevealFx fill position="absolute">
+          <Flex fill position="absolute" className="fade-in">
             <Background
               mask={{
                 x: effects.mask.x,
@@ -212,7 +217,7 @@ export default async function RootLayout({
                 color: effects.lines.color,
               }}
             />
-          </RevealFx>
+          </Flex>
           <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
