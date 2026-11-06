@@ -111,15 +111,13 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead AI, software
-              development and deployment in a regulated environment. I don't just advise,
-              I build and run
-              AI myself: I built my own open-source agent harness, I serve my own models
-              with vLLM on my own GPU, and I instrument everything with observability.
-              Data sovereignty, security and governance are part of how I work by default.
-              Before that, I shipped with small founding teams — YC and Sequoia-backed
-              startups and a unicorn — and I know from the inside what makes an
-              early-stage engineering team win.
+              Founding engineer at a defense startup, where I lead the AI, software
+              development and deployment work. I'm a practicing AI engineer: I built my
+              own open-source agent harness, I serve my own models with vLLM on my own
+              GPU, and every system I ship comes with logs, tracing and dashboards.
+              The defense background makes me think about data security and governance
+              first, not last. Before that I built at YC and Sequoia-backed startups and
+              a unicorn, so I know what it takes to make a small engineering team work.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -359,17 +357,15 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, le
-              développement logiciel et le déploiement dans un environnement réglementé.
-              Je ne fais pas que conseiller, je construis et j&apos;exploite moi-même
-              l&apos;IA : j&apos;ai
-              construit mon propre harnais d&apos;agents open source, je sers mes propres
-              modèles avec vLLM sur mes propres GPU, et j&apos;instrumente tout en
-              observabilité. La souveraineté des données, la sécurité et la gouvernance
-              font partie de ma façon de travailler par défaut. Avant, j&apos;ai livré avec
-              de petites équipes fondatrices — dont des startups soutenues par Y Combinator
-              et Sequoia et une licorne — et je sais de l&apos;intérieur ce qui fait gagner
-              une équipe d&apos;ingénierie en phase initiale.
+              Founding Engineer dans une startup de défense, je pilote l&apos;IA, le
+              développement logiciel et le déploiement. Je ne me contente pas de
+              conseiller : j&apos;ai construit mon propre harnais d&apos;agents open source,
+              je sers mes propres modèles avec vLLM sur mes propres GPU, et chaque
+              système que je livre embarque logs, tracing et dashboards. Mon passage par
+              la défense me fait penser sécurité et gouvernance des données en premier,
+              pas en dernier. Avant, j&apos;ai bâti dans des startups soutenues par Y
+              Combinator et Sequoia et dans une licorne, donc je sais ce qu&apos;il faut
+              pour faire tourner une petite équipe d&apos;ingénierie.
             </>
           ),
           email: "monga.4landry@gmail.com",
