@@ -555,7 +555,7 @@ export function getContent(language: Language = "en") {
     },
     calendar: {
       display: true,
-      link: "https://cal.com",
+      link: "https://calendar.app.google/vsTDwGyn5oBUVkrf8",
     },
     intro: {
       display: true,
