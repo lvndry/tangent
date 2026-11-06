@@ -1,8 +1,7 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useSyncExternalStore } from "react";
-
-type Language = "en" | "fr";
+import { createContext, ReactNode, useContext, useState } from "react";
+import { Language, LANGUAGE_COOKIE } from "./language";
 
 interface LanguageContextType {
   language: Language;
@@ -11,61 +10,19 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Store subscription callbacks to trigger updates when language changes in same window
-let languageCallbacks: Set<() => void> = new Set();
-
-function getLanguageFromStorage(): Language {
-  if (typeof window === "undefined") {
-    return "en";
-  }
-
-  const savedLanguage = localStorage.getItem("language") as Language | null;
-  if (savedLanguage && (savedLanguage === "en" || savedLanguage === "fr")) {
-    return savedLanguage;
-  }
-
-  // Detect browser language
-  const browserLang = navigator.language || (navigator as any).userLanguage;
-  const detectedLang = browserLang.startsWith("fr") ? "fr" : "en";
-  localStorage.setItem("language", detectedLang);
-  return detectedLang;
-}
-
-function subscribeToLanguage(callback: () => void) {
-  if (typeof window === "undefined") {
-    return () => {};
-  }
-
-  languageCallbacks.add(callback);
-
-  function handleStorageChange(event: StorageEvent) {
-    if (event.key === "language") {
-      callback();
-    }
-  }
-
-  window.addEventListener("storage", handleStorageChange);
-  return () => {
-    languageCallbacks.delete(callback);
-    window.removeEventListener("storage", handleStorageChange);
-  };
-}
-
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Use useSyncExternalStore to properly sync with localStorage
-  // This ensures server and client both start with "en" to prevent hydration mismatch
-  const language = useSyncExternalStore(
-    subscribeToLanguage,
-    getLanguageFromStorage,
-    () => "en" as Language // Server-side fallback - always "en" to match initial client render
-  ) as Language;
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: {
+  children: ReactNode;
+  initialLanguage: Language;
+}) {
+  const [language, setLanguageState] = useState<Language>(initialLanguage);
 
   function setLanguage(lang: Language) {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("language", lang);
-      // Manually trigger all subscription callbacks since StorageEvent doesn't fire for same-window changes
-      languageCallbacks.forEach((callback) => callback());
-    }
+    document.cookie = `${LANGUAGE_COOKIE}=${lang}; path=/; max-age=31536000; samesite=lax`;
+    document.documentElement.lang = lang;
+    setLanguageState(lang);
   }
 
   return (

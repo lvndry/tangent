@@ -10,7 +10,6 @@ import {
   Grid,
   Heading,
   Line,
-  RevealFx,
   Row,
   Schema,
   Text,
@@ -36,28 +35,15 @@ export function HomeClient() {
       {/* Hero Section */}
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
-          <RevealFx
-            translateY="4"
-            fillWidth
-            horizontal="center"
-            paddingBottom="16"
-          >
-            <Column fillWidth horizontal="center" gap="16">
-              <Text variant="label-default-s" onBackground="brand-medium">
-                {t.eyebrow}
-              </Text>
-              <Heading wrap="balance" variant="display-strong-l">
-                {content.home.headline}
-              </Heading>
-            </Column>
-          </RevealFx>
-          <RevealFx
-            translateY="8"
-            delay={0.2}
-            fillWidth
-            horizontal="center"
-            paddingBottom="32"
-          >
+          <Column fillWidth horizontal="center" gap="16" paddingBottom="16">
+            <Text variant="label-default-s" onBackground="brand-medium">
+              {t.eyebrow}
+            </Text>
+            <Heading wrap="balance" variant="display-strong-l">
+              {content.home.headline}
+            </Heading>
+          </Column>
+          <Column fillWidth horizontal="center" paddingBottom="32">
             <Text
               wrap="balance"
               onBackground="neutral-weak"
@@ -65,10 +51,9 @@ export function HomeClient() {
             >
               {content.home.subline}
             </Text>
-          </RevealFx>
-          <RevealFx
+          </Column>
+          <Row
             paddingTop="12"
-            delay={0.4}
             horizontal="center"
             gap="m"
             s={{ direction: "column" }}
@@ -95,12 +80,12 @@ export function HomeClient() {
                 {t.buttons.getInTouch}
               </Button>
             </Row>
-          </RevealFx>
+          </Row>
         </Column>
       </Column>
 
       {/* Intro */}
-      <RevealFx translateY="16" delay={0.6}>
+      <Column fillWidth>
         <Column fillWidth gap="m" paddingY="l">
           <Heading as="h2" variant="display-strong-m">
             {t.introTitle}
@@ -115,10 +100,10 @@ export function HomeClient() {
             </Text>
           ))}
         </Column>
-      </RevealFx>
+      </Column>
 
       {/* Services Overview */}
-      <RevealFx translateY="16" delay={0.7}>
+      <Column fillWidth>
         <Column fillWidth gap="l" paddingY="l">
           <Heading as="h2" variant="display-strong-m">
             {t.servicesTitle}
@@ -155,10 +140,10 @@ export function HomeClient() {
             ))}
           </Grid>
         </Column>
-      </RevealFx>
+      </Column>
 
       {/* Engagement models */}
-      <RevealFx translateY="16" delay={0.8}>
+      <Column fillWidth>
         <Column fillWidth gap="l" paddingY="l">
           <Row fillWidth paddingRight="64">
             <Line />
@@ -179,10 +164,10 @@ export function HomeClient() {
             ))}
           </Grid>
         </Column>
-      </RevealFx>
+      </Column>
 
       {/* Who I work with */}
-      <RevealFx translateY="16" delay={0.9}>
+      <Column fillWidth>
         <Column fillWidth gap="l" paddingY="l">
           <Row fillWidth paddingRight="64">
             <Line />
@@ -203,10 +188,10 @@ export function HomeClient() {
             ))}
           </Column>
         </Column>
-      </RevealFx>
+      </Column>
 
       {/* Approach */}
-      <RevealFx translateY="16" delay={1.0}>
+      <Column fillWidth>
         <Column fillWidth gap="m" paddingY="l">
           <Row fillWidth paddingLeft="64" horizontal="end">
             <Line />
@@ -224,10 +209,10 @@ export function HomeClient() {
             </Text>
           ))}
         </Column>
-      </RevealFx>
+      </Column>
 
       {/* Call to action */}
-      <RevealFx translateY="16" delay={1.1}>
+      <Column fillWidth>
         <Column fillWidth gap="m" paddingY="l" horizontal="center" align="center">
           <Heading as="h2" variant="display-strong-m" wrap="balance">
             {t.ctaTitle}
@@ -256,7 +241,7 @@ export function HomeClient() {
             </Button>
           </Row>
         </Column>
-      </RevealFx>
+      </Column>
     </Column>
   );
 }
