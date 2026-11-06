@@ -231,6 +231,72 @@ const translations = {
         contact: "Or reach out to discuss your project",
       },
     },
+    about: {
+      intro: {
+        display: true,
+        title: "Introduction",
+        description: [
+          "I'm an independent AI and engineering advisor based in Paris. Day to day, I work in the defense sector as a founding engineer, leading AI, research and deployment in one of the most demanding security environments there is.",
+          "But I don't just advise on AI — I build and run it myself. I built my own open-source agent harness, I deploy and serve my own models on my own GPU, and I instrument everything with observability, so I know what my systems do — and when they silently lose data.",
+          "I've also worked with several early-stage startups, from Y Combinator and Sequoia-backed teams to a unicorn. I know what makes an engineering team win — and what quietly kills a product before it ships.",
+        ],
+      },
+      work: {
+        display: true,
+        title: "Where I get my edge",
+        experiences: [
+          {
+            company: "Defense sector",
+            timeframe: "Present",
+            role: "Founding Engineer — AI, research & deployment",
+            achievements: [
+              "I lead AI and deployment in a regulated environment where data sovereignty and security are non-negotiable — not something to bolt on afterwards.",
+              "I designed our AI and data governance end to end: what data a model sees, who can access it, how outputs are evaluated and audited.",
+              "I run production AI with structured logs, end-to-end tracing and dashboards, so degradation shows up before your users notice it.",
+            ],
+          },
+          {
+            company: "Early-stage startups & a unicorn",
+            timeframe: "Earlier career",
+            role: "Software engineer",
+            achievements: [
+              "I shipped alongside small founding teams where every engineering decision had to pay off fast.",
+              "I learned from the inside what makes an early-stage team win: focus, ownership, and simple systems that stay fast as you scale.",
+            ],
+          },
+        ],
+      },
+      technical: {
+        display: true,
+        title: "What I build and run",
+        skills: [
+          {
+            title: "On-prem AI & GPU infrastructure",
+            description:
+              "I run my own private AI stack: open-weight models served with vLLM on hardware I own — sized, benchmarked and tuned for cost. I've also shipped AI fleets on small GPU devices in the field, air-gapped where it mattered.",
+            tags: [{ name: "vLLM" }, { name: "Self-hosted LLMs" }, { name: "GPU sizing" }, { name: "Edge devices" }],
+          },
+          {
+            title: "AI agent systems",
+            description:
+              "I built my own agent harness from scratch — the framework the agents I work with every day run on — and I maintain it solo. I know exactly where agent systems break, because I'm the one who fixes them.",
+            tags: [{ name: "Agent harness" }, { name: "Open source" }],
+          },
+          {
+            title: "Observability",
+            description:
+              "Every system I run ships with structured logs, tracing and dashboards. I can tell when a model degrades or data is silently lost — and I hold the same standard for the stacks I advise on.",
+            tags: [{ name: "Structured logging" }, { name: "Tracing" }, { name: "Dashboards" }],
+          },
+          {
+            title: "Security & data governance",
+            description:
+              "Working in defense means I default to data classification, access control and auditability. I bring that rigor to AI: what data a model sees, how outputs are evaluated, and how internal adoption stays governed.",
+            tags: [{ name: "Data sovereignty" }, { name: "Access control" }, { name: "Auditability" }],
+          },
+        ],
+      },
+    },
   },
   fr: {
     person: {
@@ -476,6 +542,72 @@ const translations = {
         contact: "Ou contactez-moi pour discuter de votre projet",
       },
     },
+    about: {
+      intro: {
+        display: true,
+        title: "Introduction",
+        description: [
+          "Je suis conseiller indépendant en IA et ingénierie, basé à Paris. Au quotidien, je travaille dans le secteur de la défense comme founding engineer, avec la responsabilité de l'IA, de la recherche et du déploiement dans l'un des environnements de sécurité les plus exigeants qui soient.",
+          "Mais je ne fais pas que conseiller — je construis et j'exploite moi-même mes systèmes d'IA. J'ai construit mon propre harnais d'agents open source, je déploie et je fais tourner mes propres modèles sur mes propres GPU, et j'instrumente tout en observabilité : je sais ce que font mes systèmes — et quand ils perdent de la donnée sans le signaler.",
+          "J'ai aussi travaillé auprès de plusieurs startups en phase initiale, de Y Combinator et Sequoia jusqu'à une licorne. Je sais ce qui fait gagner une équipe d'ingénierie — et ce qui tue un produit avant qu'il ne sorte.",
+        ],
+      },
+      work: {
+        display: true,
+        title: "D'où vient mon edge",
+        experiences: [
+          {
+            company: "Secteur de la défense",
+            timeframe: "Aujourd'hui",
+            role: "Founding Engineer — IA, recherche & déploiement",
+            achievements: [
+              "Je pilote l'IA et le déploiement dans un environnement réglementé où la souveraineté des données et la sécurité ne se négocient pas — et ne s'ajoutent pas a posteriori.",
+              "J'ai conçu notre gouvernance de l'IA et des données de bout en bout : quelles données un modèle voit, qui y a accès, comment les sorties sont évaluées et auditées.",
+              "J'exploite l'IA en production avec logs structurés, tracing de bout en bout et dashboards : la dégradation est visible avant vos utilisateurs.",
+            ],
+          },
+          {
+            company: "Startups en phase initiale & licorne",
+            timeframe: "Carrière précédente",
+            role: "Ingénieur logiciel",
+            achievements: [
+              "J'ai livré avec de petites équipes fondatrices où chaque décision technique devait payer rapidement.",
+              "J'ai appris de l'intérieur ce qui fait gagner une équipe en phase initiale : focus, ownership, et des systèmes simples qui restent rapides à l'échelle.",
+            ],
+          },
+        ],
+      },
+      technical: {
+        display: true,
+        title: "Ce que je construis et j'exploite",
+        skills: [
+          {
+            title: "IA on-prem & infrastructure GPU",
+            description:
+              "Je fais tourner ma propre pile IA privée : des modèles open-weight servis avec vLLM sur du matériel que je possède — dimensionné, benchmarké et optimisé pour le coût. J'ai aussi déployé des flottes IA sur de petits devices GPU sur le terrain, en environnement air-gapped quand nécessaire.",
+            tags: [{ name: "vLLM" }, { name: "LLM auto-hébergés" }, { name: "Dimensionnement GPU" }, { name: "Devices edge" }],
+          },
+          {
+            title: "Systèmes d'agents IA",
+            description:
+              "J'ai construit mon propre harnais d'agents de zéro — le framework sur lequel tournent les agents avec lesquels je travaille chaque jour — et je l'entretiens seul. Je sais exactement où les systèmes d'agents cassent, parce que c'est moi qui les répare.",
+            tags: [{ name: "Harnais d'agents" }, { name: "Open source" }],
+          },
+          {
+            title: "Observabilité",
+            description:
+              "Chaque système que je fais tourner embarque des logs structurés, du tracing et des dashboards. Je sais quand un modèle se dégrade ou que des données sont perdues silencieusement — j'applique la même exigence aux stacks que je conseille.",
+            tags: [{ name: "Logs structurés" }, { name: "Tracing" }, { name: "Dashboards" }],
+          },
+          {
+            title: "Sécurité & gouvernance des données",
+            description:
+              "Travailler dans la défense, c'est penser par défaut classification des données, contrôle d'accès et traçabilité. J'apporte cette rigueur à l'IA : quelles données un modèle voit, comment les sorties sont évaluées, comment l'adoption interne reste gouvernée.",
+            tags: [{ name: "Souveraineté des données" }, { name: "Contrôle d'accès" }, { name: "Auditabilité" }],
+          },
+        ],
+      },
+    },
   },
 };
 
@@ -548,28 +680,16 @@ export function getContent(language: Language = "en") {
     },
     calendar: {
       display: true,
-      link: "https://cal.com",
+      link: "https://calendar.app.google/vsTDwGyn5oBUVkrf8",
     },
-    intro: {
-      display: true,
-      title: "Introduction",
-      description: "",
-    },
-    work: {
-      display: false,
-      title: "Work Experience",
-      experiences: [],
-    },
+    intro: t.about.intro,
+    work: t.about.work,
     studies: {
       display: false,
       title: "Studies",
       institutions: [],
     },
-    technical: {
-      display: false,
-      title: "Technical skills",
-      skills: [],
-    },
+    technical: t.about.technical,
   };
 
   const services: Services = {
