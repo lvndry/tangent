@@ -3,15 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
-import {
-  Button,
-  Column,
-  Heading,
-  Row,
-  Schema,
-  Tag,
-  Text,
-} from "@once-ui-system/core";
+import { Button, Column, Heading, Row, Schema, Tag, Text } from "@once-ui-system/core";
 
 export default function ServicesPage() {
   const { language } = useLanguage();
@@ -98,4 +90,3 @@ export default function ServicesPage() {
     </Column>
   );
 }
-

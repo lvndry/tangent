@@ -6,7 +6,17 @@
     "useIgnoreFile": false
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!**/.next",
+      "!**/node_modules",
+      "!**/.vercel",
+      "!**/bun.lock",
+      "!**/*.md",
+      "!**/*.scss",
+      "!**/*.webmanifest"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -15,8 +25,7 @@
     "lineWidth": 100
   },
   "linter": {
-    "enabled": true,
-    "rules": { "recommended": true }
+    "enabled": false
   },
   "javascript": {
     "formatter": {

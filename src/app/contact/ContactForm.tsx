@@ -2,12 +2,7 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getContent } from "@/resources/content";
-import {
-  Button,
-  Column,
-  Input,
-  Text,
-} from "@once-ui-system/core";
+import { Button, Column, Input, Text } from "@once-ui-system/core";
 import { useState } from "react";
 
 export function ContactForm() {
@@ -27,11 +22,11 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   function handleChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
   ) {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -56,7 +51,7 @@ export function ContactForm() {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }
 
   return (
     <Column fillWidth gap="l" paddingTop="l" maxWidth="s">
@@ -168,4 +163,3 @@ export function ContactForm() {
     </Column>
   );
 }
-

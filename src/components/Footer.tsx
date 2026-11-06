@@ -9,9 +9,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
   const content = getContent(language);
-  const footerText = language === "fr"
-    ? " / Conseil indépendant en IA et ingénierie"
-    : " / Independent AI & engineering advisory";
+  const footerText =
+    language === "fr"
+      ? " / Conseil indépendant en IA et ingénierie"
+      : " / Independent AI & engineering advisory";
 
   return (
     <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
@@ -32,9 +33,7 @@ export function Footer() {
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{content.person.name}</Text>
-          <Text onBackground="neutral-weak">
-            {footerText}
-          </Text>
+          <Text onBackground="neutral-weak">{footerText}</Text>
         </Text>
         <Row gap="16">
           {content.social.map(

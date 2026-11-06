@@ -3,14 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
-import {
-  Button,
-  Column,
-  Heading,
-  Row,
-  Schema,
-  Text,
-} from "@once-ui-system/core";
+import { Button, Column, Heading, Row, Schema, Text } from "@once-ui-system/core";
 import { ContactForm } from "./ContactForm";
 
 export default function ContactPage() {

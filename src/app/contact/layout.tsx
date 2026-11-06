@@ -55,11 +55,6 @@ export async function generateMetadata() {
   };
 }
 
-export default function ContactLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ContactLayout({ children }: { children: React.ReactNode }) {
   return children;
 }
-

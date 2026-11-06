@@ -3,17 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { baseURL } from "@/resources";
 import { getContent } from "@/resources/content";
-import {
-  Button,
-  Card,
-  Column,
-  Grid,
-  Heading,
-  Line,
-  Row,
-  Schema,
-  Text,
-} from "@once-ui-system/core";
+import { Button, Card, Column, Grid, Heading, Line, Row, Schema, Text } from "@once-ui-system/core";
 
 export function HomeClient() {
   const { language } = useLanguage();
@@ -28,9 +18,7 @@ export function HomeClient() {
         path={content.home.path}
         title={content.home.title}
         description={content.home.description}
-        image={`/api/og/generate?title=${encodeURIComponent(
-          content.home.title
-        )}`}
+        image={`/api/og/generate?title=${encodeURIComponent(content.home.title)}`}
       />
       {/* Hero Section */}
       <Column fillWidth horizontal="center" gap="m">
@@ -44,20 +32,11 @@ export function HomeClient() {
             </Heading>
           </Column>
           <Column fillWidth horizontal="center" paddingBottom="32">
-            <Text
-              wrap="balance"
-              onBackground="neutral-weak"
-              variant="heading-default-xl"
-            >
+            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
               {content.home.subline}
             </Text>
           </Column>
-          <Row
-            paddingTop="12"
-            horizontal="center"
-            gap="m"
-            s={{ direction: "column" }}
-          >
+          <Row paddingTop="12" horizontal="center" gap="m" s={{ direction: "column" }}>
             <Row gap="m" s={{ direction: "column", fillWidth: true }}>
               <Button
                 data-border="rounded"
@@ -91,11 +70,7 @@ export function HomeClient() {
             {t.introTitle}
           </Heading>
           {t.introText.map((paragraph) => (
-            <Text
-              key={paragraph}
-              variant="body-default-l"
-              onBackground="neutral-weak"
-            >
+            <Text key={paragraph} variant="body-default-l" onBackground="neutral-weak">
               {paragraph}
             </Text>
           ))}
@@ -126,12 +101,7 @@ export function HomeClient() {
                 </Text>
                 <Column as="ul" gap="8" paddingLeft="m">
                   {service.includes?.map((item, index) => (
-                    <Text
-                      key={index}
-                      as="li"
-                      variant="body-default-s"
-                      onBackground="neutral-weak"
-                    >
+                    <Text key={index} as="li" variant="body-default-s" onBackground="neutral-weak">
                       {item}
                     </Text>
                   ))}
@@ -200,11 +170,7 @@ export function HomeClient() {
             {t.approachTitle}
           </Heading>
           {t.approachText.map((paragraph) => (
-            <Text
-              key={paragraph}
-              variant="body-default-l"
-              onBackground="neutral-weak"
-            >
+            <Text key={paragraph} variant="body-default-l" onBackground="neutral-weak">
               {paragraph}
             </Text>
           ))}

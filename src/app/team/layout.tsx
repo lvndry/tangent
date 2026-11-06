@@ -55,11 +55,6 @@ export async function generateMetadata() {
   };
 }
 
-export default function TeamLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function TeamLayout({ children }: { children: React.ReactNode }) {
   return children;
 }
-

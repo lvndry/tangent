@@ -3,7 +3,7 @@ import { baseURL, protectedRoutes } from "@/resources";
 export default function robots() {
   // Get all protected routes that should be disallowed
   const disallowPaths = Object.keys(protectedRoutes).filter(
-    (route) => protectedRoutes[route as keyof typeof protectedRoutes]
+    (route) => protectedRoutes[route as keyof typeof protectedRoutes],
   );
 
   return {
