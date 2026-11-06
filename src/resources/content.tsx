@@ -111,8 +111,9 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead AI, research and
-              deployment in a regulated environment. I don't just advise — I build and run
+              Founding engineer at a defense startup, where I lead AI, software
+              development and deployment in a regulated environment. I don't just advise
+              — I build and run
               AI myself: I built my own open-source agent harness, I serve my own models
               with vLLM on my own GPU, and I instrument everything with observability.
               Data sovereignty, security and governance are part of how I work by default.
@@ -354,9 +355,10 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, la
-              recherche et le déploiement dans un environnement réglementé. Je ne fais
-              pas que conseiller — je construis et j&apos;exploite moi-même l&apos;IA : j&apos;ai
+              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, le
+              développement logiciel et le déploiement dans un environnement réglementé.
+              Je ne fais pas que conseiller — je construis et j&apos;exploite moi-même
+              l&apos;IA : j&apos;ai
               construit mon propre harnais d&apos;agents open source, je sers mes propres
               modèles avec vLLM sur mes propres GPU, et j&apos;instrumente tout en
               observabilité. La souveraineté des données, la sécurité et la gouvernance
