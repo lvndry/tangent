@@ -8,7 +8,7 @@ type SitemapEntry = {
 };
 
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const existingRoutes = ["/", "/about", "/services", "/team", "/contact"];
+  const existingRoutes = ["/", "/about", "/services", "/about-me", "/contact"];
 
   const routes: SitemapEntry[] = existingRoutes.map((route) => {
     const url = `${baseURL}${route !== "/" ? route : ""}`;

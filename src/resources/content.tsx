@@ -102,8 +102,8 @@ const translations = {
       },
     },
     team: {
-      label: "Team",
-      title: "Our Team - Tangent Consulting",
+      label: "About Me",
+      title: "About Me - Tangent Consulting",
       description: "Meet the engineer behind Tangent Consulting.",
       members: [
         {
@@ -111,11 +111,14 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead AI, research and deployment.
-              Software engineer based in Paris with 6+ years of experience, having worked at
-              unicorns and at Y Combinator and Sequoia-backed startups. I now bring that hands-on
-              experience of building and deploying AI in demanding environments to startups and
-              engineering teams.
+              Founding engineer at a defense startup, where I lead AI, research and
+              deployment in a regulated environment. I don't just advise — I build and run
+              AI myself: I built my own open-source agent harness, I serve my own models
+              with vLLM on my own GPU, and I instrument everything with observability.
+              Data sovereignty, security and governance are part of how I work by default.
+              Before that, I shipped with small founding teams — YC and Sequoia-backed
+              startups and a unicorn — and I know from the inside what makes an
+              early-stage engineering team win.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -351,12 +354,16 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, la recherche et
-              le déploiement. Ingénieur logiciel basé à Paris avec plus de 6 ans d&apos;expérience,
-              passé par des licornes et des startups soutenues par Y Combinator et Sequoia Capital.
-              J&apos;apporte aujourd&apos;hui cette expérience concrète de la construction et du
-              déploiement d&apos;IA en environnements exigeants aux startups et aux équipes
-              d&apos;ingénierie.
+              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, la
+              recherche et le déploiement dans un environnement réglementé. Je ne fais
+              pas que conseiller — je construis et j&apos;exploite moi-même l&apos;IA : j&apos;ai
+              construit mon propre harnais d&apos;agents open source, je sers mes propres
+              modèles avec vLLM sur mes propres GPU, et j&apos;instrumente tout en
+              observabilité. La souveraineté des données, la sécurité et la gouvernance
+              font partie de ma façon de travailler par défaut. Avant, j&apos;ai livré avec
+              de petites équipes fondatrices — dont des startups soutenues par Y Combinator
+              et Sequoia et une licorne — et je sais de l&apos;intérieur ce qui fait gagner
+              une équipe d&apos;ingénierie en phase initiale.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -585,7 +592,7 @@ export function getContent(language: Language = "en") {
   const logoDevToken = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN || "";
 
   const team: Team = {
-    path: "/team",
+        path: "/about-me",
     label: t.team.label,
     title: t.team.title,
     description: t.team.description,
