@@ -102,8 +102,8 @@ const translations = {
       },
     },
     team: {
-      label: "Team",
-      title: "Our Team - Tangent Consulting",
+      label: "About Me",
+      title: "About Me - Tangent Consulting",
       description: "Meet the engineer behind Tangent Consulting.",
       members: [
         {
@@ -111,11 +111,14 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead AI, research and deployment.
-              Software engineer based in Paris with 6+ years of experience, having worked at
-              unicorns and at Y Combinator and Sequoia-backed startups. I now bring that hands-on
-              experience of building and deploying AI in demanding environments to startups and
-              engineering teams.
+              Founding engineer at a defense startup, where I lead the AI, software
+              development and deployment work. I'm a practicing AI engineer: I built my
+              own open-source agent harness, I serve my own models with vLLM on my own
+              GPU, and every system I ship comes with logs, tracing and dashboards.
+              I've worked with highly sensitive data and I know how to run data
+              governance that holds up in production. Before that I built at YC and
+              Sequoia-backed startups and a unicorn, so I know what it takes to make a
+              small engineering team work, and how to build one that's a winner.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -129,6 +132,10 @@ const translations = {
             {
               src: "https://img.logo.dev/sequoiacap.com",
               alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/dust.tt",
+              alt: "Dust",
             },
             {
               src: "https://img.logo.dev/project-a.vc",
@@ -351,12 +358,16 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, où je pilote l&apos;IA, la recherche et
-              le déploiement. Ingénieur logiciel basé à Paris avec plus de 6 ans d&apos;expérience,
-              passé par des licornes et des startups soutenues par Y Combinator et Sequoia Capital.
-              J&apos;apporte aujourd&apos;hui cette expérience concrète de la construction et du
-              déploiement d&apos;IA en environnements exigeants aux startups et aux équipes
-              d&apos;ingénierie.
+              Founding Engineer dans une startup de défense, je pilote l&apos;IA, le
+              développement logiciel et le déploiement. Je ne me contente pas de
+              conseiller : j&apos;ai construit mon propre harnais d&apos;agents open source,
+              je sers mes propres modèles avec vLLM sur mes propres GPU, et chaque
+              système que je livre embarque logs, tracing et dashboards. J&apos;ai travaillé
+              sur des données très sensibles et je sais faire tourner une gouvernance
+              des données qui tient en production. Avant, j&apos;ai bâti dans des startups
+              soutenues par Y Combinator et Sequoia et dans une licorne, donc je sais ce
+              qu&apos;il faut pour faire tourner une petite équipe d&apos;ingénierie, et comment
+              construire une équipe qui gagne.
             </>
           ),
           email: "monga.4landry@gmail.com",
@@ -370,6 +381,10 @@ const translations = {
             {
               src: "https://img.logo.dev/sequoiacap.com",
               alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/dust.tt",
+              alt: "Dust",
             },
             {
               src: "https://img.logo.dev/project-a.vc",
@@ -548,7 +563,7 @@ export function getContent(language: Language = "en") {
     },
     calendar: {
       display: true,
-      link: "https://cal.com",
+      link: "https://calendar.app.google/vsTDwGyn5oBUVkrf8",
     },
     intro: {
       display: true,
@@ -585,7 +600,7 @@ export function getContent(language: Language = "en") {
   const logoDevToken = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN || "";
 
   const team: Team = {
-    path: "/team",
+        path: "/about-me",
     label: t.team.label,
     title: t.team.title,
     description: t.team.description,
