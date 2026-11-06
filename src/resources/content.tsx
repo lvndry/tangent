@@ -112,8 +112,8 @@ const translations = {
           bio: (
             <>
               Founding engineer at a defense startup, where I lead AI, software
-              development and deployment in a regulated environment. I don't just advise
-              — I build and run
+              development and deployment in a regulated environment. I don't just advise,
+              I build and run
               AI myself: I built my own open-source agent harness, I serve my own models
               with vLLM on my own GPU, and I instrument everything with observability.
               Data sovereignty, security and governance are part of how I work by default.
@@ -133,6 +133,10 @@ const translations = {
             {
               src: "https://img.logo.dev/sequoiacap.com",
               alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/dust.tt",
+              alt: "Dust",
             },
             {
               src: "https://img.logo.dev/project-a.vc",
@@ -357,7 +361,7 @@ const translations = {
             <>
               Founding Engineer dans une startup de défense, où je pilote l&apos;IA, le
               développement logiciel et le déploiement dans un environnement réglementé.
-              Je ne fais pas que conseiller — je construis et j&apos;exploite moi-même
+              Je ne fais pas que conseiller, je construis et j&apos;exploite moi-même
               l&apos;IA : j&apos;ai
               construit mon propre harnais d&apos;agents open source, je sers mes propres
               modèles avec vLLM sur mes propres GPU, et j&apos;instrumente tout en
@@ -379,6 +383,10 @@ const translations = {
             {
               src: "https://img.logo.dev/sequoiacap.com",
               alt: "Sequoia Capital",
+            },
+            {
+              src: "https://img.logo.dev/dust.tt",
+              alt: "Dust",
             },
             {
               src: "https://img.logo.dev/project-a.vc",
