@@ -21,8 +21,8 @@ const routes: RoutesConfig = {
   "/about": false,
   "/work": false,
   "/blog": false,
-  "/services": true,
-    "/about-me": true,
+  "/services": false,
+  "/about-me": false,
   "/contact": true,
 };
 
@@ -37,23 +37,26 @@ const display: DisplayConfig = {
 const protectedRoutes: ProtectedRoutesConfig = {};
 
 // Import and set font for each variant
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, TikTok_Sans } from "next/font/google";
 
-const heading = Geist({
+const heading = TikTok_Sans({
   variable: "--font-heading",
   subsets: ["latin"],
+  axes: ["wdth"],
   display: "swap",
 });
 
-const body = Geist({
+const body = TikTok_Sans({
   variable: "--font-body",
   subsets: ["latin"],
+  axes: ["wdth"],
   display: "swap",
 });
 
-const label = Geist({
+const label = TikTok_Sans({
   variable: "--font-label",
   subsets: ["latin"],
+  axes: ["wdth"],
   display: "swap",
 });
 
@@ -72,14 +75,14 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
-  theme: "system", // dark | light | system
+  theme: "dark", // dark | light | system
   neutral: "gray", // sand | gray | slate | custom
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  solid: "contrast", // color | contrast
+  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  solid: "color", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
+  surface: "filled", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };

@@ -1,57 +1,79 @@
 "use client";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getContent } from "@/resources/content";
-import { IconButton, Row, Text } from "@once-ui-system/core";
+import { elsewhereLinks, getContent } from "@/resources/content";
 import styles from "./Footer.module.scss";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
   const content = getContent(language);
-  const footerText =
-    language === "fr"
-      ? " / Conseil indépendant en IA et ingénierie"
-      : " / Independent AI & engineering advisory";
+  const copy = content.translations.landing.footer;
+  const serviceNames = content.translations.landing.services.subsections.flatMap((subsection) =>
+    subsection.groups.map((group) => group.title),
+  );
+  const currentYear = new Date().getFullYear();
 
   return (
-    <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
-      <Row
-        className={styles.mobile}
-        maxWidth="m"
-        paddingY="8"
-        paddingX="16"
-        gap="16"
-        horizontal="between"
-        vertical="center"
-        s={{
-          direction: "column",
-          horizontal: "center",
-          align: "center",
-        }}
-      >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{content.person.name}</Text>
-          <Text onBackground="neutral-weak">{footerText}</Text>
-        </Text>
-        <Row gap="16">
-          {content.social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
-        </Row>
-      </Row>
-      <Row height="80" hide s={{ hide: false }} />
-    </Row>
+    <footer className={styles.footer}>
+      <div className={styles.columns}>
+        <div className={styles.column}>
+          <b className={styles.title}>{copy.servicesTitle}</b>
+          {serviceNames.map((name) => (
+            <span key={name}>
+              {name}
+              <br />
+            </span>
+          ))}
+        </div>
+        <div className={styles.column}>
+          <b className={styles.title}>{copy.writeTitle}</b>
+          <a href={`mailto:${content.person.email}`}>{content.person.email}</a>
+        </div>
+        <div className={styles.column}>
+          <b className={styles.title}>{copy.elsewhereTitle}</b>
+          {elsewhereLinks.map((link) => (
+            <span key={link.name}>
+              <a href={link.href}>{link.name}</a>
+              <br />
+            </span>
+          ))}
+        </div>
+        <div className={styles.column}>
+          <b className={styles.title}>{copy.languagesTitle}</b>
+          {copy.languages.map((name) => (
+            <span key={name}>
+              {name}
+              <br />
+            </span>
+          ))}
+        </div>
+      </div>
+      <div />
+      <div>
+        <svg
+          className={styles.wordmark}
+          viewBox="0 0 1000 250"
+          role="img"
+          aria-label={content.person.firstName}
+        >
+          <text
+            x="0"
+            y="238"
+            textLength="1000"
+            lengthAdjust="spacingAndGlyphs"
+            fontFamily="var(--font-heading), sans-serif"
+            fontWeight="800"
+            fontSize="290"
+            fill="currentColor"
+            style={{ fontStretch: "150%", textTransform: "uppercase" }}
+          >
+            {content.person.firstName}
+          </text>
+        </svg>
+        <p className={styles.legal}>
+          © {currentYear} {content.person.name}
+        </p>
+      </div>
+    </footer>
   );
 }

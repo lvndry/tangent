@@ -73,3 +73,53 @@
     animation: none;
   }
 }
+
+:root {
+  --ground: #0b1410;
+  --surface: #122019;
+  --ink: #eaf3ee;
+  --soft: #9db3a8;
+  --accent: #34d399;
+  --on-accent: #0b1410;
+  --pale: #eef4ef;
+  --pale-ink: #0b1410;
+  --deep: #0b7a55;
+  --margin: clamp(20px, 2.4vw, 32px);
+  --step-small: clamp(13px, 12.6px + 0.1vw, 14px);
+  --step-body: clamp(17px, 16px + 0.25vw, 19px);
+  --step-lead: clamp(20px, 17.6px + 0.7vw, 26px);
+  --step-head: clamp(40px, 19.2px + 4.2vw, 76px);
+  --display: clamp(72px, 10.4vw, 170px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background: var(--ground);
+  scroll-behavior: smooth;
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s var(--ease),
+    transform 0.9s var(--ease);
+  transition-delay: calc(var(--index, 0) * 80ms);
+}
+
+.js .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

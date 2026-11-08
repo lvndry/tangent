@@ -7,4 +7,3 @@ export { RouteGuard } from "@/components/RouteGuard";
 export { Providers } from "@/components/Providers";
 export { ScrollToHash } from "@/components/ScrollToHash";
 export { LanguageToggle } from "@/components/LanguageToggle";
-export { ThemeToggle } from "@/components/ThemeToggle";
