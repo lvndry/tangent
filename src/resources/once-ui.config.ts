@@ -191,7 +191,7 @@ const schema: SchemaConfig = {
   type: "Organization",
   name: "Tangent Consulting",
   description: getContent("fr").home.description,
-  email: "monga.4landry@gmail.com",
+  email: "contact@lvndry.xyz",
 };
 
 // social links

@@ -122,7 +122,7 @@ const translations = {
               a winner.
             </>
           ),
-          email: "monga.4landry@gmail.com",
+          email: "contact@lvndry.xyz",
           linkedin: "https://www.linkedin.com/in/landry-monga",
           github: "https://github.com/lvndry",
           logos: [
@@ -480,7 +480,7 @@ const translations = {
               comment construire une équipe qui gagne.
             </>
           ),
-          email: "monga.4landry@gmail.com",
+          email: "contact@lvndry.xyz",
           linkedin: "https://www.linkedin.com/in/landry-monga",
           github: undefined,
           logos: [
@@ -721,7 +721,7 @@ export function getContent(language: Language = "en") {
     name: t.person.name,
     role: t.person.role,
     avatar: "/images/avatar.jpg",
-    email: "monga.4landry@gmail.com",
+    email: "contact@lvndry.xyz",
     location: "Europe/Paris",
     languages: t.person.languages,
   };
