@@ -6,7 +6,6 @@ import { Footer, Header, Providers, RouteGuard } from "@/components";
 import {
   baseURL,
   dataStyle,
-  effects,
   fonts,
   sameAs,
   schema,
@@ -15,15 +14,7 @@ import {
 } from "@/resources";
 import { getContent } from "@/resources/content";
 import { resolveLanguage } from "@/contexts/language";
-import {
-  Background,
-  Column,
-  Flex,
-  Meta,
-  Opacity,
-  Schema,
-  SpacingToken,
-} from "@once-ui-system/core";
+import { Column, Flex, Meta, Schema } from "@once-ui-system/core";
 
 import "@/resources/custom.css";
 import "@once-ui-system/core/css/styles.css";
@@ -114,7 +105,7 @@ export default async function RootLayout({
             (function() {
               try {
                 const root = document.documentElement;
-                const defaultTheme = 'system';
+                root.classList.add('js');
 
                 // Set defaults from config
                 const config = ${JSON.stringify({
@@ -135,18 +126,7 @@ export default async function RootLayout({
                   root.setAttribute('data-' + key, value);
                 });
 
-                // Resolve theme
-                const resolveTheme = (themeValue) => {
-                  if (!themeValue || themeValue === 'system') {
-                    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  }
-                  return themeValue;
-                };
-
-                // Apply saved theme
-                const savedTheme = localStorage.getItem('data-theme');
-                const resolvedTheme = resolveTheme(savedTheme);
-                root.setAttribute('data-theme', resolvedTheme);
+                root.setAttribute('data-theme', 'dark');
 
                 // Apply any saved style overrides
                 const styleKeys = Object.keys(config);
@@ -168,9 +148,8 @@ export default async function RootLayout({
       <Providers initialLanguage={language}>
         <Column
           as="body"
-          background="page"
           fillWidth
-          style={{ minHeight: "100vh" }}
+          style={{ minHeight: "100vh", background: "var(--ground)" }}
           margin="0"
           padding="0"
           horizontal="center"
@@ -183,54 +162,9 @@ export default async function RootLayout({
             description={schema.description}
             sameAs={[sameAs.linkedin].filter(Boolean)}
           />
-          <Flex fill position="absolute" className="fade-in">
-            <Background
-              mask={{
-                x: effects.mask.x,
-                y: effects.mask.y,
-                radius: effects.mask.radius,
-                cursor: effects.mask.cursor,
-              }}
-              gradient={{
-                display: effects.gradient.display,
-                opacity: effects.gradient.opacity as Opacity,
-                x: effects.gradient.x,
-                y: effects.gradient.y,
-                width: effects.gradient.width,
-                height: effects.gradient.height,
-                tilt: effects.gradient.tilt,
-                colorStart: effects.gradient.colorStart,
-                colorEnd: effects.gradient.colorEnd,
-              }}
-              dots={{
-                display: effects.dots.display,
-                opacity: effects.dots.opacity as Opacity,
-                size: effects.dots.size as SpacingToken,
-                color: effects.dots.color,
-              }}
-              grid={{
-                display: effects.grid.display,
-                opacity: effects.grid.opacity as Opacity,
-                color: effects.grid.color,
-                width: effects.grid.width,
-                height: effects.grid.height,
-              }}
-              lines={{
-                display: effects.lines.display,
-                opacity: effects.lines.opacity as Opacity,
-                size: effects.lines.size as SpacingToken,
-                thickness: effects.lines.thickness,
-                angle: effects.lines.angle,
-                color: effects.lines.color,
-              }}
-            />
-          </Flex>
-          <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />
-          <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
-            <Flex horizontal="center" fillWidth minHeight="0">
-              <RouteGuard>{children}</RouteGuard>
-            </Flex>
+          <Flex as="main" fillWidth flex={1} minHeight="0">
+            <RouteGuard>{children}</RouteGuard>
           </Flex>
           <Footer />
         </Column>

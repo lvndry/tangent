@@ -8,7 +8,7 @@ type SitemapEntry = {
 };
 
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const existingRoutes = ["/", "/about", "/services", "/about-me", "/contact"];
+  const existingRoutes = ["/", "/contact"];
 
   const routes: SitemapEntry[] = existingRoutes.map((route) => {
     const url = `${baseURL}${route !== "/" ? route : ""}`;
@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
       };
     }
     // Important pages get high priority
-    if (route === "/services" || route === "/contact") {
+    if (route === "/contact") {
       return {
         url,
         lastModified: new Date().toISOString().split("T")[0],

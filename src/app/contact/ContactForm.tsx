@@ -104,11 +104,11 @@ export function ContactForm() {
               }}
             >
               <option value="">{t.serviceOptions.select}</option>
-              <option value="ai-strategy-engineering">{t.serviceOptions.strategy}</option>
-              <option value="private-ai-infrastructure">{t.serviceOptions.infrastructure}</option>
-              <option value="engineering-leadership-hiring">{t.serviceOptions.leadership}</option>
-              <option value="team-training">{t.serviceOptions.training}</option>
-              <option value="ai-governance">{t.serviceOptions.governance}</option>
+              <option value="ai-strategy">{t.serviceOptions.strategy}</option>
+              <option value="build-integrate">{t.serviceOptions.build}</option>
+              <option value="private-ai">{t.serviceOptions.infrastructure}</option>
+              <option value="technical-leadership">{t.serviceOptions.leadership}</option>
+              <option value="training-governance">{t.serviceOptions.training}</option>
               <option value="other">{t.serviceOptions.other}</option>
             </select>
           </Column>

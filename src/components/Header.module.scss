@@ -1,31 +1,91 @@
-@use "./breakpoints.scss" as breakpoints;
-
-.mask {
-    pointer-events: none;
-    backdrop-filter: blur(0.5rem);
-    background: linear-gradient(to bottom, var(--page-background), var(--static-transparent));
-    mask-image: linear-gradient(rgba(0,0,0) 25%, rgba(0, 0, 0, 0) 100%);
-    mask-size: 100% 100%;
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px var(--margin);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
-@media (max-width: breakpoints.$s) {
-    .position {
-        top: auto;
-        bottom: var(--static-space-24);
-        opacity: 0;
-        transform: translateY(100%);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        pointer-events: none;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--step-body);
 
-    .position.scrolled {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
+  svg {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.6s var(--ease);
+  }
 
-    .mask {
-        transform: rotate(180deg);
-        bottom: 0;
-    }
+  &:hover svg {
+    transform: rotate(-14deg) scale(1.1);
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.link {
+  color: var(--soft);
+  text-decoration: none;
+  font-size: var(--step-body);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
+.language {
+  font: inherit;
+  font-size: var(--step-small);
+  font-weight: 600;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 6px 4px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.brand:focus-visible,
+.link:focus-visible,
+.language:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .link {
+    display: none;
+  }
+}
+
+.bar a.brand,
+.bar a.brand:hover {
+  color: var(--ink);
+}
+
+.bar a.link {
+  color: var(--soft);
+}
+
+.bar a.link:hover {
+  color: var(--ink);
 }

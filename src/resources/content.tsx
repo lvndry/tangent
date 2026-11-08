@@ -16,7 +16,7 @@ const translations = {
       label: "Home",
       title: "Tangent Consulting - Independent AI & Engineering Advisory",
       description:
-        "Independent AI & engineering advisory for startups and engineering teams: AI strategy, private AI and infrastructure, fractional CTO and hiring support, and team training.",
+        "Independent AI advisor for leadership teams: decide where AI pays off, build it properly, keep your data private, and train your teams.",
       headline: <>Build AI that works in the real world.</>,
       subline: (
         <>
@@ -111,35 +111,24 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead the AI, software
-              development and deployment work. I'm a practicing AI engineer: I built my
+              Founding engineer at a defense startup, where my work spans AI, software
+              development, on-prem deployment and governance. I'm a practicing AI engineer: I built my
               own open-source agent harness, I serve my own models with vLLM on my own
               GPU, and every system I ship comes with logs, tracing and dashboards.
               I've worked with highly sensitive data and I know how to run data
-              governance that holds up in production. Before that I built at YC and
-              Sequoia-backed startups and a unicorn, so I know what it takes to make a
-              small engineering team work, and how to build one that's a winner.
+              governance that holds up in production. Before that I worked at startups
+              backed by Y Combinator and Sequoia, and at a unicorn, so I know what it
+              takes to make a small engineering team work, and how to build one that's
+              a winner.
             </>
           ),
-          email: "monga.4landry@gmail.com",
+          email: "contact@lvndry.xyz",
           linkedin: "https://www.linkedin.com/in/landry-monga",
           github: "https://github.com/lvndry",
           logos: [
             {
-              src: "https://img.logo.dev/ycombinator.com",
-              alt: "Y Combinator",
-            },
-            {
-              src: "https://img.logo.dev/sequoiacap.com",
-              alt: "Sequoia Capital",
-            },
-            {
               src: "https://img.logo.dev/dust.tt",
               alt: "Dust",
-            },
-            {
-              src: "https://img.logo.dev/project-a.vc",
-              alt: "Project A",
             },
             {
               src: "https://img.logo.dev/ledger.com",
@@ -167,76 +156,197 @@ const translations = {
           name: "Your name",
           email: "your.email@company.com",
           phone: "+33 6 12 34 56 78",
-          message: "Tell us about your project or technical challenge...",
+          message: "Tell me what is stuck...",
         },
         serviceOptions: {
           select: "Select a service",
-          strategy: "AI Strategy & Engineering",
-          infrastructure: "Private AI & Infrastructure",
-          leadership: "Engineering Leadership & Hiring",
-          training: "Team Training",
-          governance: "AI & Data Governance",
+          strategy: "AI strategy",
+          build: "Build and integrate",
+          infrastructure: "Private AI",
+          leadership: "Technical leadership",
+          training: "Training and governance",
           other: "Other",
         },
       },
     },
-    homepage: {
-      eyebrow: "Independent AI & Engineering Advisory",
-      introTitle: "Engineering challenges deserve practical answers.",
-      introText: [
-        "Building AI products involves more than choosing a model.",
-        "Which architecture should you use? When does self-hosting make sense? How do you control inference costs? How do you evaluate reliability? And how do you build the right engineering team to support it?",
-        "I help founders and technical teams answer these questions and turn decisions into actionable plans.",
-      ],
-      servicesTitle: "What I can help you with",
-      engagementTitle: "How we can work together",
-      engagements: [
-        {
-          title: "Technical Assessments",
-          text: "Independent reviews of your systems and technical decisions, delivered with clear recommendations and a prioritized roadmap.",
-        },
-        {
-          title: "Focused Engineering Projects",
-          text: "Time-boxed engagements to investigate, benchmark or implement a specific technical solution.",
-        },
-        {
-          title: "Ongoing Advisory",
-          text: "Regular support for architecture decisions, infrastructure strategy, hiring and engineering leadership.",
-        },
-        {
-          title: "Team Training",
-          text: "Practical workshops tailored to your organization's engineering challenges and current skill levels.",
-        },
-      ],
-      audienceTitle: "Who I work with",
-      audiences: [
-        {
-          title: "Early-stage startups",
-          text: "Building their first AI-powered products, preparing to scale, or making foundational engineering decisions.",
-        },
-        {
-          title: "Growing engineering teams",
-          text: "Looking to improve reliability, infrastructure efficiency and technical execution.",
-        },
-        {
-          title: "Companies adopting private AI",
-          text: "Exploring secure deployment options and practical approaches to using AI with sensitive business data.",
-        },
-      ],
-      approachTitle: "A practical, independent approach.",
-      approachText: [
-        "I believe good engineering is about making thoughtful trade-offs, not blindly adopting the latest technology.",
-        "My approach combines technical analysis, practical experimentation and straightforward communication.",
-        "The goal is to help your team understand its options, make confident decisions and build sustainable systems.",
-      ],
-      ctaTitle: "Let's discuss your technical challenge.",
-      ctaText:
-        "Whether you're planning an AI deployment, reconsidering your architecture or looking for an independent technical perspective, I'd be happy to explore how I can help.",
-      buttons: {
-        viewServices: "Explore services",
-        getInTouch: "Book an intro call",
-        contact: "Or reach out to discuss your project",
+    landing: {
+      "nav": {
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact",
+        "home": "Tangent home"
       },
+      "hero": {
+        "sentence": "Your AI works in the demo. I get it working every day.",
+        "cta": "Book a free intro call"
+      },
+      "services": {
+        "title": "What I do",
+        "placeholder": "Pick what is stuck. I will show what I do about it.",
+        "action": "Talk about this",
+        "mailSubject": "Intro call",
+        "mailGreeting": "Hello Landry,",
+        "mailTopic": "What is stuck",
+        "subsections": [
+          {
+            "title": "AI",
+            "groups": [
+              {
+                "title": "AI strategy",
+                "summary": "Find the few AI projects worth doing.",
+                "items": [
+                  {
+                    "name": "Choosing projects",
+                    "text": "Pick the few AI projects worth doing, and drop the rest, before you spend the budget."
+                  },
+                  {
+                    "name": "Build, buy or wait",
+                    "text": "A straight answer on whether to build it, buy a tool, or wait six months."
+                  },
+                  {
+                    "name": "A roadmap you can follow",
+                    "text": "A plain-language plan with order, owners and costs. Not a slide deck."
+                  },
+                  {
+                    "name": "A second opinion",
+                    "text": "A senior review of a plan or a quote you have already received."
+                  }
+                ]
+              },
+              {
+                "title": "Build and integrate",
+                "summary": "Put AI inside your product or operations.",
+                "items": [
+                  {
+                    "name": "AI in your product",
+                    "text": "AI features inside your product, reliable enough for customers to depend on."
+                  },
+                  {
+                    "name": "AI in your operations",
+                    "text": "AI inside the daily work of your team, wired into the tools they already use."
+                  },
+                  {
+                    "name": "Answers you can trust",
+                    "text": "Quality checks so you can trust what the AI says, and see when it is wrong."
+                  },
+                  {
+                    "name": "A clean handover",
+                    "text": "A handover your team can maintain without calling me."
+                  }
+                ]
+              },
+              {
+                "title": "Private AI",
+                "summary": "Keep your data on your own servers.",
+                "items": [
+                  {
+                    "name": "On your own servers",
+                    "text": "AI that runs on your own servers, so company and customer data stays inside."
+                  },
+                  {
+                    "name": "Data that never leaves",
+                    "text": "No third party sees your documents, conversations or customer records."
+                  },
+                  {
+                    "name": "Running costs, up front",
+                    "text": "What it costs to run, laid out before you commit to anything."
+                  },
+                  {
+                    "name": "Fits your rules",
+                    "text": "A setup that fits your security rules and legal obligations."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Leadership and teams",
+            "groups": [
+              {
+                "title": "Technical leadership",
+                "summary": "Senior tech judgment without the full-time hire.",
+                "items": [
+                  {
+                    "name": "A part-time tech leader",
+                    "text": "Senior technical judgment a few days a month, without a full-time hire."
+                  },
+                  {
+                    "name": "Hiring engineers",
+                    "text": "Help interviewing and choosing the right engineers."
+                  },
+                  {
+                    "name": "Reviewing your team",
+                    "text": "An honest review of your tech and your team, with what to fix first."
+                  },
+                  {
+                    "name": "Choosing vendors",
+                    "text": "Tool and supplier decisions made with you, not for you."
+                  }
+                ]
+              },
+              {
+                "title": "Training and governance",
+                "summary": "Teams that use AI well, and safely.",
+                "items": [
+                  {
+                    "name": "Team workshops",
+                    "text": "Hands-on sessions on your team's real work, not generic demos."
+                  },
+                  {
+                    "name": "Rules people follow",
+                    "text": "Simple rules for everyday AI use that people actually follow."
+                  },
+                  {
+                    "name": "Rules for your data",
+                    "text": "Clear practices for the data you give to AI, and who can see what."
+                  },
+                  {
+                    "name": "Ready for an audit",
+                    "text": "Practices that hold up when someone asks you to prove them."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "about": {
+        "first": "Landry",
+        "last": "Monga",
+        "passages": [
+          {
+            "text": "I am a founding engineer at a defense startup. My work spans AI, software development, on-prem deployment and governance.",
+            "note": "Where data is sensitive and mistakes are expensive."
+          },
+          {
+            "text": "Before that I worked at startups backed by Y Combinator and Sequoia, and at a unicorn.",
+            "note": "So I know how a small team ships, and how to build one that wins."
+          },
+          {
+            "text": "You work with me directly.",
+            "note": "If I am not the right person, I will say so on the first call."
+          }
+        ]
+      },
+      "contact": {
+        "pageTitle": "Contact",
+        "pageLede": "Tell me what is stuck and I will reply.",
+        "ask": "Write to me about what is stuck.",
+        "cta": "Book a free intro call",
+        "form": "Or send a message",
+        "languages": "English and French",
+        "mailBody": "Hello Landry,\n\nHere is what is stuck:\n"
+      },
+      "footer": {
+        "servicesTitle": "Services",
+        "writeTitle": "Write",
+        "elsewhereTitle": "Elsewhere",
+        "languagesTitle": "Languages",
+        "languages": [
+          "English",
+          "Français"
+        ]
+      }
     },
   },
   fr: {
@@ -251,7 +361,7 @@ const translations = {
       label: "Accueil",
       title: "Tangent Consulting - Conseil indépendant en IA et ingénierie",
       description:
-        "Conseil indépendant en IA et ingénierie pour les startups et les équipes techniques : stratégie IA, IA privée et infrastructure, CTO à temps partagé et recrutement, formation des équipes.",
+        "Conseil indépendant en IA pour les équipes dirigeantes : décider où l'IA rapporte, la construire proprement, garder vos données privées et former vos équipes.",
       headline: <>Construisez une IA qui fonctionne dans le monde réel.</>,
       subline: (
         <>
@@ -358,37 +468,25 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, je pilote l&apos;IA, le
-              développement logiciel et le déploiement. Je ne me contente pas de
+              Founding Engineer dans une startup de défense, mon travail couvre l&apos;IA, le
+              développement logiciel, le déploiement on-prem et la gouvernance. Je ne me contente pas de
               conseiller : j&apos;ai construit mon propre harnais d&apos;agents open source,
               je sers mes propres modèles avec vLLM sur mes propres GPU, et chaque
               système que je livre embarque logs, tracing et dashboards. J&apos;ai travaillé
               sur des données très sensibles et je sais faire tourner une gouvernance
-              des données qui tient en production. Avant, j&apos;ai bâti dans des startups
-              soutenues par Y Combinator et Sequoia et dans une licorne, donc je sais ce
-              qu&apos;il faut pour faire tourner une petite équipe d&apos;ingénierie, et comment
-              construire une équipe qui gagne.
+              des données qui tient en production. Avant, j&apos;ai travaillé dans des
+              startups soutenues par Y Combinator et Sequoia, et dans une licorne, donc je
+              sais ce qu&apos;il faut pour faire tourner une petite équipe d&apos;ingénierie, et
+              comment construire une équipe qui gagne.
             </>
           ),
-          email: "monga.4landry@gmail.com",
+          email: "contact@lvndry.xyz",
           linkedin: "https://www.linkedin.com/in/landry-monga",
           github: undefined,
           logos: [
             {
-              src: "https://img.logo.dev/ycombinator.com",
-              alt: "Y Combinator",
-            },
-            {
-              src: "https://img.logo.dev/sequoiacap.com",
-              alt: "Sequoia Capital",
-            },
-            {
               src: "https://img.logo.dev/dust.tt",
               alt: "Dust",
-            },
-            {
-              src: "https://img.logo.dev/project-a.vc",
-              alt: "Project A",
             },
             {
               src: "https://img.logo.dev/ledger.com",
@@ -420,76 +518,197 @@ const translations = {
           name: "Votre nom",
           email: "votre.email@entreprise.com",
           phone: "+33 6 12 34 56 78",
-          message: "Parlez-nous de votre projet ou de votre défi technique...",
+          message: "Dites-moi ce qui bloque...",
         },
         serviceOptions: {
           select: "Sélectionner un service",
-          strategy: "Stratégie & ingénierie IA",
-          infrastructure: "IA privée & infrastructure",
-          leadership: "Leadership technique & recrutement",
-          training: "Formation des équipes",
-          governance: "Gouvernance de l'IA et des données",
+          strategy: "Stratégie IA",
+          build: "Construire et intégrer",
+          infrastructure: "IA privée",
+          leadership: "Direction technique",
+          training: "Formation et gouvernance",
           other: "Autre",
         },
       },
     },
-    homepage: {
-      eyebrow: "Conseil indépendant en IA et ingénierie",
-      introTitle: "Les défis d'ingénierie méritent des réponses pratiques.",
-      introText: [
-        "Construire des produits d'IA, ce n'est pas seulement choisir un modèle.",
-        "Quelle architecture adopter ? Quand l'auto-hébergement a-t-il du sens ? Comment maîtriser les coûts d'inférence ? Comment évaluer la fiabilité ? Et comment constituer la bonne équipe d'ingénierie pour soutenir tout cela ?",
-        "J'aide les fondateurs et les équipes techniques à répondre à ces questions et à transformer leurs décisions en plans d'action.",
-      ],
-      servicesTitle: "Comment je peux vous aider",
-      engagementTitle: "Comment travailler ensemble",
-      engagements: [
-        {
-          title: "Audits techniques",
-          text: "Des revues indépendantes de vos systèmes et de vos décisions techniques, avec des recommandations claires et une feuille de route priorisée.",
-        },
-        {
-          title: "Projets d'ingénierie ciblés",
-          text: "Des missions limitées dans le temps pour investiguer, benchmarker ou implémenter une solution technique précise.",
-        },
-        {
-          title: "Accompagnement continu",
-          text: "Un soutien régulier pour les décisions d'architecture, la stratégie d'infrastructure, le recrutement et le leadership technique.",
-        },
-        {
-          title: "Formation des équipes",
-          text: "Des ateliers pratiques adaptés aux défis d'ingénierie de votre organisation et au niveau actuel de vos équipes.",
-        },
-      ],
-      audienceTitle: "Avec qui je travaille",
-      audiences: [
-        {
-          title: "Startups en phase initiale",
-          text: "Qui construisent leurs premiers produits d'IA, se préparent à passer à l'échelle ou prennent leurs premières décisions d'ingénierie structurantes.",
-        },
-        {
-          title: "Équipes d'ingénierie en croissance",
-          text: "Qui veulent améliorer la fiabilité, l'efficacité de l'infrastructure et l'exécution technique.",
-        },
-        {
-          title: "Entreprises adoptant l'IA privée",
-          text: "Qui explorent des options de déploiement sécurisées et des approches concrètes pour utiliser l'IA avec des données d'entreprise sensibles.",
-        },
-      ],
-      approachTitle: "Une approche pragmatique et indépendante.",
-      approachText: [
-        "Je crois qu'une bonne ingénierie consiste à faire des compromis réfléchis, pas à adopter aveuglément la dernière technologie.",
-        "Mon approche combine analyse technique, expérimentation pratique et communication directe.",
-        "L'objectif : aider votre équipe à comprendre ses options, à décider en confiance et à construire des systèmes durables.",
-      ],
-      ctaTitle: "Parlons de votre défi technique.",
-      ctaText:
-        "Que vous prépariez un déploiement d'IA, reconsidériez votre architecture ou cherchiez un regard technique indépendant, je serai ravi d'explorer comment je peux vous aider.",
-      buttons: {
-        viewServices: "Découvrir les services",
-        getInTouch: "Réserver un appel découverte",
-        contact: "Ou contactez-moi pour discuter de votre projet",
+    landing: {
+      "nav": {
+        "services": "Services",
+        "about": "À propos",
+        "contact": "Contact",
+        "home": "Accueil Tangent"
       },
+      "hero": {
+        "sentence": "Votre IA fonctionne en démo. Je la fais fonctionner tous les jours.",
+        "cta": "Réserver un appel gratuit"
+      },
+      "services": {
+        "title": "Ce que je fais",
+        "placeholder": "Choisissez ce qui bloque. Je vous montre ce que je fais.",
+        "action": "En parler",
+        "mailSubject": "Appel d'introduction",
+        "mailGreeting": "Bonjour Landry,",
+        "mailTopic": "Ce qui bloque",
+        "subsections": [
+          {
+            "title": "IA",
+            "groups": [
+              {
+                "title": "Stratégie IA",
+                "summary": "Trouver les quelques projets IA qui comptent.",
+                "items": [
+                  {
+                    "name": "Choisir les projets",
+                    "text": "Garder les quelques projets IA qui valent la peine, et abandonner les autres, avant de dépenser le budget."
+                  },
+                  {
+                    "name": "Construire, acheter ou attendre",
+                    "text": "Une réponse franche : construire, acheter un outil ou attendre six mois."
+                  },
+                  {
+                    "name": "Une feuille de route claire",
+                    "text": "Un plan en langage clair : ordre, responsables et coûts. Pas un PowerPoint."
+                  },
+                  {
+                    "name": "Un second avis",
+                    "text": "Un regard senior sur un plan ou un devis que vous avez déjà reçu."
+                  }
+                ]
+              },
+              {
+                "title": "Construire et intégrer",
+                "summary": "Mettre l'IA dans votre produit ou vos opérations.",
+                "items": [
+                  {
+                    "name": "L'IA dans votre produit",
+                    "text": "Des fonctions IA dans votre produit, assez fiables pour que vos clients s'y fient."
+                  },
+                  {
+                    "name": "L'IA dans vos opérations",
+                    "text": "L'IA au cœur du travail quotidien de vos équipes, branchée sur leurs outils actuels."
+                  },
+                  {
+                    "name": "Des réponses fiables",
+                    "text": "Des contrôles qualité pour faire confiance à l'IA, et voir quand elle se trompe."
+                  },
+                  {
+                    "name": "Une passation propre",
+                    "text": "Une passation que votre équipe sait maintenir sans m'appeler."
+                  }
+                ]
+              },
+              {
+                "title": "IA privée",
+                "summary": "Garder vos données sur vos serveurs.",
+                "items": [
+                  {
+                    "name": "Sur vos propres serveurs",
+                    "text": "Une IA qui tourne sur vos serveurs : les données de l'entreprise et des clients restent chez vous."
+                  },
+                  {
+                    "name": "Des données qui ne sortent pas",
+                    "text": "Aucun tiers ne voit vos documents, conversations ou fiches clients."
+                  },
+                  {
+                    "name": "Les coûts, dès le départ",
+                    "text": "Ce que ça coûte à faire tourner, posé avant tout engagement."
+                  },
+                  {
+                    "name": "Conforme à vos règles",
+                    "text": "Une installation conforme à vos règles de sécurité et à vos obligations légales."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Direction et équipes",
+            "groups": [
+              {
+                "title": "Direction technique",
+                "summary": "Un regard tech senior sans l'embauche à temps plein.",
+                "items": [
+                  {
+                    "name": "Un directeur technique à temps partiel",
+                    "text": "Un regard technique senior quelques jours par mois, sans embauche à temps plein."
+                  },
+                  {
+                    "name": "Recruter des ingénieurs",
+                    "text": "De l'aide pour interviewer et choisir les bons ingénieurs."
+                  },
+                  {
+                    "name": "Auditer votre équipe",
+                    "text": "Un audit honnête de votre tech et de votre équipe, avec ce qu'il faut corriger d'abord."
+                  },
+                  {
+                    "name": "Choisir les fournisseurs",
+                    "text": "Des choix d'outils et de fournisseurs faits avec vous, pas à votre place."
+                  }
+                ]
+              },
+              {
+                "title": "Formation et gouvernance",
+                "summary": "Des équipes qui utilisent l'IA bien, et en sécurité.",
+                "items": [
+                  {
+                    "name": "Ateliers d'équipe",
+                    "text": "Des sessions pratiques sur le vrai travail de votre équipe, pas des démos génériques."
+                  },
+                  {
+                    "name": "Des règles suivies",
+                    "text": "Des règles simples pour l'usage quotidien de l'IA, que les gens suivent vraiment."
+                  },
+                  {
+                    "name": "Des règles pour vos données",
+                    "text": "Des pratiques claires sur les données confiées à l'IA, et qui peut voir quoi."
+                  },
+                  {
+                    "name": "Prêt pour un audit",
+                    "text": "Des pratiques qui tiennent quand on vous demande de les prouver."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "about": {
+        "first": "Landry",
+        "last": "Monga",
+        "passages": [
+          {
+            "text": "Je suis founding engineer dans une startup de défense. Mon travail couvre l'IA, le développement logiciel, le déploiement on-prem et la gouvernance.",
+            "note": "Là où les données sont sensibles et où les erreurs coûtent cher."
+          },
+          {
+            "text": "Avant, j'ai travaillé dans des startups soutenues par Y Combinator et Sequoia, et dans une licorne.",
+            "note": "Je sais donc comment livre une petite équipe, et comment en bâtir une qui gagne."
+          },
+          {
+            "text": "Vous travaillez directement avec moi.",
+            "note": "Si je ne suis pas la bonne personne, je vous le dirai dès le premier appel."
+          }
+        ]
+      },
+      "contact": {
+        "pageTitle": "Contact",
+        "pageLede": "Dites-moi ce qui bloque et je vous réponds.",
+        "ask": "Écrivez-moi pour dire ce qui bloque.",
+        "cta": "Réserver un appel gratuit",
+        "form": "Ou envoyez un message",
+        "languages": "Anglais et français",
+        "mailBody": "Bonjour Landry,\n\nVoici ce qui bloque :\n"
+      },
+      "footer": {
+        "servicesTitle": "Services",
+        "writeTitle": "Écrire",
+        "elsewhereTitle": "Ailleurs",
+        "languagesTitle": "Langues",
+        "languages": [
+          "English",
+          "Français"
+        ]
+      }
     },
   },
 };
@@ -502,7 +721,7 @@ export function getContent(language: Language = "en") {
     name: t.person.name,
     role: t.person.role,
     avatar: "/images/avatar.jpg",
-    email: "monga.4landry@gmail.com",
+    email: "contact@lvndry.xyz",
     location: "Europe/Paris",
     languages: t.person.languages,
   };
@@ -636,6 +855,11 @@ export function getContent(language: Language = "en") {
     translations: t,
   };
 }
+
+export const elsewhereLinks = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/landry-monga" },
+  { name: "GitHub", href: "https://github.com/lvndry" },
+];
 
 export const person = getContent("en").person;
 export const social = getContent("en").social;
