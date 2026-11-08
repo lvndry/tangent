@@ -111,8 +111,8 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding engineer at a defense startup, where I lead the AI, software
-              development and deployment work. I'm a practicing AI engineer: I built my
+              Founding engineer at a defense startup, where my work spans AI, software
+              development, on-prem deployment and governance. I'm a practicing AI engineer: I built my
               own open-source agent harness, I serve my own models with vLLM on my own
               GPU, and every system I ship comes with logs, tracing and dashboards.
               I've worked with highly sensitive data and I know how to run data
@@ -315,7 +315,7 @@ const translations = {
         "last": "Monga",
         "passages": [
           {
-            "text": "I am a founding engineer at a defense startup. I lead the AI, the software and the deployment.",
+            "text": "I am a founding engineer at a defense startup. My work spans AI, software development, on-prem deployment and governance.",
             "note": "Where data is sensitive and mistakes are expensive."
           },
           {
@@ -468,8 +468,8 @@ const translations = {
           role: "Founding Engineer",
           bio: (
             <>
-              Founding Engineer dans une startup de défense, je pilote l&apos;IA, le
-              développement logiciel et le déploiement. Je ne me contente pas de
+              Founding Engineer dans une startup de défense, mon travail couvre l&apos;IA, le
+              développement logiciel, le déploiement on-prem et la gouvernance. Je ne me contente pas de
               conseiller : j&apos;ai construit mon propre harnais d&apos;agents open source,
               je sers mes propres modèles avec vLLM sur mes propres GPU, et chaque
               système que je livre embarque logs, tracing et dashboards. J&apos;ai travaillé
@@ -677,7 +677,7 @@ const translations = {
         "last": "Monga",
         "passages": [
           {
-            "text": "Je suis founding engineer dans une startup de défense. Je pilote l'IA, le logiciel et le déploiement.",
+            "text": "Je suis founding engineer dans une startup de défense. Mon travail couvre l'IA, le développement logiciel, le déploiement on-prem et la gouvernance.",
             "note": "Là où les données sont sensibles et où les erreurs coûtent cher."
           },
           {
