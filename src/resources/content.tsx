@@ -348,6 +348,7 @@ const translations = {
         "writeTitle": "Write",
         "elsewhereTitle": "Elsewhere",
         "languagesTitle": "Languages",
+        "basedIn": "Based in Paris",
         "languages": [
           "English",
           "Français"
@@ -716,6 +717,7 @@ const translations = {
         "writeTitle": "Écrire",
         "elsewhereTitle": "Ailleurs",
         "languagesTitle": "Langues",
+        "basedIn": "Basé à Paris",
         "languages": [
           "English",
           "Français"

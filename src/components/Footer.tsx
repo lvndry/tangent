@@ -71,7 +71,7 @@ export function Footer() {
           </text>
         </svg>
         <p className={styles.legal}>
-          © {currentYear} {content.person.name}
+          © {currentYear} {content.person.name} · {copy.basedIn}
         </p>
       </div>
     </footer>
