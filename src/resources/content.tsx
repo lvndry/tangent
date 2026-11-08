@@ -320,6 +320,12 @@ const translations = {
           },
           {
             "text": "Before that I worked at startups backed by Y Combinator and Sequoia, and at a unicorn.",
+            "logos": [
+              { "name": "Y Combinator", "domain": "ycombinator.com" },
+              { "name": "Sequoia", "domain": "sequoiacap.com" },
+              { "name": "Ledger", "domain": "ledger.com" },
+              { "name": "Dust", "domain": "dust.tt" }
+            ],
             "note": "So I know how a small team ships, and how to build one that wins."
           },
           {
@@ -682,6 +688,12 @@ const translations = {
           },
           {
             "text": "Avant, j'ai travaillé dans des startups soutenues par Y Combinator et Sequoia, et dans une licorne.",
+            "logos": [
+              { "name": "Y Combinator", "domain": "ycombinator.com" },
+              { "name": "Sequoia", "domain": "sequoiacap.com" },
+              { "name": "Ledger", "domain": "ledger.com" },
+              { "name": "Dust", "domain": "dust.tt" }
+            ],
             "note": "Je sais donc comment livre une petite équipe, et comment en bâtir une qui gagne."
           },
           {

@@ -286,6 +286,20 @@
   line-height: 1.45;
 }
 
+.aboutLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.aboutLogos img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 .contact {
   margin-top: clamp(120px, 20vh, 220px);
   min-height: 100svh;
