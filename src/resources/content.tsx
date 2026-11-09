@@ -323,7 +323,7 @@ const translations = {
             "logos": [
               { "name": "Y Combinator", "domain": "ycombinator.com" },
               { "name": "Sequoia", "domain": "sequoiacap.com" },
-              { "name": "Ledger", "domain": "ledger.com" },
+              { "name": "Ledger", "domain": "ledger.com", "theme": "dark" },
               { "name": "Dust", "domain": "dust.tt" }
             ],
             "note": "So I know how a small team ships, and how to build one that wins."
@@ -692,7 +692,7 @@ const translations = {
             "logos": [
               { "name": "Y Combinator", "domain": "ycombinator.com" },
               { "name": "Sequoia", "domain": "sequoiacap.com" },
-              { "name": "Ledger", "domain": "ledger.com" },
+              { "name": "Ledger", "domain": "ledger.com", "theme": "dark" },
               { "name": "Dust", "domain": "dust.tt" }
             ],
             "note": "Je sais donc comment livre une petite équipe, et comment en bâtir une qui gagne."
