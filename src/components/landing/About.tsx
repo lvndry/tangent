@@ -7,8 +7,9 @@ import { Reveal } from "./Reveal";
 
 const logoToken = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN ?? "";
 
-function logoUrl(domain: string) {
-  return `https://img.logo.dev/${domain}?token=${logoToken}&size=96&format=png&retina=true`;
+function logoUrl(domain: string, theme?: string) {
+  const themeParameter = theme ? `&theme=${theme}` : "";
+  return `https://img.logo.dev/${domain}?token=${logoToken}&size=96&format=png&retina=true${themeParameter}`;
 }
 
 export function About() {
@@ -31,7 +32,7 @@ export function About() {
                 {passage.logos.map((logo) => (
                   <img
                     key={logo.domain}
-                    src={logoUrl(logo.domain)}
+                    src={logoUrl(logo.domain, logo.theme)}
                     alt={logo.name}
                     title={logo.name}
                     width={48}
