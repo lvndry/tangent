@@ -1,11 +1,11 @@
-# Tangent
+<p align="center">
+  <img src="public/images/tangent-mark.svg" alt="Tangent logo" width="96" height="96" />
+</p>
 
-## Getting started
+<h1 align="center">Tangent</h1>
 
-```sh
-$ git clone git@github.com:lvndry/tangent.git
-
-$ bun install
-
-$ bun run dev 
-```
+<p align="center">
+  Website of Tangent Consulting, an independent AI and engineering advisory based in Paris.
+  <br />
+  <a href="https://tangent-bice.vercel.app">tangent-bice.vercel.app</a>
+</p>
